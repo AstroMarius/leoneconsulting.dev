@@ -1,0 +1,323 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Servizi - Leone Consulting" description="Scopri i nostri servizi: AI Engineering, sviluppo software e consulenza IT per trasformare il tuo business.">
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-6 bg-gradient-to-br from-primary-50 to-white">
+      <div class="container mx-auto">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">I Nostri Servizi</h1>
+          <p class="text-xl text-gray-600 leading-relaxed">
+            Soluzioni tecnologiche complete per portare la tua azienda nel futuro digitale
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI Engineering -->
+    <section id="ai" class="py-20 px-6">
+      <div class="container mx-auto">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div class="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+              </div>
+              <h2 class="text-4xl font-bold text-gray-900 mb-6">AI Engineering</h2>
+              <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                Sviluppiamo sistemi di intelligenza artificiale avanzati per automatizzare processi, 
+                migliorare decisioni aziendali e creare esperienze utente innovative.
+              </p>
+              <p class="text-gray-600 mb-6">
+                Le nostre soluzioni AI sono progettate su misura per le tue esigenze specifiche, 
+                integrandosi perfettamente con i tuoi sistemi esistenti.
+              </p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-lg">
+              <h3 class="text-xl font-bold text-gray-900 mb-6">Cosa offriamo:</h3>
+              <ul class="space-y-4">
+                <li class="flex items-start">
+                  <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <div>
+                    <strong class="text-gray-900">Machine Learning & Deep Learning</strong>
+                    <p class="text-gray-600 text-sm">Modelli predittivi e sistemi di raccomandazione personalizzati</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <div>
+                    <strong class="text-gray-900">Natural Language Processing</strong>
+                    <p class="text-gray-600 text-sm">Analisi del testo, chatbot intelligenti e assistenti virtuali</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <div>
+                    <strong class="text-gray-900">Computer Vision</strong>
+                    <p class="text-gray-600 text-sm">Riconoscimento immagini e video analysis</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <div>
+                    <strong class="text-gray-900">LLM Integration</strong>
+                    <p class="text-gray-600 text-sm">Integrazione di Large Language Models nelle tue applicazioni</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <div>
+                    <strong class="text-gray-900">MLOps & Deployment</strong>
+                    <p class="text-gray-600 text-sm">Pipeline CI/CD per modelli ML e monitoring in produzione</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Software Development -->
+    <section id="development" class="py-20 px-6 bg-gray-50">
+      <div class="container mx-auto">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="order-2 md:order-1 bg-white p-8 rounded-xl shadow-lg">
+              <h3 class="text-xl font-bold text-gray-900 mb-6">Cosa offriamo:</h3>
+              <ul class="space-y-4">
+                <li class="flex items-start">
+                  <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <div>
+                    <strong class="text-gray-900">Applicazioni Web</strong>
+                    <p class="text-gray-600 text-sm">SPA, PWA e applicazioni web moderne con React, Vue, Astro</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <div>
+                    <strong class="text-gray-900">API & Backend</strong>
+                    <p class="text-gray-600 text-sm">RESTful API, GraphQL, microservizi con Node.js, Python, FastAPI</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <div>
+                    <strong class="text-gray-900">Database Design</strong>
+                    <p class="text-gray-600 text-sm">PostgreSQL, MySQL, MongoDB, Redis - schema design e ottimizzazione</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <div>
+                    <strong class="text-gray-900">Cloud Native</strong>
+                    <p class="text-gray-600 text-sm">Applicazioni scalabili su AWS, Azure, GCP</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <div>
+                    <strong class="text-gray-900">Mobile Development</strong>
+                    <p class="text-gray-600 text-sm">App native e cross-platform con React Native</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="order-1 md:order-2">
+              <div class="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+              </div>
+              <h2 class="text-4xl font-bold text-gray-900 mb-6">Sviluppo Software</h2>
+              <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                Creiamo software su misura utilizzando le tecnologie più moderne e le best practice 
+                di sviluppo per garantire codice pulito, scalabile e manutenibile.
+              </p>
+              <p class="text-gray-600 mb-6">
+                Dalla progettazione all'implementazione fino al deployment, seguiamo il tuo progetto 
+                in ogni fase con metodologie agile e comunicazione trasparente.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IT Consulting -->
+    <section id="consulting" class="py-20 px-6">
+      <div class="container mx-auto">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div class="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h2 class="text-4xl font-bold text-gray-900 mb-6">Consulenza IT</h2>
+              <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                Offriamo consulenza strategica e tecnica per aiutarti a prendere le decisioni giuste 
+                e guidare il tuo business verso il successo tecnologico.
+              </p>
+              <p class="text-gray-600 mb-6">
+                Analizziamo il tuo contesto, identifichiamo opportunità di miglioramento e 
+                definiamo roadmap tecnologiche chiare e realizzabili.
+              </p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-lg">
+              <h3 class="text-xl font-bold text-gray-900 mb-6">Cosa offriamo:</h3>
+              <ul class="space-y-4">
+                <li class="flex items-start">
+                  <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <div>
+                    <strong class="text-gray-900">Architettura Software</strong>
+                    <p class="text-gray-600 text-sm">Design di sistemi scalabili e manutenibili</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <div>
+                    <strong class="text-gray-900">Code Review & Refactoring</strong>
+                    <p class="text-gray-600 text-sm">Analisi del codice e miglioramento della qualità</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <div>
+                    <strong class="text-gray-900">Technical Due Diligence</strong>
+                    <p class="text-gray-600 text-sm">Valutazione tecnica per M&A e investimenti</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <div>
+                    <strong class="text-gray-900">DevOps & CI/CD</strong>
+                    <p class="text-gray-600 text-sm">Automazione, deployment e infrastructure as code</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <div>
+                    <strong class="text-gray-900">Technology Strategy</strong>
+                    <p class="text-gray-600 text-sm">Roadmap tecnologica e scelta delle tecnologie</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="py-20 px-6 bg-gray-50">
+      <div class="container mx-auto">
+        <div class="max-w-4xl mx-auto text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-6">Il Nostro Processo</h2>
+          <p class="text-xl text-gray-600">
+            Un approccio strutturato per garantire il successo del tuo progetto
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">
+              1
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Analisi</h3>
+            <p class="text-gray-600">
+              Comprendiamo le tue esigenze e definiamo obiettivi chiari
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">
+              2
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Progettazione</h3>
+            <p class="text-gray-600">
+              Creiamo l'architettura e il piano di sviluppo ottimale
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">
+              3
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Sviluppo</h3>
+            <p class="text-gray-600">
+              Implementiamo la soluzione con metodologie agile
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">
+              4
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Deploy & Support</h3>
+            <p class="text-gray-600">
+              Rilasciamo in produzione e forniamo supporto continuo
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-6 bg-primary-600 text-white">
+      <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-6">Hai un progetto in mente?</h2>
+        <p class="text-xl mb-8 text-primary-100 max-w-2xl mx-auto">
+          Contattaci per una consulenza gratuita e scopri come possiamo aiutarti a realizzarlo.
+        </p>
+        <a 
+          href="/contact" 
+          class="inline-block px-8 py-4 bg-white text-primary-600 rounded-lg hover:bg-gray-100 transition-all transform hover:scale-105 font-semibold shadow-lg"
+        >
+          Richiedi una Consulenza
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

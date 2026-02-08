@@ -20,3 +20,23 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+node_modules
+
+# Astro
+dist/
+.astro/
+.output/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.env
+.env.production
+.env.local
+.env.*.local
+.DS_Store
+*.swp
+*.swo
+*~
+*.tmp
+.cache/

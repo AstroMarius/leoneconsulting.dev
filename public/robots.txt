@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /portfolio-redirect.html
+
+Sitemap: https://leoneconsulting.dev/sitemap-index.xml

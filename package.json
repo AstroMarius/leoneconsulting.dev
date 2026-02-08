@@ -1,0 +1,30 @@
+{
+  "name": "leoneconsulting.dev",
+  "version": "1.0.0",
+  "description": "Leone Consulting - AI Engineering, Sviluppo Software e Consulenza IT",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AstroMarius/leoneconsulting.dev.git"
+  },
+  "keywords": ["ai", "machine-learning", "consulting", "software-development"],
+  "author": "Leone Consulting",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AstroMarius/leoneconsulting.dev/issues"
+  },
+  "homepage": "https://leoneconsulting.dev",
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.0",
+    "@astrojs/tailwind": "^6.0.2",
+    "astro": "^5.17.1",
+    "tailwindcss": "^3.4.19"
+  }
+}
