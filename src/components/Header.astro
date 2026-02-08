@@ -74,7 +74,7 @@ const basePath = lang === 'en' ? '/en' : '';
         <a href="https://portfolio.leoneconsulting.dev" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition-colors py-2">{t('nav.portfolio')}</a>
         <a href={`${basePath}/contact`} class="text-sm font-medium text-gray-600 hover:text-primary-600 transition-colors py-2">{t('nav.contact')}</a>
         <div class="pt-3 mt-3 border-t border-gray-200">
-          <LanguagePicker />
+          <LanguagePicker isMobile={true} />
         </div>
       </div>
     </div>

@@ -1,8 +1,16 @@
 ---
 import { languages } from '../i18n/translations';
 
+interface Props {
+  isMobile?: boolean;
+}
+
+const { isMobile = false } = Astro.props;
 const currentPath = Astro.url.pathname;
 const currentLang = currentPath.startsWith('/en') ? 'en' : 'it';
+
+const buttonId = isMobile ? 'lang-switcher-mobile' : 'lang-switcher';
+const menuId = isMobile ? 'lang-menu-mobile' : 'lang-menu';
 
 function getAlternatePath(lang: string) {
   if (lang === 'it') {
@@ -19,7 +27,7 @@ function getAlternatePath(lang: string) {
 
 <div class="relative inline-block">
   <button
-    id="lang-switcher"
+    id={buttonId}
     class="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-600 hover:text-primary-600 transition-colors rounded-lg hover:bg-gray-50"
     aria-label="Change language"
   >
@@ -33,7 +41,7 @@ function getAlternatePath(lang: string) {
   </button>
 
   <div
-    id="lang-menu"
+    id={menuId}
     class="hidden absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg border border-gray-200 py-1 z-50"
   >
     {Object.entries(languages).map(([code, name]) => (
@@ -49,17 +57,16 @@ function getAlternatePath(lang: string) {
   </div>
 </div>
 
-<script>
-  const button = document.getElementById('lang-switcher');
-  const menu = document.getElementById('lang-menu');
+<script define:vars={{ buttonId, menuId }}>
+  const button = document.getElementById(buttonId);
+  const menu = document.getElementById(menuId);
   
   button?.addEventListener('click', () => {
     menu?.classList.toggle('hidden');
   });
 
-  // Close menu when clicking outside
   document.addEventListener('click', (e) => {
-    if (!button?.contains(e.target as Node) && !menu?.contains(e.target as Node)) {
+    if (!button?.contains(e.target) && !menu?.contains(e.target)) {
       menu?.classList.add('hidden');
     }
   });
