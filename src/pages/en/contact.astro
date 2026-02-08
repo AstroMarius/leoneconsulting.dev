@@ -240,8 +240,31 @@ import Footer from '../../components/Footer.astro';
   const form = document.getElementById('contact-form') as HTMLFormElement;
   const messageDiv = document.getElementById('form-message');
 
+  function sanitizeInput(input: string): string {
+    const div = document.createElement('div');
+    div.textContent = input;
+    return div.innerHTML;
+  }
+
+  let submissionCount = 0;
+  let lastSubmissionTime = 0;
+  const MAX_SUBMISSIONS = 3;
+  const RATE_LIMIT_WINDOW = 60000;
+
   form?.addEventListener('submit', async (e) => {
     e.preventDefault();
+    
+    const now = Date.now();
+    if (now - lastSubmissionTime > RATE_LIMIT_WINDOW) {
+      submissionCount = 0;
+    }
+    
+    if (submissionCount >= MAX_SUBMISSIONS) {
+      messageDiv?.classList.remove('hidden', 'bg-green-100', 'text-green-800');
+      messageDiv?.classList.add('bg-red-100', 'text-red-800');
+      messageDiv!.textContent = 'Too many attempts. Please wait one minute before trying again.';
+      return;
+    }
     
     // Show loading state
     const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement;
@@ -249,13 +272,31 @@ import Footer from '../../components/Footer.astro';
     submitButton.textContent = 'Sending...';
     submitButton.disabled = true;
 
-    // Get form data
     const formData = new FormData(form);
+    const sanitizedData = {
+      name: sanitizeInput(formData.get('name') as string),
+      email: sanitizeInput(formData.get('email') as string),
+      company: sanitizeInput(formData.get('company') as string || ''),
+      service: sanitizeInput(formData.get('service') as string || ''),
+      message: sanitizeInput(formData.get('message') as string)
+    };
+
+    if (!sanitizedData.email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+      messageDiv?.classList.remove('hidden', 'bg-green-100', 'text-green-800');
+      messageDiv?.classList.add('bg-red-100', 'text-red-800');
+      messageDiv!.textContent = 'Invalid email address.';
+      submitButton.textContent = originalText;
+      submitButton.disabled = false;
+      return;
+    }
+    
+    submissionCount++;
+    lastSubmissionTime = now;
     
     // Simulate form submission (replace with actual endpoint)
     // In production, you'd send this to your backend or a service like Formspree
     setTimeout(() => {
-      messageDiv?.classList.remove('hidden');
+      messageDiv?.classList.remove('hidden', 'bg-red-100', 'text-red-800');
       messageDiv?.classList.add('bg-green-100', 'text-green-800');
       messageDiv!.textContent = 'Message sent successfully! We will reply soon.';
       
