@@ -67,15 +67,15 @@ const basePath = lang === 'en' ? '/en' : '';
 
     <!-- Mobile menu -->
     <div id="mobile-menu" class="hidden md:hidden pt-4 pb-2">
-      <div class{basePath || '/'} class="text-sm font-medium text-gray-600 hover:text-primary-600 transition-colors">{t('nav.home')}</a>
-        <a href={`${basePath}/about`} class="text-sm font-medium text-gray-600 hover:text-primary-600 transition-colors">{t('nav.about')}</a>
-        <a href={`${basePath}/services`} class="text-sm font-medium text-gray-600 hover:text-primary-600 transition-colors">{t('nav.services')}</a>
-        <a href="https://portfolio.leoneconsulting.dev" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition-colors">{t('nav.portfolio')}</a>
-        <a href={`${basePath}/contact`} class="text-sm font-medium text-gray-600 hover:text-primary-600 transition-colors">{t('nav.contact')}</a>
-        <div class="pt-2 border-t border-gray-200">
+      <div class="flex flex-col space-y-3">
+        <a href={basePath || '/'} class="text-sm font-medium text-gray-600 hover:text-primary-600 transition-colors py-2">{t('nav.home')}</a>
+        <a href={`${basePath}/about`} class="text-sm font-medium text-gray-600 hover:text-primary-600 transition-colors py-2">{t('nav.about')}</a>
+        <a href={`${basePath}/services`} class="text-sm font-medium text-gray-600 hover:text-primary-600 transition-colors py-2">{t('nav.services')}</a>
+        <a href="https://portfolio.leoneconsulting.dev" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition-colors py-2">{t('nav.portfolio')}</a>
+        <a href={`${basePath}/contact`} class="text-sm font-medium text-gray-600 hover:text-primary-600 transition-colors py-2">{t('nav.contact')}</a>
+        <div class="pt-3 mt-3 border-t border-gray-200">
           <LanguagePicker />
-        </divium text-gray-600 hover:text-primary-600 transition-colors">Portfolio</a>
-        <a href="/contact" class="text-sm font-medium text-gray-600 hover:text-primary-600 transition-colors">Contatti</a>
+        </div>
       </div>
     </div>
   </nav>
