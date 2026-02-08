@@ -1,25 +1,15 @@
----
-// Redirect configuration for portfolio subdomain
-// This file will be used when deploying to handle subdomain routing
-
-const portfolioUrl = 'https://portfolio.leoneconsulting.dev';
-
-// This is a placeholder for now
-// In production, you'll configure this at the DNS/hosting level
----
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url={portfolioUrl}">
+  <meta http-equiv="refresh" content="0; url=https://portfolio.leoneconsulting.dev">
   <meta name="robots" content="noindex">
   <title>Redirecting to Portfolio...</title>
 </head>
 <body>
   <p>Redirecting to portfolio...</p>
   <script>
-    window.location.href = '{portfolioUrl}';
+    window.location.href = 'https://portfolio.leoneconsulting.dev';
   </script>
 </body>
 </html>
