@@ -27,6 +27,9 @@ export const ui = {
     'services.ai.description': 'Sviluppo di sistemi intelligenti, machine learning e soluzioni AI personalizzate per automatizzare e ottimizzare i tuoi processi aziendali.',
     'services.ai.cta': 'Scopri di più',
     
+    'services.datascience.title': 'Data Science',
+    'services.datascience.description': 'Trasformazione dei dati in insight strategici. Analisi avanzate, modelli predittivi e business intelligence per decisioni consapevoli.',
+    
     'services.dev.title': 'Sviluppo Software',
     'services.dev.description': 'Applicazioni web, mobile e desktop su misura. Utilizziamo le tecnologie più moderne per creare software scalabile e performante.',
     
@@ -122,6 +125,9 @@ export const ui = {
     'services.ai.title': 'AI Engineering',
     'services.ai.description': 'Development of intelligent systems, machine learning and customized AI solutions to automate and optimize your business processes.',
     'services.ai.cta': 'Learn more',
+    
+    'services.datascience.title': 'Data Science',
+    'services.datascience.description': 'Data transformation into strategic insights. Advanced analytics, predictive models and business intelligence for informed decisions.',
     
     'services.dev.title': 'Software Development',
     'services.dev.description': 'Custom web, mobile and desktop applications. We use the most modern technologies to create scalable and performant software.',
