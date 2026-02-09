@@ -88,10 +88,9 @@ export default async (req: VercelRequest, res: VercelResponse) => {
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS
-      },
-      tls: {
-        rejectUnauthorized: false
       }
+      // TLS configuration removed for security - OVH's certificate should be valid
+      // If you experience SSL issues, verify the certificate chain instead of disabling checks
     });
 
     // Email content

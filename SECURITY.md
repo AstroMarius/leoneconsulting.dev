@@ -1,21 +1,29 @@
 # Security Policy
 
-## Supported Versions
-
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
-
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
-
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+Se hai scoperto una vulnerabilità di sicurezza, **non creare una issue pubblica su GitHub**.
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+### Come Segnalare
+
+Usa **GitHub Security Advisories**:
+- https://github.com/AstroMarius/leoneconsulting.dev/security/advisories
+- Oppure invia a: **info@leoneconsulting.dev**
+
+### Cosa Includere
+
+- Descrizione della vulnerabilità
+- Passi per riprodurre
+- Impatto potenziale
+- Proof of Concept (se disponibile)
+
+### Cosa Aspettarsi
+
+- Conferma: entro 48 ore
+- Risoluzione: entro 7 giorni lavorativi
+- Disclosure coordinata dopo il fix
+
+---
+
+**Ultimo aggiornamento:** 9 Febbraio 2026
+
