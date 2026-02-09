@@ -1,4 +1,4 @@
-import { VercelRequest, VercelResponse } from '@vercel/node';
+import type { VercelRequest, VercelResponse } from '@vercel/node';
 import nodemailer from 'nodemailer';
 
 // Rate limiting
@@ -36,11 +36,6 @@ function validateEmail(email: string): boolean {
 }
 
 export default async (req: VercelRequest, res: VercelResponse) => {
-  // Only POST requests
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
-
   // Check CORS
   res.setHeader('Access-Control-Allow-Origin', 'https://leoneconsulting.dev');
   res.setHeader('Access-Control-Allow-Methods', 'POST');
@@ -48,6 +43,11 @@ export default async (req: VercelRequest, res: VercelResponse) => {
 
   if (req.method === 'OPTIONS') {
     return res.status(200).end();
+  }
+
+  // Only POST requests
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {

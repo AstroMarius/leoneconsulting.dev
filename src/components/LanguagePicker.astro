@@ -25,9 +25,11 @@ function getAlternatePath(lang: string) {
 }
 ---
 
-<div class="relative inline-block">
+<div class="relative inline-block" data-lang-picker>
   <button
     id={buttonId}
+    data-button-id={buttonId}
+    data-menu-id={menuId}
     class="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-600 hover:text-primary-600 transition-colors rounded-lg hover:bg-gray-50"
     aria-label="Change language"
   >
@@ -57,17 +59,27 @@ function getAlternatePath(lang: string) {
   </div>
 </div>
 
-<script define:vars={{ buttonId, menuId }}>
-  const button = document.getElementById(buttonId);
-  const menu = document.getElementById(menuId);
-  
-  button?.addEventListener('click', () => {
-    menu?.classList.toggle('hidden');
-  });
+<script>
+  document.querySelectorAll('[data-lang-picker]').forEach((picker) => {
+    const button = picker.querySelector('button[data-button-id]') as HTMLButtonElement;
+    if (!button) return;
+    
+    const buttonId = button.dataset.buttonId;
+    const menuId = button.dataset.menuId;
+    if (!buttonId || !menuId) return;
+    
+    const menu = document.getElementById(menuId);
+    if (!menu) return;
+    
+    button.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
 
-  document.addEventListener('click', (e) => {
-    if (!button?.contains(e.target) && !menu?.contains(e.target)) {
-      menu?.classList.add('hidden');
-    }
+    document.addEventListener('click', (e) => {
+      const target = e.target as Node;
+      if (!button.contains(target) && !menu.contains(target)) {
+        menu.classList.add('hidden');
+      }
+    });
   });
 </script>
