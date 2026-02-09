@@ -39,13 +39,20 @@ Sito web ufficiale di Leone Consulting - AI Engineering, Sviluppo Software e Con
 └── package.json
 ```
 
-## 🌐 Pagine
+## 🌐 Servizi
 
-- **Home** - Presentazione dei servizi e value proposition
-- **Chi Siamo** - Storia, missione e valori dell'azienda
-- **Servizi** - Dettagli su AI Engineering, Sviluppo Software e Consulenza IT
-- **Contatti** - Form di contatto e informazioni
-- **Portfolio** - Redirect a portfolio.leoneconsulting.dev
+- **AI Engineering** - Sistemi intelligenti e machine learning
+- **Data Science** - Analisi dati, modelli predittivi e business intelligence
+- **Sviluppo Software** - Applicazioni web, mobile e backend
+- **Consulenza IT** - Architettura, strategy e ottimizzazione
+
+## 📄 Pagine
+
+- **Home** - Presentazione e overview dei servizi
+- **Chi Siamo** - Azienda e competenze
+- **Servizi** - Dettagli completi di ogni servizio
+- **Contatti** - Form di contatto
+- **Prenota** - Booking consulenze
 
 ## 📝 Deployment
 
