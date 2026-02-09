@@ -18,6 +18,10 @@ rad.json
 *.g.xlf
 #License-file
 *.flf
+
+# Environment variables
+.env.local
+.env.*.local
 #Test results file
 TestResults.xml
 node_modules
