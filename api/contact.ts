@@ -88,6 +88,9 @@ export default async (req: VercelRequest, res: VercelResponse) => {
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS
+      },
+      tls: {
+        rejectUnauthorized: false
       }
     });
 
@@ -104,7 +107,7 @@ export default async (req: VercelRequest, res: VercelResponse) => {
     `;
 
     // Send email
-    await transporter.sendMail({
+    const info = await transporter.sendMail({
       from: process.env.SMTP_FROM || process.env.SMTP_USER,
       to: process.env.SMTP_TO,
       replyTo: sanitizedData.email,
@@ -121,10 +124,12 @@ ${sanitizedData.message}
       `
     });
 
+    console.log('Email sent successfully:', info.messageId);
     return res.status(200).json({ success: true, message: 'Email sent successfully' });
 
   } catch (error) {
     console.error('Contact form error:', error);
-    return res.status(500).json({ error: 'Failed to send email' });
+    console.error('Error details:', JSON.stringify(error, null, 2));
+    return res.status(500).json({ error: 'Failed to send email', details: process.env.NODE_ENV === 'development' ? String(error) : undefined });
   }
 };
