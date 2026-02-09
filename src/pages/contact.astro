@@ -140,6 +140,7 @@ import Footer from '../components/Footer.astro';
                   >
                     <option value="">Seleziona un servizio</option>
                     <option value="ai">AI Engineering</option>
+                    <option value="datascience">Data Science</option>
                     <option value="development">Sviluppo Software</option>
                     <option value="consulting">Consulenza IT</option>
                     <option value="other">Altro</option>
@@ -293,21 +294,37 @@ import Footer from '../components/Footer.astro';
     submissionCount++;
     lastSubmissionTime = now;
     
-    // Simulate form submission (replace with actual endpoint)
-    // In production, you'd send this to your backend or a service like Formspree
-    setTimeout(() => {
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(sanitizedData)
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send email');
+      }
+
       messageDiv?.classList.remove('hidden', 'bg-red-100', 'text-red-800');
       messageDiv?.classList.add('bg-green-100', 'text-green-800');
       messageDiv!.textContent = 'Messaggio inviato con successo! Ti risponderemo presto.';
       
       form.reset();
-      submitButton.textContent = originalText;
-      submitButton.disabled = false;
 
       // Hide message after 5 seconds
       setTimeout(() => {
         messageDiv?.classList.add('hidden');
       }, 5000);
-    }, 1000);
+    } catch (error) {
+      console.error('Error:', error);
+      messageDiv?.classList.remove('hidden', 'bg-green-100', 'text-green-800');
+      messageDiv?.classList.add('bg-red-100', 'text-red-800');
+      messageDiv!.textContent = 'Errore nell\'invio del messaggio. Riprova più tardi.';
+    } finally {
+      submitButton.textContent = originalText;
+      submitButton.disabled = false;
+    }
   });
 </script>
