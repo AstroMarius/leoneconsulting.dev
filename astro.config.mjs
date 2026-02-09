@@ -7,7 +7,7 @@ import vercel from '@astrojs/vercel/serverless';
 export default defineConfig({
   site: 'https://leoneconsulting.dev',
   integrations: [tailwind(), sitemap()],
-  output: 'static',
+  output: 'server',
   adapter: vercel(),
   i18n: {
     defaultLocale: 'it',
