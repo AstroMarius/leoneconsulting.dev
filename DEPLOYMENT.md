@@ -1,52 +1,82 @@
 # Guida al Deployment
 
-Questo progetto può essere deployato su diversi servizi di hosting per siti statici.
+Questo progetto è attualmente deployato su **Vercel**.
 
-## Opzioni di Deployment
+## Deployment Attivo
 
-### 1. Vercel (Consigliato)
+### ✅ Vercel (Produzione)
 
-1. Vai su [vercel.com](https://vercel.com)
-2. Importa il repository GitHub
-3. Vercel rileverà automaticamente Astro
-4. Click "Deploy"
+**URL di Produzione:**
+- Main: https://leoneconsulting.dev
+- Vercel: https://leoneconsulting-dev.vercel.app
 
-### 2. Netlify
+**Deployment Automatico:**
+- Ogni push su `main` triggera un deployment automatico su Vercel
+- Preview deployments per ogni PR
 
-1. Vai su [netlify.com](https://netlify.com)
-2. Importa il repository GitHub
-3. Le configurazioni sono già presenti in `netlify.toml`
-4. Click "Deploy"
+**Setup Iniziale (già configurato):**
+1. Progetto linkato: `leoneconsulting-dev`
+2. Dominio custom aggiunto: `leoneconsulting.dev`
+3. Build command: `npm run build`
+4. Output directory: `dist`
 
-### 3. GitHub Pages
+## Configurazione DNS su OVH
 
-1. Vai nelle Settings del repository
-2. Pages > Source > GitHub Actions
-3. Il workflow è già configurato in `.github/workflows/deploy.yml`
-4. Ogni push su main fa partire il deployment automatico
+**IMPORTANTE:** Per far funzionare il dominio `leoneconsulting.dev`, configura questi record DNS su OVH:
 
-### 4. Cloudflare Pages
+### Record Obbligatori
 
-1. Vai su [pages.cloudflare.com](https://pages.cloudflare.com)
-2. Connetti il repository GitHub
-3. Configurazione:
-   - Build command: `npm run build`
-   - Output directory: `dist`
-   - Node version: 20
+#### Opzione 1: Record A (Root Domain)
+```
+Tipo: A
+Nome: @ (oppure lascia vuoto)
+Valore: 76.76.21.22
+TTL: 300
+```
 
-## Configurazione Domini
+#### Opzione 2: Record A Alternativo (Ridondanza)
+```
+Tipo: A
+Nome: @ (oppure lascia vuoto)
+Valore: 66.33.60.129
+TTL: 300
+```
 
-### Domini Principali
+#### Record CNAME per WWW (Opzionale)
+```
+Tipo: CNAME
+Nome: www
+Valore: cname.vercel-dns-017.com
+TTL: 300
+```
+
+### Verifica DNS
+Dopo la configurazione, attendi 5-10 minuti e verifica:
+```bash
+dig +short leoneconsulting.dev
+# Dovrebbe restituire: 76.76.21.22 o 66.33.60.129
+```
+
+### Alternative: Nameserver Vercel (Più Automatico)
+Se preferisci, puoi cambiare i nameserver su OVH:
+```
+ns1.vercel-dns.com
+ns2.vercel-dns.com
+```
+Questo permette a Vercel di gestire automaticamente tutti i record DNS.
+
+## Domini Principali
 - **leoneconsulting.dev** → Sito principale
 - **portfolio.leoneconsulting.dev** → Portfolio (da configurare separatamente)
 
-### DNS Configuration
+## Altre Opzioni di Deployment (Non Attive)
 
-Per configurare il sottodominio portfolio:
+### Netlify (Supportato)
+Le configurazioni sono già presenti in `netlify.toml` se vuoi usare Netlify.
 
-1. Aggiungi un record DNS CNAME:
-   - Name: `portfolio`
-   - Target: indirizzo del servizio di hosting del portfolio
+### ~~GitHub Pages~~ (Disabilitato)
+Il workflow GitHub Pages è stato disabilitato per evitare conflitti.
+File: `.github/workflows/deploy.yml.disabled`
 
 2. Il redirect automatico è già configurato nel sito
 
