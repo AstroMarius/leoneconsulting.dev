@@ -103,7 +103,7 @@ export const ui = {
     'booking.form.success': 'Prenotazione ricevuta! Ti contatteremo entro 24 ore per confermare.',
     'booking.form.error': 'Si è verificato un errore. Riprova o contattaci direttamente.',
     'booking.availability': 'Disponibilità',
-    'booking.availability.desc': 'Orari: Lun-Ven 15:00-18:00. Ti ricontatteremo per confermare la disponibilità.',
+    'booking.availability.desc': 'Orari: Lun-Ven 15-18. Ti ricontatteremo per confermare la disponibilità.',
   },
   en: {
     'nav.home': 'Home',
@@ -201,7 +201,7 @@ export const ui = {
     'booking.form.success': 'Booking received! We\'ll contact you within 24 hours to confirm.',
     'booking.form.error': 'An error occurred. Please try again or contact us directly.',
     'booking.availability': 'Availability',
-    'booking.availability.desc': 'Hours: Mon-Fri 3:00 PM - 6:00 PM. We\'ll contact you back to confirm availability.',
+    'booking.availability.desc': 'Hours: Mon-Fri 3-6 PM. We\'ll contact you back to confirm availability.',
     'contact.form.success': 'Message sent successfully! We will reply soon.',
   },
 } as const;
