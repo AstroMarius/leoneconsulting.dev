@@ -59,7 +59,7 @@ const subtitle = titleParts[1] ? `per ${titleParts[1]}` : '';
     
     <!-- Metriche Chiave Inline -->
     {topMetrics.length > 0 && (
-      <div class="flex flex-wrap gap-3 mb-4 py-3 border-y border-gray-100">
+      <div class="flex flex-wrap gap-3 mb-6 py-3 border-y border-gray-100">
         {topMetrics.map(metric => (
           <span class="text-sm font-semibold text-gray-900">
             {metric.value}
@@ -67,12 +67,6 @@ const subtitle = titleParts[1] ? `per ${titleParts[1]}` : '';
         ))}
       </div>
     )}
-    
-    <!-- Tech Stack Minimal -->
-    <div class="flex flex-wrap gap-2 mb-4 text-xs text-gray-500">
-      {caseStudy.tech.stack.slice(0, 3).join(' • ')}
-      {caseStudy.tech.stack.length > 3 && ` • +${caseStudy.tech.stack.length - 3}`}
-    </div>
     
     <!-- CTA -->
     <a 
