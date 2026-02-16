@@ -1,0 +1,73 @@
+---
+import type { CaseStudy } from '../types/case-study';
+
+interface Props {
+  caseStudy: CaseStudy;
+  featured?: boolean;
+}
+
+const { caseStudy, featured = false } = Astro.props;
+const topMetrics = caseStudy.results.metrics.slice(0, 2);
+---
+
+<article class={`bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-1 border border-gray-100 overflow-hidden ${featured ? 'md:col-span-2' : ''}`}>
+  {caseStudy.featuredImage && (
+    <div class="relative h-48 overflow-hidden bg-gray-100">
+      <img 
+        src={caseStudy.featuredImage} 
+        alt={caseStudy.title}
+        class="w-full h-full object-cover"
+        loading="lazy"
+      />
+    </div>
+  )}
+  
+  <div class="p-6">
+    <div class="flex items-center gap-2 text-sm text-gray-500 mb-3">
+      <span class="font-medium">{caseStudy.client}</span>
+      <span>•</span>
+      <span>{caseStudy.sector}</span>
+    </div>
+    
+    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+      {caseStudy.title}
+    </h3>
+    
+    <p class="text-gray-600 mb-4 line-clamp-2 leading-relaxed">
+      {caseStudy.problem.description}
+    </p>
+    
+    {topMetrics.length > 0 && (
+      <div class="flex flex-wrap gap-2 mb-4">
+        {topMetrics.map(metric => (
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary-100 text-primary-800">
+            {metric.value}
+          </span>
+        ))}
+      </div>
+    )}
+    
+    <div class="flex flex-wrap gap-2 mb-4">
+      {caseStudy.tech.stack.slice(0, 4).map(tech => (
+        <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-gray-100 text-gray-700">
+          {tech}
+        </span>
+      ))}
+      {caseStudy.tech.stack.length > 4 && (
+        <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-gray-100 text-gray-700">
+          +{caseStudy.tech.stack.length - 4}
+        </span>
+      )}
+    </div>
+    
+    <a 
+      href={`/portfolio/${caseStudy.slug}`}
+      class="text-primary-600 font-semibold hover:text-primary-700 transition-colors inline-flex items-center group"
+    >
+      Leggi il case study
+      <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </a>
+  </div>
+</article>

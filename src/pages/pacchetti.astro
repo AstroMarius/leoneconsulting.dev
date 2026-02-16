@@ -1,0 +1,200 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PackageCard from '../components/PackageCard.astro';
+import type { Package } from '../types/package';
+
+// Import packages
+import techAudit from '../../company/packages/tech-audit.json';
+import mvpSprint from '../../company/packages/mvp-sprint.json';
+import dataPipeline from '../../company/packages/data-pipeline.json';
+
+const packages: Package[] = [
+  techAudit as Package,
+  mvpSprint as Package,
+  dataPipeline as Package,
+].filter(pkg => pkg.metadata.featured);
+---
+
+<Layout 
+  title="Pacchetti - Servizi Chiari, Risultati Certi | Leone Consulting"
+  description="Scegli il pacchetto per la tua fase: Tech/AI Audit (5 giorni), MVP Sprint (2-4 settimane), o Data Pipeline (2-6 settimane). Deliverable chiari, prezzi trasparenti."
+>
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="pt-32 pb-12 px-6 bg-gradient-to-br from-primary-50 to-white">
+      <div class="container mx-auto">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            Servizi Chiari,
+            <span class="text-primary-600">Risultati Certi</span>
+          </h1>
+          <p class="text-xl text-gray-600 leading-relaxed">
+            Pacchetti con deliverable definiti, timeline chiare e prezzi trasparenti. Nessuna sorpresa, solo valore.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Packages Grid -->
+    <section class="py-16 px-6">
+      <div class="container mx-auto max-w-6xl">
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          {packages.map(pkg => (
+            <PackageCard package={pkg} />
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailed Package Sections -->
+    {packages.map(pkg => (
+      <section id={pkg.slug} class="py-16 px-6 border-t border-gray-200">
+        <div class="container mx-auto max-w-4xl">
+          <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">{pkg.title}</h2>
+            <p class="text-xl text-gray-600">{pkg.tagline}</p>
+          </div>
+
+          <!-- Deliverables -->
+          <div class="mb-12">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">{pkg.deliverables.title}</h3>
+            <div class="space-y-6">
+              {pkg.deliverables.items.map(item => (
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                  <div class="flex items-start justify-between mb-2">
+                    <h4 class="text-lg font-bold text-gray-900">{item.name}</h4>
+                    {item.format && (
+                      <span class="text-sm bg-primary-100 text-primary-800 px-3 py-1 rounded-full font-medium">
+                        {item.format}
+                      </span>
+                    )}
+                  </div>
+                  <p class="text-gray-600 leading-relaxed">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Grid: For Whom + Requirements -->
+          <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-6">{pkg.forWhom.title}</h3>
+              <ul class="space-y-3">
+                {pkg.forWhom.bullets.map(bullet => (
+                  <li class="flex items-start gap-3 text-gray-700">
+                    <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-6">{pkg.requirements.title}</h3>
+              <ul class="space-y-3">
+                {pkg.requirements.items.map(item => (
+                  <li class="flex items-start gap-3 text-gray-700">
+                    <svg class="w-6 h-6 text-primary-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                    </svg>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <!-- Timeline -->
+          <div class="mb-12 bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl border border-blue-200">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">Timeline: {pkg.timeline.duration}</h3>
+            {pkg.timeline.breakdown && (
+              <div class="space-y-4">
+                {pkg.timeline.breakdown.map((phase, index) => (
+                  <div class="flex items-start gap-4">
+                    <div class="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">
+                      {index + 1}
+                    </div>
+                    <div class="flex-grow">
+                      <div class="font-semibold text-gray-900">{phase.phase}</div>
+                      <div class="text-sm text-gray-600">{phase.days} giorni</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <!-- Process -->
+          <div class="mb-12">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">Come Funziona</h3>
+            <ol class="space-y-4">
+              {pkg.process.map((step, index) => (
+                <li class="flex items-start gap-4">
+                  <span class="flex-shrink-0 w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold text-sm">
+                    {index + 1}
+                  </span>
+                  <span class="text-gray-700 pt-1">{step}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+
+          <!-- FAQ -->
+          {pkg.faq && pkg.faq.length > 0 && (
+            <div class="mb-12">
+              <h3 class="text-2xl font-bold text-gray-900 mb-6">Domande Frequenti</h3>
+              <div class="space-y-4">
+                {pkg.faq.map(item => (
+                  <details class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                    <summary class="font-bold text-gray-900 cursor-pointer hover:text-primary-600 transition-colors">
+                      {item.question}
+                    </summary>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                      {item.answer}
+                    </p>
+                  </details>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <!-- CTA -->
+          <div class="text-center">
+            <a 
+              href={pkg.cta.url}
+              class="inline-block px-10 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-all transform hover:scale-105 font-bold shadow-lg text-lg"
+            >
+              {pkg.cta.text}
+            </a>
+          </div>
+        </div>
+      </section>
+    ))}
+
+    <!-- Final CTA -->
+    <section class="py-20 px-6 bg-gradient-to-br from-gray-900 to-gray-800">
+      <div class="container mx-auto max-w-4xl text-center">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+          Non sei sicuro quale pacchetto scegliere?
+        </h2>
+        <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+          Richiedi un audit asincrono gratuito. Ti dirò quale approccio è meglio per il tuo caso.
+        </p>
+        <a 
+          href="/audit-asincrono" 
+          class="inline-block px-10 py-4 bg-white text-gray-900 rounded-lg hover:bg-gray-100 transition-all transform hover:scale-105 font-bold shadow-lg text-lg"
+        >
+          Richiedi Audit Gratuito
+        </a>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>

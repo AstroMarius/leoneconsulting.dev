@@ -1,0 +1,102 @@
+{
+  "slug": "pipeline-analytics-ecommerce",
+  "title": "Pipeline Dati per Analytics E-commerce",
+  "client": "E-commerce B2C medio",
+  "sector": "E-commerce",
+  "published": true,
+  "featuredImage": "/img/case-studies/ecommerce-pipeline.jpg",
+  
+  "problem": {
+    "description": "Un e-commerce in crescita aveva dati sparsi tra Shopify, Google Analytics, Facebook Ads e un CRM custom. I report erano manuali e richiedevano giorni. Impossibile fare analisi cross-piattaforma o calcolare metriche complesse come LTV.",
+    "painPoints": [
+      "Dati in 4 sistemi diversi, nessuna visione unificata",
+      "Report settimanali richiedevano export CSV manuali e merge in Excel",
+      "Impossibile calcolare LTV, CAC o altre metriche strategiche",
+      "Decisioni di marketing basate su dati parziali o obsoleti"
+    ]
+  },
+  
+  "constraints": {
+    "timeline": "6 settimane",
+    "budget": "Budget medio, focus su ROI rapido",
+    "technical": [
+      "API rate limits di piattaforme third-party",
+      "Dati storici incompleti (alcuni mesi mancanti)",
+      "Team tecnico interno limitato (1 developer junior)"
+    ]
+  },
+  
+  "solution": {
+    "architecture": "Data pipeline cloud-native: Fivetran per ingestion da Shopify/GA/FB Ads → BigQuery come data warehouse → dbt per transformations → Metabase per visualizzazione. Airflow per orchestrazione e scheduling.",
+    "keyDecisions": [
+      "Fivetran per ingestion (no-code, affidabile) invece di custom scrapers",
+      "BigQuery per storage (pay-per-query, scalabile, zero maintenance)",
+      "dbt per data modeling (SQL, version control, testabile)",
+      "Metabase per BI (self-service, non richiede data analyst dedicato)"
+    ],
+    "approach": "Implementazione incrementale: settimana 1-2 = setup infrastruttura + prima fonte (Shopify), settimana 3-4 = aggiunta GA e FB Ads + prime metriche, settimana 5-6 = dbt models complessi (LTV, cohorts) + training team."
+  },
+  
+  "results": {
+    "metrics": [
+      {
+        "label": "Tempo report ridotto",
+        "value": "da 2 giorni a real-time",
+        "isProxy": false,
+        "description": "Dashboard automatiche aggiornate ogni ora"
+      },
+      {
+        "label": "Metriche strategic",
+        "value": "LTV, CAC, ROI ora disponibili",
+        "isProxy": false,
+        "description": "Prima impossibili da calcolare"
+      },
+      {
+        "label": "Decisioni data-driven",
+        "value": "+40% velocità decisionale",
+        "isProxy": true,
+        "description": "Stimato da stakeholder, time-to-insight ridotto"
+      },
+      {
+        "label": "ROI marketing",
+        "value": "+15% in 3 mesi",
+        "isProxy": false,
+        "description": "Ottimizzazione campagne grazie a dati migliori"
+      }
+    ],
+    "impact": "Il team marketing ora prende decisioni basate su dati real-time e completi. Hanno identificato 3 segmenti cliente ad alto LTV prima ignorati, e ottimizzato il budget ads tagliando canali non performanti. Pipeline pronta per ML/predictive analytics."
+  },
+  
+  "tech": {
+    "stack": [
+      "Fivetran",
+      "BigQuery",
+      "dbt",
+      "Metabase",
+      "Airflow",
+      "Python"
+    ],
+    "tools": [
+      "Shopify API",
+      "Google Analytics API",
+      "Facebook Marketing API",
+      "Git",
+      "Docker"
+    ]
+  },
+  
+  "role": [
+    "Design architettura data pipeline end-to-end",
+    "Setup Fivetran connectors e BigQuery",
+    "Data modeling con dbt (schema, transformations, tests)",
+    "Creazione dashboard Metabase con KPI strategici",
+    "Documentazione e training del team",
+    "Setup monitoring e alerting"
+  ],
+  
+  "metadata": {
+    "duration": "6 settimane",
+    "year": 2025,
+    "language": "it"
+  }
+}
