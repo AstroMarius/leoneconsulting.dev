@@ -8,9 +8,9 @@ export const prerender = true;
 
 export async function getStaticPaths() {
   const caseStudies = [
-    await import('../../../../company/case-studies/dashboard-kpi-operations.json'),
-    await import('../../../../company/case-studies/prototipo-ai-classificazione.json'),
-    await import('../../../../company/case-studies/pipeline-analytics-ecommerce.json'),
+    await import('../../../../company/case-studies/dashboard-kpi-operations.en.json'),
+    await import('../../../../company/case-studies/prototipo-ai-classificazione.en.json'),
+    await import('../../../../company/case-studies/pipeline-analytics-ecommerce.en.json'),
   ];
 
   return caseStudies.map((cs) => ({
