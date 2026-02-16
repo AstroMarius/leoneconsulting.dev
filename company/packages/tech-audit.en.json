@@ -1,0 +1,128 @@
+{
+  "slug": "tech-ai-audit",
+  "title": "Tech/AI Audit",
+  "tagline": "Technical diagnosis and roadmap in 5 business days",
+  "price": {
+    "display": "starting from CHF 2,700",
+    "value": 2700,
+    "currency": "CHF"
+  },
+  
+  "forWhom": {
+    "title": "Who is this audit for?",
+    "bullets": [
+      "You have a tech/AI idea or project but don't know if it's feasible or where to start",
+      "Your internal team lacks AI/ML expertise and you want an external assessment",
+      "You want a clear plan (risks, quick wins, 30/60/90 day roadmap) before investing"
+    ]
+  },
+  
+  "deliverables": {
+    "title": "What you get",
+    "items": [
+      {
+        "name": "Technical Diagnosis Report",
+        "description": "Analysis of current state: architecture, stack, available data, technical debt",
+        "format": "PDF 15-20 pages"
+      },
+      {
+        "name": "Risk Assessment",
+        "description": "Technical, timeline, cost and compliance risks. Overall feasibility (Go/No-Go/Go with modifications)",
+        "format": "Dedicated section in report"
+      },
+      {
+        "name": "Quick Wins",
+        "description": "3-5 immediate actions (1-2 weeks) that deliver quick value with minimal effort",
+        "format": "Actionable checklist"
+      },
+      {
+        "name": "30/60/90 Day Roadmap",
+        "description": "Phased implementation plan with priorities, dependencies and milestones",
+        "format": "Gantt or visual timeline"
+      },
+      {
+        "name": "Effort & Budget Estimate",
+        "description": "Ballpark figures for time, costs, required team size",
+        "format": "Range and breakdown per phase"
+      },
+      {
+        "name": "Q&A Session",
+        "description": "1 hour video call to discuss the report and answer questions",
+        "format": "Google Meet / Zoom"
+      }
+    ]
+  },
+  
+  "requirements": {
+    "title": "What we need from you",
+    "items": [
+      "Initial brief (1-2 pages): objective, context, constraints, deadlines",
+      "Read-only access to existing repo/code (if applicable)",
+      "1-2 hours interview with key stakeholders (phone or video call)",
+      "Data samples (if data/AI project) or screenshots of existing systems"
+    ]
+  },
+  
+  "timeline": {
+    "duration": "5 business days",
+    "breakdown": [
+      {
+        "phase": "Day 1: Kickoff & info gathering",
+        "days": "1"
+      },
+      {
+        "phase": "Days 2-3: Technical analysis & research",
+        "days": "2"
+      },
+      {
+        "phase": "Day 4: Report & roadmap writing",
+        "days": "1"
+      },
+      {
+        "phase": "Day 5: Review & Q&A session",
+        "days": "1"
+      }
+    ]
+  },
+  
+  "process": [
+    "Send initial brief and materials",
+    "Schedule kickoff call (1h) to understand objectives and constraints",
+    "Analyze your technical situation (code, data, stack, team)",
+    "Prepare report with diagnosis, risks, roadmap and estimates",
+    "Deliver report and conduct Q&A session (1h)"
+  ],
+  
+  "cta": {
+    "text": "Request Tech/AI Audit",
+    "url": "/en/booking?package=tech-audit"
+  },
+  
+  "faq": [
+    {
+      "question": "Is 5 days realistic for a complete audit?",
+      "answer": "Yes. It's an intensive diagnosis, not a multi-month consulting engagement. I focus on identifying main risks, quick wins and phased roadmap. Perfect for pre-investment decisions."
+    },
+    {
+      "question": "What if I don't have code yet, just an idea?",
+      "answer": "No problem. I can audit feasibility based on brief, similar projects, and market research. Less technical deep dive, more strategic assessment."
+    },
+    {
+      "question": "Do I get recommendations even if the idea isn't feasible?",
+      "answer": "Absolutely. If there are blocking issues, I'll tell you clearly and suggest alternatives or pivots that could work."
+    },
+    {
+      "question": "Can we continue working together after the audit?",
+      "answer": "Yes. If audit results are positive and you want to proceed, I can implement the roadmap through MVP Sprint or custom projects."
+    },
+    {
+      "question": "Is the report confidential?",
+      "answer": "100%. NDA available upon request. All materials and findings remain your property."
+    }
+  ],
+  
+  "metadata": {
+    "featured": true,
+    "language": "en"
+  }
+}

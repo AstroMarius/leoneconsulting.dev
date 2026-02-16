@@ -1,0 +1,124 @@
+{
+  "slug": "mvp-sprint",
+  "title": "MVP Sprint",
+  "tagline": "Working prototype in 2-4 weeks",
+  "price": {
+    "display": "CHF 5,500 - CHF 13,000",
+    "currency": "CHF"
+  },
+  
+  "forWhom": {
+    "title": "Who is this sprint for?",
+    "bullets": [
+      "You want to validate an idea with a real prototype (not mockup) before investing in full development",
+      "You need a working demo to present to investors, clients or internal stakeholders",
+      "You want to test technical feasibility of complex architecture or features with a rapid PoC"
+    ]
+  },
+  
+  "deliverables": {
+    "title": "What you get",
+    "items": [
+      {
+        "name": "Working Prototype",
+        "description": "Deployed web-accessible application with core features working (not mockup)",
+        "format": "Live web app with public or private URL"
+      },
+      {
+        "name": "Clean Codebase",
+        "description": "Git repository with clear, structured and commented code. Ready to be extended by your team",
+        "format": "GitHub/GitLab private repo"
+      },
+      {
+        "name": "Automated Deploy",
+        "description": "Basic CI/CD setup for deployment on Vercel/Railway/AWS. Push to deploy ready",
+        "format": "Configured pipeline"
+      },
+      {
+        "name": "Basic Metrics",
+        "description": "Minimal analytics/monitoring to track usage and performance (Plausible, Sentry, or similar)",
+        "format": "Dashboard + integration"
+      },
+      {
+        "name": "Technical Documentation",
+        "description": "README with architecture, local setup, deploy, API docs (if applicable)",
+        "format": "Markdown in repo"
+      },
+      {
+        "name": "Handover Session",
+        "description": "1-2 hours code and architecture walkthrough with your team",
+        "format": "Video call + recording"
+      }
+    ]
+  },
+  
+  "requirements": {
+    "title": "What we need from you",
+    "items": [
+      "Detailed brief (3-5 pages): objective, main user stories, constraints, audience",
+      "1 stakeholder available for weekly syncs (1h/week)",
+      "Design/wireframes (if you have UI already, otherwise I use Tailwind components/standard UI kit)",
+      "Access to third-party services/APIs if needed (test accounts OK)",
+      "Quick feedback on WIP builds (within 24-48h)"
+    ]
+  },
+  
+  "timeline": {
+    "duration": "2-4 weeks",
+    "breakdown": [
+      {
+        "phase": "Week 1: Setup, architecture, core features",
+        "days": "5"
+      },
+      {
+        "phase": "Week 2: Additional features, integrations, UI",
+        "days": "5"
+      },
+      {
+        "phase": "Week 3-4: Refinement, deploy, testing, handover",
+        "days": "5-10"
+      }
+    ]
+  },
+  
+  "process": [
+    "Kickoff call: define scope, MVP features, tech stack and constraints",
+    "Each week: WIP build deployed for review and feedback",
+    "Rapid iterations: prioritize features based on feedback",
+    "Final deploy + documentation + handover session",
+    "Optional: post-launch support (1-2 weeks bugfix included)"
+  ],
+  
+  "cta": {
+    "text": "Request MVP Sprint",
+    "url": "/en/booking?package=mvp-sprint"
+  },
+  
+  "faq": [
+    {
+      "question": "What is NOT included in an MVP Sprint?",
+      "answer": "Not full production-ready development. MVP is functional but may lack: advanced auth, edge cases, polished UI/UX, complete test coverage, enterprise scalability. It's designed to validate, not replace full-scale development."
+    },
+    {
+      "question": "Can I extend the MVP after the sprint?",
+      "answer": "Yes. Codebase is clean and structured specifically to be extended. You can do it internally or we can continue with additional sprints."
+    },
+    {
+      "question": "How 'working' is the prototype?",
+      "answer": "100% functional for core features defined in scope. Not a clickable mockup: it's a deployed app you can use, test with real users and integrate with external services."
+    },
+    {
+      "question": "Can I change scope during the sprint?",
+      "answer": "Yes, within reasonable limits. We work iteratively: if a feature becomes less priority after first test, we can change it. But significant scope creep extends timeline."
+    },
+    {
+      "question": "Do I own the code?",
+      "answer": "Yes, 100%. Complete ownership of repo, code, deploy. After handover, you're the owner."
+    }
+  ],
+  
+  "metadata": {
+    "featured": true,
+    "language": "en"
+  }
+}

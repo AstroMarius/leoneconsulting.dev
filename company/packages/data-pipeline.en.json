@@ -1,0 +1,132 @@
+{
+  "slug": "data-pipeline-dashboard",
+  "title": "Data Pipeline & Dashboard",
+  "tagline": "Data infrastructure from zero to operational dashboard in 2-6 weeks",
+  "price": {
+    "display": "CHF 6,500 - CHF 16,000",
+    "currency": "CHF"
+  },
+  
+  "forWhom": {
+    "title": "Who is this package for?",
+    "bullets": [
+      "You have data scattered across multiple systems (ERP, CRM, Excel sheets, databases) and want to centralize and visualize it",
+      "You create manual reports that take days and want to automate them with real-time dashboards",
+      "You want to build a solid data foundation for future AI/ML projects or advanced analytics"
+    ]
+  },
+  
+  "deliverables": {
+    "title": "What you get",
+    "items": [
+      {
+        "name": "ETL/Data Pipeline",
+        "description": "Automated ingestion system that extracts data from N sources, transforms and loads into centralized DB",
+        "format": "Python/Airflow/dbt code + scheduling"
+      },
+      {
+        "name": "Data Warehouse/Lake",
+        "description": "Centralized database optimized for analytics (PostgreSQL, BigQuery, Snowflake or similar)",
+        "format": "Schema design + setup"
+      },
+      {
+        "name": "KPI & Dashboard",
+        "description": "Interactive dashboard with your business key KPIs (Metabase, Superset, or similar)",
+        "format": "Live dashboard accessible via web"
+      },
+      {
+        "name": "Monitoring & Alerting",
+        "description": "Automatic alerts on data anomalies or pipeline failures (email/Slack)",
+        "format": "Monitoring setup"
+      },
+      {
+        "name": "Data Documentation",
+        "description": "Data dictionary, schema, query examples, guide for adding new metrics",
+        "format": "Markdown + SQL comments"
+      },
+      {
+        "name": "Training Session",
+        "description": "2 hours training for your team: how to use dashboard, add charts, read data",
+        "format": "Video call + recording"
+      }
+    ]
+  },
+  
+  "requirements": {
+    "title": "What we need from you",
+    "items": [
+      "List of data sources with access (API, database, CSV exports, Excel sheets)",
+      "Desired KPIs and business metrics (even draft, we'll refine together)",
+      "1 stakeholder available for weekly sync (1h/week)",
+      "Data samples for each source (test extracts OK, to understand structure and quality)",
+      "Access to infrastructure for deployment (or I can manage it in cloud on your behalf)"
+    ]
+  },
+  
+  "timeline": {
+    "duration": "2-6 weeks (varies based on number of data sources and complexity)",
+    "breakdown": [
+      {
+        "phase": "Week 1: Discovery, source mapping, schema design",
+        "days": "5"
+      },
+      {
+        "phase": "Week 2-3: ETL for first source + dashboard first metrics",
+        "days": "5-10"
+      },
+      {
+        "phase": "Week 3-5: Additional sources integration + refine dashboard",
+        "days": "5-10"
+      },
+      {
+        "phase": "Week 4-6: Testing, monitoring, handover & training",
+        "days": "5"
+      }
+    ]
+  },
+  
+  "process": [
+    "Kickoff: map data sources, priority KPIs, technical constraints",
+    "Iteration 1: first data source + first metrics in dashboard (proof of concept)",
+    "Iteration 2-N: progressively add sources and metrics",
+    "Setup monitoring, alerts and documentation",
+    "Final training and handover"
+  ],
+  
+  "cta": {
+    "text": "Request Data Pipeline",
+    "url": "/en/booking?package=data-pipeline"
+  },
+  
+  "faq": [
+    {
+      "question": "My data is a mess. Can I still start?",
+      "answer": "Yes. I often work with 'dirty' data. Part of the job is cleaning, normalizing and standardizing. If data is very chaotic, timeline might extend, but it's doable."
+    },
+    {
+      "question": "Can I add new data sources after the project?",
+      "answer": "Yes. Pipeline is designed to be extended. I'll leave you documentation and templates to add new sources. Or we can do it together with additional support."
+    },
+    {
+      "question": "Does it work with on-premise data or legacy systems?",
+      "answer": "Yes. I have experience with legacy ERPs, on-premise databases, CSV exports, screen scraping (if strictly necessary). We always find a way."
+    },
+    {
+      "question": "Is the dashboard customizable afterwards?",
+      "answer": "Yes. I use tools like Metabase or Superset that allow creating new charts, modifying queries, adding filters without writing code. I'll train you on this."
+    },
+    {
+      "question": "What happens if the pipeline breaks?",
+      "answer": "Monitoring and alerting setup: you receive immediate notification if something fails. Includes 2 weeks post-launch support for bugfixes. After that, we can do monthly maintenance or on-demand."
+    },
+    {
+      "question": "Can I use this infrastructure as foundation for AI/ML in the future?",
+      "answer": "Absolutely. Data warehouse is designed to be the foundation for advanced analytics, ML models, or other data-driven projects. It's the correct first step."
+    }
+  ],
+  
+  "metadata": {
+    "featured": true,
+    "language": "en"
+  }
+}
