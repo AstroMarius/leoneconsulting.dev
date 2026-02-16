@@ -8,64 +8,79 @@ interface Props {
 
 const { caseStudy, featured = false } = Astro.props;
 const topMetrics = caseStudy.results.metrics.slice(0, 2);
+
+// Determina categoria e stile dal titolo
+const getCategory = (title: string) => {
+  if (title.includes('Dashboard') || title.includes('KPI')) return { label: 'OPERATIONS', color: 'blue' };
+  if (title.includes('AI') || title.includes('Prototipo')) return { label: 'AI/ML', color: 'purple' };
+  if (title.includes('Pipeline') || title.includes('Dati')) return { label: 'DATA', color: 'emerald' };
+  return { label: 'PROJECT', color: 'gray' };
+};
+
+const category = getCategory(caseStudy.title);
+
+// Split titolo in parte principale e sottotitolo
+const titleParts = caseStudy.title.split(' per ');
+const mainTitle = titleParts[0];
+const subtitle = titleParts[1] ? `per ${titleParts[1]}` : '';
 ---
 
-<article class={`bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-1 border border-gray-100 overflow-hidden ${featured ? 'md:col-span-2' : ''}`}>
-  {caseStudy.featuredImage && (
-    <div class="relative h-48 overflow-hidden bg-gray-100">
-      <img 
-        src={caseStudy.featuredImage} 
-        alt={caseStudy.title}
-        class="w-full h-full object-cover"
-        loading="lazy"
-      />
-    </div>
-  )}
-  
+<article class={`bg-white rounded-xl shadow-md hover:shadow-xl transition-all border border-gray-200 overflow-hidden ${featured ? 'md:col-span-2' : ''}`}>
   <div class="p-6">
-    <div class="flex items-center gap-2 text-sm text-gray-500 mb-3">
-      <span class="font-medium">{caseStudy.client}</span>
+    <!-- Badge Categoria -->
+    <div class="mb-3">
+      <span class={`inline-block text-xs font-semibold tracking-wider uppercase px-2 py-1 rounded
+        ${category.color === 'blue' ? 'text-blue-700 bg-blue-50' : ''}
+        ${category.color === 'purple' ? 'text-purple-700 bg-purple-50' : ''}
+        ${category.color === 'emerald' ? 'text-emerald-700 bg-emerald-50' : ''}
+      `}>
+        {category.label}
+      </span>
+    </div>
+    
+    <!-- Titolo Split -->
+    <h3 class="mb-1">
+      <span class="block text-2xl font-bold text-gray-900 leading-tight">
+        {mainTitle}
+      </span>
+      {subtitle && (
+        <span class="block text-base font-normal text-gray-600 mt-1">
+          {subtitle}
+        </span>
+      )}
+    </h3>
+    
+    <!-- Client Info -->
+    <div class="flex items-center gap-2 text-sm text-gray-500 mt-3 mb-4">
+      <span>{caseStudy.client}</span>
       <span>•</span>
       <span>{caseStudy.sector}</span>
     </div>
     
-    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-      {caseStudy.title}
-    </h3>
-    
-    <p class="text-gray-600 mb-4 line-clamp-2 leading-relaxed">
-      {caseStudy.problem.description}
-    </p>
-    
+    <!-- Metriche Chiave Inline -->
     {topMetrics.length > 0 && (
-      <div class="flex flex-wrap gap-2 mb-4">
+      <div class="flex flex-wrap gap-3 mb-4 py-3 border-y border-gray-100">
         {topMetrics.map(metric => (
-          <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary-100 text-primary-800">
+          <span class="text-sm font-semibold text-gray-900">
             {metric.value}
           </span>
         ))}
       </div>
     )}
     
-    <div class="flex flex-wrap gap-2 mb-4">
-      {caseStudy.tech.stack.slice(0, 4).map(tech => (
-        <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-gray-100 text-gray-700">
-          {tech}
-        </span>
-      ))}
-      {caseStudy.tech.stack.length > 4 && (
-        <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-gray-100 text-gray-700">
-          +{caseStudy.tech.stack.length - 4}
-        </span>
-      )}
+    <!-- Tech Stack Minimal -->
+    <div class="flex flex-wrap gap-2 mb-4 text-xs text-gray-500">
+      {caseStudy.tech.stack.slice(0, 3).join(' • ')}
+      {caseStudy.tech.stack.length > 3 && ` • +${caseStudy.tech.stack.length - 3}`}
     </div>
     
+    <!-- CTA -->
     <a 
       href={`/portfolio/${caseStudy.slug}`}
-      class="text-primary-600 font-semibold hover:text-primary-700 transition-colors inline-flex items-center group"
+      class="text-sm font-semibold text-primary-600 hover:text-primary-700 inline-flex items-center group"
     >
-      Leggi il case study
-      <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      Vedi caso completo
+      <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
       </svg>
     </a>
