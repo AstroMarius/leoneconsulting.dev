@@ -11,6 +11,9 @@ export async function getStaticPaths() {
     await import('../../../company/case-studies/dashboard-kpi-operations.json'),
     await import('../../../company/case-studies/prototipo-ai-classificazione.json'),
     await import('../../../company/case-studies/pipeline-analytics-ecommerce.json'),
+    await import('../../../company/case-studies/multiagenthft.json'),
+    await import('../../../company/case-studies/predictive-analytics-ml.json'),
+    await import('../../../company/case-studies/finllm.json'),
   ];
 
   return caseStudies.map((cs) => ({
