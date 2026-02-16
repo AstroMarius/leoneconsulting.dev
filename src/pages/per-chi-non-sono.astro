@@ -1,0 +1,228 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout 
+  title="Per Chi NON Sono - Leone Consulting" 
+  description="Se cerchi un'agenzia full-service, prezzi bassi o gestione continuativa, probabilmente non sono la soluzione giusta per te."
+>
+  <Header />
+  
+  <main>
+    <!-- Hero -->
+    <section class="pt-32 pb-16 bg-gradient-to-b from-white to-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-5xl font-bold text-gray-900 mb-6">
+          Per Chi <span class="text-primary-600">NON</span> Sono
+        </h1>
+        <p class="text-xl text-gray-600 leading-relaxed">
+          Il tempo è prezioso. Se ti riconosci in uno di questi profili, 
+          probabilmente dovremmo <strong>non</strong> lavorare insieme.
+        </p>
+      </div>
+    </section>
+
+    <!-- Not A Fit Section -->
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="space-y-8">
+          
+          <!-- 1. Agenzia Full-Service -->
+          <div class="border-l-4 border-red-500 pl-6 py-4">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">
+              ❌ Se Cerchi un'Agenzia Full-Service
+            </h2>
+            <p class="text-gray-700 mb-4">
+              Non faccio branding, design grafico, marketing, gestione social, SEO copywriting, 
+              o gestione progetti infrastrutturali complessi. Sono un <strong>technical specialist</strong>, 
+              non un'agenzia.
+            </p>
+            <p class="text-gray-600 text-sm">
+              <strong>Alternativa:</strong> Cerca un'agenzia digitale full-service o un team interno multidisciplinare.
+            </p>
+          </div>
+
+          <!-- 2. Budget Ultra-Low -->
+          <div class="border-l-4 border-red-500 pl-6 py-4">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">
+              ❌ Se il Budget È il Tuo Primo Criterio
+            </h2>
+            <p class="text-gray-700 mb-4">
+              Se stai cercando "il prezzo più basso", non sono competitivo. I miei prezzi riflettono 
+              4+ anni di esperienza, qualità del codice, e risultati misurabili. Se il tuo unico KPI è 
+              "quanto costa?", ci sono opzioni più economiche (e spesso più rischiose).
+            </p>
+            <p class="text-gray-600 text-sm">
+              <strong>Alternativa:</strong> Freelancer junior, offshore teams, o piattaforme come Upwork/Fiverr.
+            </p>
+          </div>
+
+          <!-- 3. Hand-Holding Continuo -->
+          <div class="border-l-4 border-red-500 pl-6 py-4">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">
+              ❌ Se Hai Bisogno di Supporto Continuativo 24/7
+            </h2>
+            <p class="text-gray-700 mb-4">
+              Lavoro su <strong>progetti definiti con inizio e fine chiara</strong>, non su retainer continuativi 
+              o supporto on-call. Se ti serve qualcuno "sempre disponibile" per piccole modifiche o 
+              troubleshooting quotidiano, non è il mio modello.
+            </p>
+            <p class="text-gray-600 text-sm">
+              <strong>Alternativa:</strong> Sviluppatore in-house, agenzia con contratto retainer, 
+              o managed service provider.
+            </p>
+          </div>
+
+          <!-- 4. Scope Vago -->
+          <div class="border-l-4 border-red-500 pl-6 py-4">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">
+              ❌ Se "Non Sai Ancora Cosa Vuoi"
+            </h2>
+            <p class="text-gray-700 mb-4">
+              Lavoro bene quando c'è un <strong>problema chiaro da risolvere</strong>, anche se la soluzione 
+              non è definita. Ma se non hai idea di cosa vuoi ottenere, di quali risorse hai, o "vuoi solo 
+              esplorare", probabilmente è prematuro partire.
+            </p>
+            <p class="text-gray-600 text-sm">
+              <strong>Alternativa:</strong> Inizia con un audit o una discovery call per definire obiettivi. 
+              Se anche dopo 30 minuti di call non emerge un problema chiaro, aspetta di averlo più chiaro.
+            </p>
+          </div>
+
+          <!-- 5. Zero Coinvolgimento -->
+          <div class="border-l-4 border-red-500 pl-6 py-4">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">
+              ❌ Se Vuoi "Delegare Tutto e Sparire"
+            </h2>
+            <p class="text-gray-700 mb-4">
+              I miei progetti richiedono <strong>collaborazione attiva</strong>: accesso a sistemi/dati, 
+              feedback settimanale, decisioni su priorità. Se vuoi "farmi sparire per 2 mesi e ricevere 
+              un risultato finito", non funziona così. Il miglior lavoro emerge dal dialogo.
+            </p>
+            <p class="text-gray-600 text-sm">
+              <strong>Alternativa:</strong> Agenzia con project manager dedicato o consulenza esterna 
+              con meno bisogno di allineamento continuo.
+            </p>
+          </div>
+
+          <!-- 6. Quick Fix Miracolosi -->
+          <div class="border-l-4 border-red-500 pl-6 py-4">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">
+              ❌ Se Ti Aspetti Risultati Miracolosi in 3 Giorni
+            </h2>
+            <p class="text-gray-700 mb-4">
+              I progetti seri richiedono tempo. Un audit può essere fatto in 5 giorni, ma un prototipo 
+              MVP richiede 2-4 settimane, una data pipeline 4-8 settimane. Se ti servono "soluzioni instant" 
+              senza fase di analisi o setup, non è realistico.
+            </p>
+            <p class="text-gray-600 text-sm">
+              <strong>Alternativa:</strong> Template no-code/low-code (Zapier, Airtable, Webflow) 
+              o tool pre-confezionati SaaS.
+            </p>
+          </div>
+
+        </div>
+      </main>
+
+    <!-- A Good Fit Section -->
+    <section class="py-16 bg-gradient-to-b from-gray-50 to-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">
+          Invece, Sono <span class="text-primary-600">Perfetto</span> Se...
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <div class="bg-white rounded-lg p-6 shadow-md border-l-4 border-green-500">
+            <div class="flex items-start">
+              <div class="flex-shrink-0">
+                <svg class="w-6 h-6 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Hai un Problema Tecnico Chiaro</h3>
+                <p class="text-gray-600 text-sm">
+                  "I dati sono sparsi", "Voglio validare questa idea AI", "Ho bisogno di un prototipo".
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 shadow-md border-l-4 border-green-500">
+            <div class="flex items-start">
+              <div class="flex-shrink-0">
+                <svg class="w-6 h-6 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Vuoi Risultati Misurabili</h3>
+                <p class="text-gray-600 text-sm">
+                  Non promesse, ma metriche: "recupero 2 giorni/settimana", "88% accuratezza", "+15% ROI".
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 shadow-md border-l-4 border-green-500">
+            <div class="flex items-start">
+              <div class="flex-shrink-0">
+                <svg class="w-6 h-6 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Sei Collaborativo</h3>
+                <p class="text-gray-600 text-sm">
+                  Checkpoint settimanali, accesso a dati/sistemi, feedback sui deliverable iterativi.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 shadow-md border-l-4 border-green-500">
+            <div class="flex items-start">
+              <div class="flex-shrink-0">
+                <svg class="w-6 h-6 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Valuti Qualità > Prezzo</h3>
+                <p class="text-gray-600 text-sm">
+                  Codice production-ready, documentato, testato – non patch temporanee o "quick hacks".
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div class="mt-12 text-center">
+          <p class="text-gray-700 mb-6 text-lg">
+            Ti rivedi nei profili "verdi"?
+          </p>
+          <a
+            href="/prenota"
+            class="inline-flex items-center px-8 py-4 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors shadow-lg"
+          >
+            Prenota Discovery Call Gratuita
+            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
+          <p class="mt-4 text-sm text-gray-500">
+            30 minuti, niente pitch – solo domande per capire se posso aiutarti davvero.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>

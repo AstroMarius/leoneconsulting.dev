@@ -4,6 +4,9 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import CaseStudyCard from '../components/CaseStudyCard.astro';
 import PackageCard from '../components/PackageCard.astro';
+import ProcessSection from '../components/ProcessSection.astro';
+import TestimonialsSection from '../components/TestimonialsSection.astro';
+import FAQ from '../components/FAQ.astro';
 import type { CaseStudy } from '../types/case-study';
 import type { Package } from '../types/package';
 
@@ -208,6 +211,9 @@ const packages: Package[] = [
       </div>
     </section>
 
+    <!-- Process Section -->
+    <ProcessSection />
+
     <!-- Why Choose Us -->
     <section class="py-20 px-6 bg-gray-50">
       <div class="container mx-auto">
@@ -259,6 +265,12 @@ const packages: Package[] = [
         </div>
       </div>
     </section>
+
+    <!-- Testimonials Section -->
+    <TestimonialsSection />
+
+    <!-- FAQ Section -->
+    <FAQ />
 
     <!-- CTA Section -->
     <section class="py-20 px-6 bg-primary-600 text-white">
