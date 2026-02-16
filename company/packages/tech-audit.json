@@ -3,7 +3,7 @@
   "title": "Tech/AI Audit",
   "tagline": "Diagnosi tecnica e roadmap in 5 giorni lavorativi",
   "price": {
-    "display": "a partire da €2.500",
+    "display": "a partire da CHF 2.700",
     "value": 2500,
     "currency": "EUR"
   },
@@ -113,7 +113,7 @@
     },
     {
       "question": "E se dopo l'audit risulta che il progetto non è fattibile?",
-      "answer": "Meglio saperlo dopo 5 giorni e €2.500 che dopo 3 mesi e €30K. Il report ti dirà esattamente perché e ti suggerirò alternative o modifiche per renderlo fattibile."
+      "answer": "Meglio saperlo dopo 5 giorni e CHF 2.700 che dopo 3 mesi e CHF 32K. Il report ti dirà esattamente perché e ti suggerirò alternative o modifiche per renderlo fattibile."
     }
   ],
   
