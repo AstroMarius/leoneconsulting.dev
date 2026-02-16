@@ -1,11 +1,16 @@
 ---
 import type { Package } from '../types/package';
+import { getLangFromUrl } from '../i18n/translations';
 
 interface Props {
   package: Package;
 }
 
 const { package: pkg } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const isEnglish = lang === 'en';
+const basePath = isEnglish ? '/en' : '';
+const packagesPath = isEnglish ? 'packages' : 'pacchetti';
 const topBullets = pkg.forWhom.bullets.slice(0, 3);
 ---
 
@@ -29,7 +34,7 @@ const topBullets = pkg.forWhom.bullets.slice(0, 3);
           )}
         </>
       ) : (
-        <span class="text-2xl font-bold text-primary-600">Su richiesta</span>
+        <span class="text-2xl font-bold text-primary-600">{isEnglish ? 'On request' : 'Su richiesta'}</span>
       )}
     </div>
     <p class="text-sm text-gray-500 mt-1">{pkg.timeline.duration}</p>
@@ -59,10 +64,10 @@ const topBullets = pkg.forWhom.bullets.slice(0, 3);
       {pkg.cta.text}
     </a>
     <a 
-      href={`/pacchetti#${pkg.slug}`}
+      href={`${basePath}/${packagesPath}#${pkg.slug}`}
       class="block w-full px-6 py-3 bg-white text-primary-600 text-center border-2 border-primary-600 rounded-lg hover:bg-primary-50 transition-all font-semibold"
     >
-      Maggiori dettagli
+      {isEnglish ? 'More details' : 'Maggiori dettagli'}
     </a>
   </div>
 </article>
