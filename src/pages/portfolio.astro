@@ -1,0 +1,84 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CaseStudyCard from '../components/CaseStudyCard.astro';
+import type { CaseStudy } from '../types/case-study';
+
+// Import case studies
+import dashboardOps from '../../company/case-studies/dashboard-kpi-operations.json';
+import aiClassifier from '../../company/case-studies/prototipo-ai-classificazione.json';
+import ecommercePipeline from '../../company/case-studies/pipeline-analytics-ecommerce.json';
+
+const caseStudies: CaseStudy[] = [
+  dashboardOps as CaseStudy,
+  aiClassifier as CaseStudy,
+  ecommercePipeline as CaseStudy,
+].filter(cs => cs.published);
+---
+
+<Layout 
+  title="Portfolio - Case Study con Risultati Reali | Leone Consulting"
+  description="Progetti concreti con numeri misurabili. Dashboard automatiche, prototipi AI e pipeline dati che hanno trasformato il modo di lavorare dei nostri clienti."
+>
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="pt-32 pb-12 px-6 bg-gradient-to-br from-primary-50 to-white">
+      <div class="container mx-auto">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            Case Study e 
+            <span class="text-primary-600">Risultati Concreti</span>
+          </h1>
+          <p class="text-xl text-gray-600 leading-relaxed">
+            Numeri reali, non solo slide. Progetti che hanno ridotto tempi, automatizzato processi e generato valore misurabile.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Studies Grid -->
+    <section class="py-16 px-6">
+      <div class="container mx-auto max-w-6xl">
+        <div class="grid md:grid-cols-2 gap-8">
+          {caseStudies.map((caseStudy, index) => (
+            <CaseStudyCard 
+              caseStudy={caseStudy} 
+              featured={index === 0}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-6 bg-gradient-to-br from-primary-600 to-primary-800">
+      <div class="container mx-auto max-w-4xl text-center">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+          Vuoi risultati simili?
+        </h2>
+        <p class="text-xl text-primary-100 mb-8 leading-relaxed">
+          Partiamo da un audit gratuito o una call di 30 minuti per capire come posso aiutarti.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href="/prenota" 
+            class="px-8 py-4 bg-white text-primary-600 rounded-lg hover:bg-gray-50 transition-all transform hover:scale-105 font-semibold shadow-lg"
+          >
+            Prenota una Call
+          </a>
+          <a 
+            href="/audit-asincrono" 
+            class="px-8 py-4 bg-primary-700 text-white border-2 border-white rounded-lg hover:bg-primary-800 transition-all font-semibold"
+          >
+            Richiedi Audit Asincrono
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>

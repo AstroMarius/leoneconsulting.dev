@@ -1,0 +1,108 @@
+{
+  "slug": "esempio-dashboard-kpi",
+  "title": "Dashboard KPI per Monitoraggio Operations",
+  "client": "PMI settore manifatturiero",
+  "sector": "Manufacturing",
+  "published": true,
+  "featuredImage": "/img/case-studies/example-dashboard.jpg",
+  
+  "problem": {
+    "description": "L'azienda gestiva KPI operativi tramite Excel condivisi via email, con dati estratti manualmente da 3 sistemi diversi. Il processo richiedeva 2 giorni/settimana e i dati erano spesso obsoleti o inconsistenti.",
+    "painPoints": [
+      "Report manuali richiedevano 2 giorni di lavoro settimanale",
+      "Dati obsoleti al momento della distribuzione (ritardo di 48h)",
+      "Errori di trascrizione e formule Excel corrotte"
+    ]
+  },
+  
+  "constraints": {
+    "timeline": "4 settimane",
+    "budget": "Budget contenuto per PMI",
+    "technical": [
+      "Integrazione con ERP legacy senza API documentate",
+      "Server on-premise con limitazioni di rete",
+      "No accesso diretto al database di produzione"
+    ],
+    "compliance": [
+      "Dati sensibili aziendali, no cloud pubblico"
+    ]
+  },
+  
+  "solution": {
+    "architecture": "Dashboard self-hosted con ETL giornaliero da 3 fonti dati. Python per l'ingestion, PostgreSQL per lo storage, Metabase per la visualizzazione. Deploy su VM on-premise del cliente.",
+    "keyDecisions": [
+      "Metabase invece di soluzioni custom per ridurre maintenance",
+      "ETL schedulato notturno per minimizzare impatto su sistemi di produzione",
+      "Export CSV da ERP legacy invece di screen scraping (più stabile)",
+      "PostgreSQL su Docker per semplificare backup e migrations"
+    ],
+    "approach": "Iterativo: prima ETL per fonte dati più critica, poi aggiunta progressiva delle altre. Dashboard co-progettata con gli stakeholder tramite weekly review."
+  },
+  
+  "results": {
+    "metrics": [
+      {
+        "label": "Tempo report ridotto",
+        "value": "da 2 giorni/settimana a 0 (automatico)",
+        "isProxy": false,
+        "description": "Processo completamente automatizzato"
+      },
+      {
+        "label": "Fresschezza dati",
+        "value": "da 48h a 24h di ritardo max",
+        "isProxy": false,
+        "description": "ETL notturno con dati del giorno precedente"
+      },
+      {
+        "label": "Errori di trascrizione",
+        "value": "da ~15/mese a 0",
+        "isProxy": true,
+        "description": "Stimato su segnalazioni prima/dopo"
+      },
+      {
+        "label": "Adoption rate",
+        "value": "100% del team ops (12 persone)",
+        "isProxy": false,
+        "description": "Dopo 1 mese, nessuno usa più Excel"
+      }
+    ],
+    "impact": "Il team ops ha recuperato 2 giorni/settimana di lavoro manuale, ora dedicati ad analisi invece che a data entry. I manager hanno accesso real-time ai KPI e possono prendere decisioni più rapide."
+  },
+  
+  "tech": {
+    "stack": [
+      "Python 3.11",
+      "PostgreSQL 15",
+      "Metabase",
+      "Docker",
+      "Cron"
+    ],
+    "tools": [
+      "Pandas per ETL",
+      "SQLAlchemy per ORM",
+      "CSV exports da ERP legacy",
+      "Git per version control"
+    ]
+  },
+  
+  "role": [
+    "Analisi dei sistemi esistenti e mappatura fonti dati",
+    "Design architettura e scelta del tech stack",
+    "Implementazione ETL pipeline",
+    "Setup PostgreSQL e Metabase",
+    "Co-design dashboard con stakeholders",
+    "Documentazione e handover al team IT del cliente"
+  ],
+  
+  "links": {
+    "screenshots": [
+      "/img/case-studies/example-screenshot-1.jpg"
+    ]
+  },
+  
+  "metadata": {
+    "duration": "4 settimane",
+    "year": 2025,
+    "language": "it"
+  }
+}

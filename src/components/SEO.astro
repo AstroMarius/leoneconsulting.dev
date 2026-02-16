@@ -1,0 +1,90 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: 'website' | 'article';
+  noindex?: boolean;
+  schema?: Record<string, any>;
+}
+
+const {
+  title,
+  description,
+  canonical,
+  ogImage = '/img/og-default.jpg',
+  ogType = 'website',
+  noindex = false,
+  schema,
+} = Astro.props;
+
+const siteUrl = 'https://leoneconsulting.dev';
+const fullTitle = title.includes('Leone Consulting') ? title : `${title} | Leone Consulting`;
+const canonicalURL = canonical || new URL(Astro.url.pathname, siteUrl).href;
+const ogImageURL = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
+
+// Default Organization Schema
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'Leone Consulting',
+  description: 'Data engineering, rapid prototyping, e audit tecnici per PMI e startup',
+  url: siteUrl,
+  founder: {
+    '@type': 'Person',
+    name: 'Mario Leone',
+    jobTitle: 'Data Engineer & Technical Consultant',
+  },
+  address: {
+    '@type': 'PostalAddress',
+    addressCountry: 'IT',
+    addressRegion: 'Nord Italia',
+  },
+  sameAs: [
+    'https://github.com/AstroMarius',
+    'https://www.linkedin.com/in/mario-leone-data-engineer',
+  ],
+  areaServed: {
+    '@type': 'Place',
+    name: 'Italia',
+  },
+  priceRange: '€€-€€€',
+};
+
+// Combine schemas if custom schema provided
+const finalSchema = schema 
+  ? [organizationSchema, schema]
+  : organizationSchema;
+---
+
+<!-- Primary Meta Tags -->
+<title>{fullTitle}</title>
+<meta name="title" content={fullTitle} />
+<meta name="description" content={description} />
+{canonical && <link rel="canonical" href={canonicalURL} />}
+{noindex && <meta name="robots" content="noindex, nofollow" />}
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={ogType} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={ogImageURL} />
+<meta property="og:site_name" content="Leone Consulting" />
+<meta property="og:locale" content="it_IT" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={canonicalURL} />
+<meta property="twitter:title" content={fullTitle} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={ogImageURL} />
+
+<!-- Additional SEO -->
+<meta name="author" content="Mario Leone" />
+<meta name="language" content="Italian" />
+<meta name="revisit-after" content="7 days" />
+
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json" is:inline set:html={JSON.stringify(finalSchema)} />

@@ -1,0 +1,98 @@
+{
+  "slug": "prototipo-ai-classificazione",
+  "title": "Prototipo AI per Classificazione Documenti",
+  "client": "Scale-up settore legale",
+  "sector": "Legal Tech",
+  "published": true,
+  "featuredImage": "/img/case-studies/ai-document-classifier.jpg",
+  
+  "problem": {
+    "description": "Uno studio legale riceveva centinaia di documenti al giorno da classificare manualmente in 15 categorie. Il processo era lento, soggetto a errori e creava colli di bottiglia nel workflow.",
+    "painPoints": [
+      "Classificazione manuale richiedeva 3-4 ore/giorno",
+      "Tasso di errore del 12% nella categorizzazione",
+      "Impossibile scalare con l'aumento del volume"
+    ]
+  },
+  
+  "constraints": {
+    "timeline": "3 settimane per MVP funzionante",
+    "budget": "Budget startup, focus su validazione rapida",
+    "technical": [
+      "Dataset iniziale limitato (~500 documenti etichettati)",
+      "Necessità di integrazione con sistema documentale esistente",
+      "Requisiti GDPR per privacy dei dati"
+    ],
+    "compliance": [
+      "GDPR compliance per dati legali sensibili",
+      "Audit trail per ogni classificazione"
+    ]
+  },
+  
+  "solution": {
+    "architecture": "API FastAPI con modello ML (fine-tuned BERT multilingue) per classificazione automatica. Frontend in React per review umano. Deploy su Railway con CI/CD automatico.",
+    "keyDecisions": [
+      "Fine-tuning di modello pre-trained invece di training da zero (più veloce, dataset piccolo)",
+      "Human-in-the-loop: AI suggerisce, umano valida (aumenta fiducia)",
+      "Feature: confidence score per ogni predizione (trasparenza)",
+      "Logging completo per auditing e miglioramento continuo"
+    ],
+    "approach": "MVP in 3 settimane: settimana 1 = data prep + baseline model, settimana 2 = fine-tuning + API, settimana 3 = frontend + integrazione + testing con utenti reali."
+  },
+  
+  "results": {
+    "metrics": [
+      {
+        "label": "Tempo classificazione",
+        "value": "da 3-4h/giorno a 30min",
+        "isProxy": false,
+        "description": "AI classifica automaticamente, umano valida solo casi dubbi"
+      },
+      {
+        "label": "Accuracy",
+        "value": "88% su categorie complesse",
+        "isProxy": false,
+        "description": "Misurato su test set di 100 documenti"
+      },
+      {
+        "label": "Documenti processati",
+        "value": "3x volume precedente",
+        "isProxy": false,
+        "description": "Con lo stesso team, grazie all'automazione"
+      }
+    ],
+    "impact": "Lo studio ha ridotto drasticamente i tempi di classificazione e può ora processare 3x più documenti con lo stesso team. Il sistema viene ora esteso a nuove categorie e clienti."
+  },
+  
+  "tech": {
+    "stack": [
+      "Python 3.11",
+      "FastAPI",
+      "Transformers (Hugging Face)",
+      "PostgreSQL",
+      "React",
+      "Railway"
+    ],
+    "tools": [
+      "PyTorch",
+      "scikit-learn",
+      "Docker",
+      "GitHub Actions"
+    ]
+  },
+  
+  "role": [
+    "Design architettura ML pipeline",
+    "Data preparation e labeling strategy",
+    "Fine-tuning modello BERT",
+    "Sviluppo API e frontend",
+    "Setup CI/CD e monitoring",
+    "Training del team su utilizzo e manutenzione"
+  ],
+  
+  "metadata": {
+    "duration": "3 settimane",
+    "year": 2025,
+    "language": "it"
+  }
+}

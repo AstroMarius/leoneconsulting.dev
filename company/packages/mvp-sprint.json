@@ -1,0 +1,124 @@
+{
+  "slug": "mvp-sprint",
+  "title": "MVP Sprint",
+  "tagline": "Prototipo funzionante in 2-4 settimane",
+  "price": {
+    "display": "€5.000 - €12.000",
+    "currency": "EUR"
+  },
+  
+  "forWhom": {
+    "title": "Per chi è questo sprint?",
+    "bullets": [
+      "Vuoi validare un'idea con un prototipo reale (non mockup) prima di investire in sviluppo completo",
+      "Hai bisogno di una demo funzionante per presentare a investitori, clienti o stakeholders interni",
+      "Vuoi testare fattibilità tecnica di un'architettura o feature complessa con un PoC rapido"
+    ]
+  },
+  
+  "deliverables": {
+    "title": "Cosa ottieni",
+    "items": [
+      {
+        "name": "Prototipo Funzionante",
+        "description": "Applicazione deployata e accessibile via web con le feature core funzionanti (non mockup)",
+        "format": "Web app live con URL pubblico o privato"
+      },
+      {
+        "name": "Codebase Pulito",
+        "description": "Repository Git con codice chiaro, strutturato e commentato. Pronto per essere esteso dal tuo team.",
+        "format": "GitHub/GitLab private repo"
+      },
+      {
+        "name": "Deploy Automatico",
+        "description": "CI/CD setup base per deploy su Vercel/Railway/AWS. Push to deploy ready.",
+        "format": "Pipeline configurata"
+      },
+      {
+        "name": "Metriche Minime",
+        "description": "Analytics/monitoring base per tracciare utilizzo e performance (Plausible, Sentry, o simili)",
+        "format": "Dashboard + integrazione"
+      },
+      {
+        "name": "Documentazione Tecnica",
+        "description": "README con architettura, setup locale, deploy, API docs (se applicabile)",
+        "format": "Markdown nel repo"
+      },
+      {
+        "name": "Handover Session",
+        "description": "1-2 ore di walkthrough del codice e dell'architettura con il tuo team",
+        "format": "Video call + registrazione"
+      }
+    ]
+  },
+  
+  "requirements": {
+    "title": "Cosa serve da te",
+    "items": [
+      "Brief dettagliato (3-5 pagine): obiettivo, user stories principali, vincoli, audience",
+      "1 stakeholder disponibile per sync settimanali (1h/settimana)",
+      "Design/wireframe (se hai già una UI, altrimenti uso Tailwind components/UI kit standard)",
+      "Accesso a servizi/API di terze parti se necessari (account di test OK)",
+      "Feedback rapido su WIP builds (entro 24-48h)"
+    ]
+  },
+  
+  "timeline": {
+    "duration": "2-4 settimane",
+    "breakdown": [
+      {
+        "phase": "Settimana 1: Setup, architettura, feature core",
+        "days": "5"
+      },
+      {
+        "phase": "Settimana 2: Feature aggiuntive, integrations, UI",
+        "days": "5"
+      },
+      {
+        "phase": "Settimana 3-4: Rifinitura, deploy, test, handover",
+        "days": "5-10"
+      }
+    ]
+  },
+  
+  "process": [
+    "Kickoff call: definiamo scope, feature MVP, tech stack e vincoli",
+    "Ogni settimana: WIP build deployata per review e feedback",
+    "Iterazioni rapide: prioritizziamo feature in base a feedback",
+    "Deploy finale + documentazione + handover session",
+    "Opzionale: supporto post-lancio (1-2 settimane di bugfix incluse)"
+  ],
+  
+  "cta": {
+    "text": "Richiedi MVP Sprint",
+    "url": "/prenota?package=mvp-sprint"
+  },
+  
+  "faq": [
+    {
+      "question": "Cosa NON è incluso in un MVP Sprint?",
+      "answer": "Non è sviluppo completo production-ready. L'MVP è funzionante ma potrebbe mancare di: auth avanzata, edge cases, UI/UX rifinita, test coverage completo, scalabilità enterprise. È pensato per validare, non per sostituire lo sviluppo full-scale."
+    },
+    {
+      "question": "Posso estendere l'MVP dopo lo sprint?",
+      "answer": "Sì. Il codebase è pulito e strutturato appositamente per essere esteso. Puoi farlo internamente o possiamo continuare con sprint aggiuntivi."
+    },
+    {
+      "question": "Quanto è 'funzionante' il prototipo?",
+      "answer": "100% funzionante per le feature core definite nello scope. Non è un clickable mockup: è un'app deployata che puoi usare, testare con utenti reali e integrare con servizi esterni."
+    },
+    {
+      "question": "Posso cambiare scope durante lo sprint?",
+      "answer": "Sì, entro limiti ragionevoli. Lavoriamo in modo iterativo: se una feature risulta meno prioritaria dopo il primo test, possiamo cambiarla. Ma scope creep significativo allunga la timeline."
+    },
+    {
+      "question": "Il codice rimane mio?",
+      "answer": "Sì, 100%. Ownership completa del repo, codice, deploy. Dopo l'handover, sei tu il proprietario."
+    }
+  ],
+  
+  "metadata": {
+    "featured": true,
+    "language": "it"
+  }
+}

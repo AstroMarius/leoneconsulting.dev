@@ -1,0 +1,100 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PreCallForm from '../components/PreCallForm.astro';
+---
+
+<Layout 
+  title="Prenota una Call - Leone Consulting"
+  description="Prenota una call gratuita di 30 minuti. Rispondi a 5 domande per aiutarmi a preparare al meglio la nostra conversazione."
+>
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="pt-32 pb-12 px-6 bg-gradient-to-br from-primary-50 to-white">
+      <div class="container mx-auto">
+        <div class="max-w-3xl mx-auto text-center">
+          <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            Prenota una
+            <span class="text-primary-600">Call Gratuita</span>
+          </h1>
+          <p class="text-xl text-gray-600 leading-relaxed">
+            30 minuti per capire il tuo progetto e come posso aiutarti. Rispondi a 5 domande per aiutarmi a preparare al meglio la nostra conversazione.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="py-16 px-6">
+      <div class="container mx-auto max-w-2xl">
+        <div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-gray-100">
+          <div class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">
+              Qualche Domanda Prima della Call
+            </h2>
+            <p class="text-gray-600 leading-relaxed">
+              Rispondere a queste domande mi aiuta a prepararmi al meglio e a rendere la nostra call più produttiva. Richiede solo 2 minuti.
+            </p>
+          </div>
+
+          <PreCallForm />
+        </div>
+
+        <!-- What Happens Next -->
+        <div class="mt-12 bg-blue-50 p-8 rounded-xl border border-blue-200">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Cosa Succede Dopo?</h3>
+          <ol class="space-y-4">
+            <li class="flex items-start gap-4">
+              <span class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">
+                1
+              </span>
+              <div>
+                <div class="font-semibold text-gray-900">Ricevi conferma via email</div>
+                <div class="text-gray-600 text-sm">Entro poche ore dalla richiesta</div>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <span class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">
+                2
+              </span>
+              <div>
+                <div class="font-semibold text-gray-900">Scegli data e ora</div>
+                <div class="text-gray-600 text-sm">Ti invio un link per prenotare lo slot che preferisci</div>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <span class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">
+                3
+              </span>
+              <div>
+                <div class="font-semibold text-gray-900">Ci sentiamo</div>
+                <div class="text-gray-600 text-sm">30 minuti per discutere il tuo progetto e i prossimi passi</div>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Alternative Option -->
+        <div class="mt-12 text-center">
+          <p class="text-gray-600 mb-4">
+            Preferisci un feedback scritto invece di una call?
+          </p>
+          <a 
+            href="/audit-asincrono" 
+            class="inline-flex items-center px-6 py-3 bg-white text-primary-600 border-2 border-primary-600 rounded-lg hover:bg-primary-50 transition-all font-semibold"
+          >
+            Richiedi Audit Asincrono
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>

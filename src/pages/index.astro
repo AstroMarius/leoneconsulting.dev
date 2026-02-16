@@ -2,6 +2,35 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import CaseStudyCard from '../components/CaseStudyCard.astro';
+import PackageCard from '../components/PackageCard.astro';
+import ProcessSection from '../components/ProcessSection.astro';
+import TestimonialsSection from '../components/TestimonialsSection.astro';
+import FAQ from '../components/FAQ.astro';
+import type { CaseStudy } from '../types/case-study';
+import type { Package } from '../types/package';
+
+// Import case studies
+import dashboardOps from '../../company/case-studies/dashboard-kpi-operations.json';
+import aiClassifier from '../../company/case-studies/prototipo-ai-classificazione.json';
+import ecommercePipeline from '../../company/case-studies/pipeline-analytics-ecommerce.json';
+
+// Import packages
+import techAudit from '../../company/packages/tech-audit.json';
+import mvpSprint from '../../company/packages/mvp-sprint.json';
+import dataPipeline from '../../company/packages/data-pipeline.json';
+
+const featuredCaseStudies: CaseStudy[] = [
+  dashboardOps as CaseStudy,
+  aiClassifier as CaseStudy,
+  ecommercePipeline as CaseStudy,
+].filter(cs => cs.published).slice(0, 3);
+
+const packages: Package[] = [
+  techAudit as Package,
+  mvpSprint as Package,
+  dataPipeline as Package,
+].filter(pkg => pkg.metadata.featured);
 ---
 
 <Layout title="Leone Consulting - AI Engineering, Sviluppo Software e Consulenza IT">
@@ -34,6 +63,62 @@ import Footer from '../components/Footer.astro';
               Scopri i Servizi
             </a>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="py-20 px-6 bg-gray-50">
+      <div class="container mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Risultati Concreti</h2>
+          <p class="text-xl text-gray-600">Case study con numeri reali, non solo slide</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {featuredCaseStudies.map(caseStudy => (
+            <CaseStudyCard caseStudy={caseStudy} />
+          ))}
+        </div>
+
+        <div class="text-center mt-12">
+          <a 
+            href="/portfolio" 
+            class="inline-flex items-center px-8 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-all transform hover:scale-105 font-semibold shadow-lg"
+          >
+            Vedi tutti i case study
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section class="py-20 px-6">
+      <div class="container mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Come Posso Aiutarti</h2>
+          <p class="text-xl text-gray-600">Pacchetti chiari per esigenze diverse</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {packages.map(pkg => (
+            <PackageCard package={pkg} />
+          ))}
+        </div>
+
+        <div class="text-center mt-12">
+          <a 
+            href="/pacchetti" 
+            class="inline-flex items-center px-8 py-4 bg-white text-primary-600 border-2 border-primary-600 rounded-lg hover:bg-primary-50 transition-all font-semibold"
+          >
+            Vedi tutti i pacchetti
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
         </div>
       </div>
     </section>
@@ -126,6 +211,9 @@ import Footer from '../components/Footer.astro';
       </div>
     </section>
 
+    <!-- Process Section -->
+    <ProcessSection />
+
     <!-- Why Choose Us -->
     <section class="py-20 px-6 bg-gray-50">
       <div class="container mx-auto">
@@ -177,6 +265,12 @@ import Footer from '../components/Footer.astro';
         </div>
       </div>
     </section>
+
+    <!-- Testimonials Section -->
+    <TestimonialsSection />
+
+    <!-- FAQ Section -->
+    <FAQ />
 
     <!-- CTA Section -->
     <section class="py-20 px-6 bg-primary-600 text-white">

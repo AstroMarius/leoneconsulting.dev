@@ -1,0 +1,82 @@
+---
+import faqData from '../../company/content/faq.json';
+
+// Flatten all FAQ categories into a single array
+const allFAQs = [
+  ...faqData.general,
+  ...faqData.pricing,
+  ...faqData.process,
+  ...faqData.technical,
+];
+
+// Take first 8 for the section (can be filtered by category if needed)
+const displayedFAQs = allFAQs.slice(0, 8);
+---
+
+<section class="py-24 bg-gradient-to-b from-white to-gray-50">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">
+        Domande Frequenti
+      </h2>
+      <p class="text-xl text-gray-600">
+        Risposte dirette alle domande che mi fanno più spesso
+      </p>
+    </div>
+
+    <!-- FAQ Accordion -->
+    <div class="space-y-4">
+      {displayedFAQs.map((faq) => (
+        <details class="group bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200">
+          <summary class="flex items-center justify-between cursor-pointer p-6 text-lg font-semibold text-gray-900 list-none">
+            <span class="flex-1 pr-4">{faq.question}</span>
+            <svg 
+              class="w-6 h-6 text-primary-600 transition-transform group-open:rotate-180" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 pt-2 text-gray-700 leading-relaxed border-t border-gray-100">
+            {faq.answer}
+          </div>
+        </details>
+      ))}
+    </div>
+
+    <!-- CTA -->
+    <div class="mt-12 text-center p-8 bg-primary-50 rounded-xl border border-primary-200">
+      <h3 class="text-2xl font-bold text-gray-900 mb-3">
+        Altre Domande?
+      </h3>
+      <p class="text-gray-600 mb-6">
+        Prenota una call di 30 minuti – è gratuita e senza impegno.
+      </p>
+      <a
+        href="/prenota"
+        class="inline-flex items-center px-6 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors"
+      >
+        Prenota Discovery Call
+        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Optional: Track FAQ expansion for analytics
+  document.querySelectorAll('details').forEach((detail) => {
+    detail.addEventListener('toggle', () => {
+      if (detail.open) {
+        const question = detail.querySelector('summary')?.textContent?.trim();
+        // Track with your analytics if needed
+        console.log('FAQ opened:', question);
+      }
+    });
+  });
+</script>

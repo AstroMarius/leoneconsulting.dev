@@ -1,0 +1,111 @@
+{
+  "testimonials": [
+    {
+      "id": "testimonial-1",
+      "author": {
+        "name": "Marco R.",
+        "role": "Operations Manager",
+        "company": "PMI settore manifatturiero",
+        "anonymous": true
+      },
+      "quote": "Avevamo dati sparsi in 3 sistemi diversi e facevamo report Excel manualmente ogni settimana. Mario ha automatizzato tutto in 4 settimane. Ora abbiamo una dashboard sempre aggiornata e abbiamo recuperato 2 giorni di lavoro a settimana.",
+      "project": "Data Pipeline & Dashboard",
+      "metrics": [
+        {
+          "label": "Tempo risparmiato",
+          "value": "2 giorni/settimana"
+        }
+      ],
+      "featured": true,
+      "metadata": {
+        "year": 2025,
+        "language": "it"
+      }
+    },
+    {
+      "id": "testimonial-2",
+      "author": {
+        "name": "Laura M.",
+        "role": "Founder",
+        "company": "Startup B2B SaaS",
+        "anonymous": false
+      },
+      "quote": "Non sapevamo se la nostra idea fosse tecnicamente fattibile. L'audit di Mario ci ha dato un piano chiaro, stime realistiche e ci ha fatto evitare 3 scelte architetturali sbagliate. Miglior investimento iniziale possibile.",
+      "project": "Tech/AI Audit",
+      "metrics": [
+        {
+          "label": "Rischi identificati",
+          "value": "5 critici"
+        }
+      ],
+      "featured": true,
+      "metadata": {
+        "year": 2025,
+        "language": "it"
+      }
+    },
+    {
+      "id": "testimonial-3",
+      "author": {
+        "name": "Stefano B.",
+        "role": "Product Manager",
+        "company": "Scale-up tech",
+        "anonymous": true
+      },
+      "quote": "Avevamo bisogno di un prototipo funzionante per presentare agli stakeholders. In 3 settimane Mario ha consegnato un MVP deployato che usiamo ancora oggi come base del prodotto finale. Codice pulito, ben documentato, zero sorprese.",
+      "project": "MVP Sprint",
+      "metrics": [
+        {
+          "label": "Time to demo",
+          "value": "3 settimane"
+        }
+      ],
+      "featured": true,
+      "metadata": {
+        "year": 2025,
+        "language": "it"
+      }
+    }
+  ],
+  "beforeAfter": [
+    {
+      "id": "before-after-1",
+      "title": "Report manuali → Dashboard automatica",
+      "before": {
+        "description": "2 giorni/settimana per report Excel con dati obsoleti",
+        "painPoints": [
+          "Errori di trascrizione frequenti",
+          "Dati sempre obsoleti di 48h",
+          "Impossibile fare analisi real-time"
+        ]
+      },
+      "after": {
+        "description": "Dashboard automatica aggiornata ogni notte",
+        "improvements": [
+          "Zero errori di trascrizione",
+          "Dati freschi ogni mattina",
+          "Team ops recupera 2 giorni/settimana"
+        ]
+      },
+      "metrics": [
+        {
+          "label": "Tempo ridotto",
+          "value": "da 16h/mese a 0"
+        },
+        {
+          "label": "Errori",
+          "value": "da ~15/mese a 0"
+        }
+      ],
+      "featured": true,
+      "metadata": {
+        "project": "Data Pipeline",
+        "language": "it"
+      }
+    }
+  ],
+  "metadata": {
+    "language": "it",
+    "lastUpdated": "2026-02-16"
+  }
+}
