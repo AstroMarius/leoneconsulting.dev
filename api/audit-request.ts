@@ -92,9 +92,9 @@ export default async (req: VercelRequest, res: VercelResponse) => {
 
     // Create email transporter
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || 'smtp.gmail.com',
-      port: parseInt(process.env.SMTP_PORT || '587'),
-      secure: false,
+      host: process.env.SMTP_HOST,
+      port: parseInt(process.env.SMTP_PORT || '465'),
+      secure: process.env.SMTP_PORT === '465',
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
@@ -104,7 +104,7 @@ export default async (req: VercelRequest, res: VercelResponse) => {
     // Email to me
     await transporter.sendMail({
       from: process.env.SMTP_FROM || process.env.SMTP_USER,
-      to: process.env.CONTACT_EMAIL || process.env.SMTP_USER,
+      to: process.env.SMTP_TO,
       subject: `📋 Audit Asincrono - ${sanitizedData.project}`,
       html: `
         <h2>Nuova Richiesta Audit Asincrono</h2>
