@@ -1,0 +1,108 @@
+{
+  "slug": "predictive-analytics-ml",
+  "title": "Predictive Analytics con Machine Learning",
+  "client": "Settore E-commerce & Manifatturiero",
+  "sector": "Data Science",
+  "published": true,
+  "featuredImage": "/img/case-studies/predictive-ml.jpg",
+  
+  "problem": {
+    "description": "Implementazione di pipeline ML scalabili per predizione churn clienti, risk modeling creditizio e forecasting time-series. Le aziende avevano bisogno di modelli predittivi affidabili per decisioni strategiche basate su dati concreti, non su intuizioni.",
+    "painPoints": [
+      "Previsioni vendite inaccurate causavano inefficienze inventario",
+      "Modelli baseline con scarsa accuracy (< 70%)",
+      "Dataset con missing values, outlier e trend non-lineari",
+      "Necessità di deploy modelli in production con monitoring"
+    ]
+  },
+  
+  "constraints": {
+    "timeline": "6-8 settimane per progetto",
+    "budget": "Budget limitato per PMI",
+    "technical": [
+      "Integrazione con sistemi legacy senza API moderne",
+      "Dati storici limitati (18-24 mesi)",
+      "Necessità di interpretabilità modelli per stakeholder business"
+    ],
+    "compliance": [
+      "GDPR per dati clienti in churn prediction"
+    ]
+  },
+  
+  "solution": {
+    "architecture": "Pipeline end-to-end: preprocessing dati con Pandas, feature engineering custom per dominio, ensemble models (Random Forest, Gradient Boosting, LSTM per time-series). Deploy via Docker con FastAPI per inference. Monitoring drift modelli con logging metriche.",
+    "keyDecisions": [
+      "Gradient Boosting (XGBoost) per churn prediction - migliore interpretabilità",
+      "LSTM networks per time-series con pattern stagionali complessi",
+      "Feature engineering manuale basata su domain knowledge (non solo AutoML)",
+      "Jupyter Notebooks per EDA condivisa con stakeholder business",
+      "Docker per portabilità e deployment CI/CD"
+    ],
+    "approach": "Approccio iterativo: 1) EDA approfondita per scoprire anomalie dati, 2) Modello baseline semplice come benchmark, 3) Feature engineering guidata da business insights, 4) Hyperparameter tuning con cross-validation, 5) Deployment incrementale con A/B testing."
+  },
+  
+  "results": {
+    "metrics": [
+      {
+        "label": "Accuracy churn prediction",
+        "value": "85% (da 68% baseline)",
+        "isProxy": false,
+        "description": "Modello Gradient Boosting con feature engineered"
+      },
+      {
+        "label": "Riduzione errore forecasting",
+        "value": "25% MAE improvement",
+        "isProxy": false,
+        "description": "Modello LSTM vs tradizionale ARIMA"
+      },
+      {
+        "label": "Time-to-production",
+        "value": "da 8 a 3 settimane",
+        "isProxy": false,
+        "description": "Pipeline automatizzata riduce tempo deployment"
+      }
+    ],
+    "impact": "Modelli predittivi scalabili che forniscono insights azionabili. Churn prediction abilita campagne retention mirate, forecasting ottimizza inventario, credit risk model riduce exposure finanziaria. Tutti i modelli documentati e interpretabili per stakeholder business."
+  },
+  
+  "tech": {
+    "stack": [
+      "Python 3.11",
+      "Scikit-learn",
+      "XGBoost",
+      "TensorFlow/Keras",
+      "Docker",
+      "FastAPI"
+    ],
+    "tools": [
+      "Pandas",
+      "NumPy",
+      "Matplotlib/Seaborn",
+      "Jupyter Notebook",
+      "MLflow (experiment tracking)",
+      "PostgreSQL"
+    ]
+  },
+  
+  "testimonial": null,
+  
+  "role": [
+    "Design end-to-end ML pipeline (preprocessing, training, deployment)",
+    "Feature engineering e data preprocessing con Pandas/NumPy",
+    "Model selection e hyperparameter tuning (XGBoost, LSTM)",
+    "Implementazione FastAPI per serving predizioni",
+    "Containerization Docker per ambienti reproducibili",
+    "Setup CI/CD per retraining automatico"
+  ],
+  
+  "metadata": {
+    "duration": "Progetti multipli",
+    "year": 2024,
+    "language": "it"
+  },
+  
+  "cta": {
+    "text": "Vuoi modelli ML per il tuo business?",
+    "link": "/contact"
+  }
+}

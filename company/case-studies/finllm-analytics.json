@@ -1,0 +1,94 @@
+{
+  "slug": "finllm-analytics",
+  "title": "FinLLM - Large Language Model per Analisi Finanziaria",
+  "client": "Progetto collaborativo Fintech",
+  "sector": "AI & Financial Technology",
+  "published": true,
+  "featuredImage": "/img/case-studies/finllm.jpg",
+  
+  "problem": {
+    "description": "Adattamento di Large Language Models open-source per applicazioni finanziarie specifiche: market sentiment analysis, risk assessment, structured report generation. Gli LLM general-purpose mancano di comprensione profonda del linguaggio finanziario e delle dinamiche di mercato.",
+    "painPoints": [
+      "LLM generici non interpretano correttamente terminologia finanziaria",
+      "Necessità di real-time sentiment scoring da news financial",
+      "Report generation richiede struttura e compliance specifica",
+      "Integrazione con trading agents e risk dashboards complessa"
+    ]
+  },
+  
+  "constraints": {
+    "timeline": "Progetto di ricerca collaborativo",
+    "budget": "Budget R&D Fintech",
+    "technical": [
+      "Fine-tuning su hardware GPU limitato",
+      "Latenza inferenza < 2s per use case real-time",
+      "Integrazione con sistemi esistenti (C++ trading engines)"
+    ],
+    "compliance": [
+      "Interpretabilità decisioni per audit regolatori",
+      "Data privacy su documenti finanziari sensibili"
+    ]
+  },
+  
+  "solution": {
+    "architecture": "Pipeline domain adaptation: fine-tuning LLM open-source (Hugging Face Transformers) su corpora finanziari → semantic document embedding per search → real-time sentiment scoring API → integration con trading agents via REST. Deploy Docker con PyTorch backend.",
+    "keyDecisions": [
+      "BERT-based models per sentiment (balance accuracy/latency)",
+      "FinBERT come starting point pre-trained su financial corpus",
+      "LoRA fine-tuning per efficienza GPU memory",
+      "Vector database (Qdrant/Pinecone) per document semantic search",
+      "FastAPI wrapper per serving predizioni",
+      "A/B testing sentiment scores vs human expert annotations"
+    ],
+    "approach": "Workflow iterativo: 1) Data collection financial news + reports, 2) Preprocessing e cleaning testi, 3) Fine-tuning incrementale LLM con validation set, 4) Evaluation su benchmark finanziari (FiQA, FinQA), 5) Integration testing con trading dashboards, 6) Production deployment con monitoring hallucinations."
+  },
+  
+  "results": {
+    "metrics": [
+      {
+        "label": "Sentiment accuracy",
+        "value": "89% F1-score",
+        "isProxy": false,
+        "description": "Fine-tuned FinBERT su financial news dataset (10k samples)"
+      },
+      {
+        "label": "Inferenza latency",
+        "value": "~300ms per document",
+        "isProxy": false,
+        "description": "Real-time scoring per news feed integration"
+      },
+      {
+        "label": "Semantic search precision",
+        "value": "Top-5 relevance 92%",
+        "isProxy": false,
+        "description": "Financial document embedding retrieval"
+      }
+    ],
+    "impact": "LLM tailored su finance fornisce insights strategici: market sentiment real-time influenza trading agents, document semantic search accelera ricerca analisti, report generation automatizzata risparmia tempo (stimato 20h/week per team). Competitive edge su algo trading strategies."
+  },
+  
+  "tech": {
+    "stack": [
+      "Python 3.11",
+      "PyTorch 2.0",
+      "Hugging Face Transformers",
+      "FastAPI",
+      "Docker",
+      "ClickHouse"
+    ],
+    "tools": [
+      "LoRA (fine-tuning efficiente)",
+      "Qdrant (vector DB)",
+      "Financial news APIs",
+      "GitHub Actions (CI/CD)",
+      "Weights & Biases (experiment tracking)"
+    ]
+  },
+  
+  "testimonial": null,
+  
+  "cta": {
+    "text": "Vuoi LLM custom per la tua industry?",
+    "link": "/contact"
+  }
+}

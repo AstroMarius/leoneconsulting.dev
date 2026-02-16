@@ -14,6 +14,9 @@ import type { Package } from '../types/package';
 import dashboardOps from '../../company/case-studies/dashboard-kpi-operations.json';
 import aiClassifier from '../../company/case-studies/prototipo-ai-classificazione.json';
 import ecommercePipeline from '../../company/case-studies/pipeline-analytics-ecommerce.json';
+import multiAgentHFT from '../../company/case-studies/multiagenthft.json';
+import predictiveAnalytics from '../../company/case-studies/predictive-analytics-ml.json';
+import finLLM from '../../company/case-studies/finllm.json';
 
 // Import packages
 import techAudit from '../../company/packages/tech-audit.json';
@@ -24,6 +27,9 @@ const featuredCaseStudies: CaseStudy[] = [
   dashboardOps as CaseStudy,
   aiClassifier as CaseStudy,
   ecommercePipeline as CaseStudy,
+  multiAgentHFT as CaseStudy,
+  predictiveAnalytics as CaseStudy,
+  finLLM as CaseStudy,
 ].filter(cs => cs.published).slice(0, 3);
 
 const packages: Package[] = [
