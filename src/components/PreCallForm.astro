@@ -1,16 +1,86 @@
 ---
 interface Props {
   class?: string;
+  lang?: 'it' | 'en';
 }
 
-const { class: className = '' } = Astro.props;
+const { class: className = '', lang = 'it' } = Astro.props;
+
+const t = {
+  it: {
+    name: 'Nome',
+    namePlaceholder: 'Il tuo nome',
+    email: 'Email',
+    objective: 'Qual è il tuo obiettivo principale?',
+    selectOption: 'Seleziona un\'opzione',
+    audit: 'Validare fattibilità di un\'idea o progetto tech/AI (Audit)',
+    mvp: 'Creare un prototipo o MVP funzionante (MVP Sprint)',
+    dataPipeline: 'Automatizzare report e centralizzare dati (Data Pipeline)',
+    improvement: 'Migliorare/scalare sistema esistente',
+    other: 'Altro',
+    situation: 'Descrivi brevemente la tua situazione attuale',
+    situationPlaceholder: 'Es: Abbiamo dati in 3 sistemi diversi (ERP, CRM, Excel) e facciamo report manuali. Vorremmo automatizzare.',
+    maxChars: 'Max 300 caratteri',
+    dataStatus: 'Hai già dati o sistemi tecnici esistenti?',
+    dataStatusNone: 'No, partiamo da zero',
+    dataStatusIncomplete: 'Sì, ma sono disorganizzati o incompleti',
+    dataStatusIntegration: 'Sì, abbiamo dati e sistemi ma manca integrazione',
+    dataStatusAdvanced: 'Sì, abbiamo già infrastruttura avanzata',
+    timeline: 'Qual è la tua timeline ideale?',
+    timelineUrgent: 'Urgente (entro 1 mese)',
+    timelineShort: 'Breve termine (1-3 mesi)',
+    timelineMedium: 'Medio termine (3-6 mesi)',
+    timelineLong: 'Lungo termine (6+ mesi), sto solo esplorando',
+    budget: 'Hai un budget allocato per questo progetto? (opzionale)',
+    budgetNone: 'Preferisco non specificarlo',
+    budgetNotDefined: 'Non ancora definito',
+    submit: 'Invia Richiesta',
+    submitting: 'Invio in corso...',
+    successMsg: 'Grazie! Ti ricontatterò entro 24 ore.',
+    errorMsg: 'Errore durante l\'invio. Riprova o contattami direttamente via email.',
+  },
+  en: {
+    name: 'Name',
+    namePlaceholder: 'Your name',
+    email: 'Email',
+    objective: 'What is your main objective?',
+    selectOption: 'Select an option',
+    audit: 'Validate feasibility of a tech/AI idea or project (Audit)',
+    mvp: 'Create a working prototype or MVP (MVP Sprint)',
+    dataPipeline: 'Automate reports and centralize data (Data Pipeline)',
+    improvement: 'Improve/scale existing system',
+    other: 'Other',
+    situation: 'Briefly describe your current situation',
+    situationPlaceholder: 'E.g.: We have data in 3 different systems (ERP, CRM, Excel) and create manual reports. We want to automate.',
+    maxChars: 'Max 300 characters',
+    dataStatus: 'Do you already have existing data or technical systems?',
+    dataStatusNone: 'No, starting from scratch',
+    dataStatusIncomplete: 'Yes, but they are disorganized or incomplete',
+    dataStatusIntegration: 'Yes, we have data and systems but integration is missing',
+    dataStatusAdvanced: 'Yes, we already have advanced infrastructure',
+    timeline: 'What is your ideal timeline?',
+    timelineUrgent: 'Urgent (within 1 month)',
+    timelineShort: 'Short term (1-3 months)',
+    timelineMedium: 'Medium term (3-6 months)',
+    timelineLong: 'Long term (6+ months), just exploring',
+    budget: 'Do you have an allocated budget for this project? (optional)',
+    budgetNone: 'Prefer not to specify',
+    budgetNotDefined: 'Not yet defined',
+    submit: 'Send Request',
+    submitting: 'Sending...',
+    successMsg: 'Thanks! I\'ll get back to you within 24 hours.',
+    errorMsg: 'Error sending. Please try again or contact me directly via email.',
+  },
+};
+
+const text = t[lang];
 ---
 
-<form id="pre-call-form" class={`space-y-6 ${className}`}>
+<form id="pre-call-form" class={`space-y-6 ${className}`} data-lang={lang}>
   <!-- Nome -->
   <div>
     <label for="name" class="block text-sm font-semibold text-gray-900 mb-2">
-      Nome *
+      {text.name} *
     </label>
     <input
       type="text"
@@ -18,14 +88,14 @@ const { class: className = '' } = Astro.props;
       name="name"
       required
       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-transparent transition-all"
-      placeholder="Il tuo nome"
+      placeholder={text.namePlaceholder}
     />
   </div>
 
   <!-- Email -->
   <div>
     <label for="email" class="block text-sm font-semibold text-gray-900 mb-2">
-      Email *
+      {text.email} *
     </label>
     <input
       type="email"
@@ -40,7 +110,7 @@ const { class: className = '' } = Astro.props;
   <!-- Obiettivo -->
   <div>
     <label for="objective" class="block text-sm font-semibold text-gray-900 mb-2">
-      Qual è il tuo obiettivo principale? *
+      {text.objective} *
     </label>
     <select
       id="objective"
@@ -48,19 +118,19 @@ const { class: className = '' } = Astro.props;
       required
       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-transparent transition-all"
     >
-      <option value="">Seleziona un'opzione</option>
-      <option value="audit">Validare fattibilità di un'idea o progetto tech/AI (Audit)</option>
-      <option value="mvp">Creare un prototipo o MVP funzionante (MVP Sprint)</option>
-      <option value="data-pipeline">Automatizzare report e centralizzare dati (Data Pipeline)</option>
-      <option value="improvement">Migliorare/scalare sistema esistente</option>
-      <option value="other">Altro</option>
+      <option value="">{text.selectOption}</option>
+      <option value="audit">{text.audit}</option>
+      <option value="mvp">{text.mvp}</option>
+      <option value="data-pipeline">{text.dataPipeline}</option>
+      <option value="improvement">{text.improvement}</option>
+      <option value="other">{text.other}</option>
     </select>
   </div>
 
   <!-- Situazione Attuale -->
   <div>
     <label for="situation" class="block text-sm font-semibold text-gray-900 mb-2">
-      Descrivi brevemente la tua situazione attuale *
+      {text.situation} *
     </label>
     <textarea
       id="situation"
@@ -69,15 +139,15 @@ const { class: className = '' } = Astro.props;
       rows="4"
       maxlength="300"
       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-transparent transition-all"
-      placeholder="Es: Abbiamo dati in 3 sistemi diversi (ERP, CRM, Excel) e facciamo report manuali. Vorremmo automatizzare."
+      placeholder={text.situationPlaceholder}
     ></textarea>
-    <p class="text-sm text-gray-500 mt-1">Max 300 caratteri</p>
+    <p class="text-sm text-gray-500 mt-1">{text.maxChars}</p>
   </div>
 
   <!-- Dati Esistenti -->
   <div>
     <label for="data-status" class="block text-sm font-semibold text-gray-900 mb-2">
-      Hai già dati o sistemi tecnici esistenti? *
+      {text.dataStatus} *
     </label>
     <select
       id="data-status"
@@ -85,18 +155,18 @@ const { class: className = '' } = Astro.props;
       required
       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-transparent transition-all"
     >
-      <option value="">Seleziona un'opzione</option>
-      <option value="none">No, partiamo da zero</option>
-      <option value="incomplete">Sì, ma sono disorganizzati o incompleti</option>
-      <option value="need-integration">Sì, abbiamo dati e sistemi ma manca integrazione</option>
-      <option value="advanced">Sì, abbiamo già infrastruttura avanzata</option>
+      <option value="">{text.selectOption}</option>
+      <option value="none">{text.dataStatusNone}</option>
+      <option value="incomplete">{text.dataStatusIncomplete}</option>
+      <option value="need-integration">{text.dataStatusIntegration}</option>
+      <option value="advanced">{text.dataStatusAdvanced}</option>
     </select>
   </div>
 
   <!-- Timeline -->
   <div>
     <label for="timeline" class="block text-sm font-semibold text-gray-900 mb-2">
-      Qual è la tua timeline ideale? *
+      {text.timeline} *
     </label>
     <select
       id="timeline"
@@ -104,30 +174,30 @@ const { class: className = '' } = Astro.props;
       required
       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-transparent transition-all"
     >
-      <option value="">Seleziona un'opzione</option>
-      <option value="urgent">Urgente (entro 1 mese)</option>
-      <option value="short">Breve termine (1-3 mesi)</option>
-      <option value="medium">Medio termine (3-6 mesi)</option>
-      <option value="long">Lungo termine (6+ mesi), sto solo esplorando</option>
+      <option value="">{text.selectOption}</option>
+      <option value="urgent">{text.timelineUrgent}</option>
+      <option value="short">{text.timelineShort}</option>
+      <option value="medium">{text.timelineMedium}</option>
+      <option value="long">{text.timelineLong}</option>
     </select>
   </div>
 
   <!-- Budget (opzionale) -->
   <div>
     <label for="budget" class="block text-sm font-semibold text-gray-900 mb-2">
-      Hai un budget allocato per questo progetto? (opzionale)
+      {text.budget}
     </label>
     <select
       id="budget"
       name="budget"
       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-transparent transition-all"
     >
-      <option value="">Preferisco non specificarlo</option>
+      <option value="">{text.budgetNone}</option>
       <option value="under-3k">&lt; CHF 3.200</option>
       <option value="3-10k">CHF 3.200 - CHF 11.000</option>
       <option value="10-30k">CHF 11.000 - CHF 32.000</option>
       <option value="30k+">CHF 32.000+</option>
-      <option value="not-defined">Non ancora definito</option>
+      <option value="not-defined">{text.budgetNotDefined}</option>
     </select>
   </div>
 
@@ -137,7 +207,7 @@ const { class: className = '' } = Astro.props;
       type="submit"
       class="w-full px-8 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-all transform hover:scale-105 font-semibold shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
     >
-      Invia Richiesta
+      {text.submit}
     </button>
   </div>
 
@@ -148,13 +218,31 @@ const { class: className = '' } = Astro.props;
 <script>
   const form = document.getElementById('pre-call-form') as HTMLFormElement;
   const statusDiv = document.getElementById('form-status') as HTMLDivElement;
+  const lang = form?.dataset.lang || 'it';
+
+  const messages = {
+    it: {
+      submitting: 'Invio in corso...',
+      submit: 'Invia Richiesta',
+      success: 'Grazie! Ti ricontatterò entro 24 ore.',
+      error: 'Errore durante l\'invio. Riprova o contattami direttamente via email.',
+    },
+    en: {
+      submitting: 'Sending...',
+      submit: 'Send Request',
+      success: 'Thanks! I\'ll get back to you within 24 hours.',
+      error: 'Error sending. Please try again or contact me directly via email.',
+    },
+  };
+
+  const t = messages[lang as 'it' | 'en'] || messages.it;
 
   form?.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
     submitBtn.disabled = true;
-    submitBtn.textContent = 'Invio in corso...';
+    submitBtn.textContent = t.submitting;
 
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
@@ -169,25 +257,25 @@ const { class: className = '' } = Astro.props;
       });
 
       if (response.ok) {
-        statusDiv.textContent = 'Grazie! Ti ricontatterò entro 24 ore.';
+        statusDiv.textContent = t.success;
         statusDiv.className = 'p-4 rounded-lg bg-green-100 text-green-800 border border-green-300';
         statusDiv.classList.remove('hidden');
         form.reset();
         
         // Redirect after 2 seconds
         setTimeout(() => {
-          window.location.href = '/booking';
+          window.location.href = lang === 'en' ? '/en/booking' : '/booking';
         }, 2000);
       } else {
         throw new Error('Errore durante l\'invio');
       }
     } catch (error) {
-      statusDiv.textContent = 'Errore durante l\'invio. Riprova o contattami direttamente via email.';
+      statusDiv.textContent = t.error;
       statusDiv.className = 'p-4 rounded-lg bg-red-100 text-red-800 border border-red-300';
       statusDiv.classList.remove('hidden');
     } finally {
       submitBtn.disabled = false;
-      submitBtn.textContent = 'Invia Richiesta';
+      submitBtn.textContent = t.submit;
     }
   });
 </script>

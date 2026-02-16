@@ -1,0 +1,100 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import PreCallForm from '../../components/PreCallForm.astro';
+---
+
+<Layout 
+  title="Book a Call - Leone Consulting"
+  description="Book a free 30-minute call. Answer 5 questions to help me prepare our conversation better."
+>
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="pt-32 pb-12 px-6 bg-gradient-to-br from-primary-50 to-white">
+      <div class="container mx-auto">
+        <div class="max-w-3xl mx-auto text-center">
+          <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            Book a
+            <span class="text-primary-600">Free Call</span>
+          </h1>
+          <p class="text-xl text-gray-600 leading-relaxed">
+            30 minutes to understand your project and how I can help. Answer 5 questions to help me prepare our conversation better.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="py-16 px-6">
+      <div class="container mx-auto max-w-2xl">
+        <div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-gray-100">
+          <div class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">
+              A Few Questions Before the Call
+            </h2>
+            <p class="text-gray-600 leading-relaxed">
+              Answering these questions helps me prepare better and make our call more productive. Takes only 2 minutes.
+            </p>
+          </div>
+
+          <PreCallForm lang="en" />
+        </div>
+
+        <!-- What Happens Next -->
+        <div class="mt-12 bg-blue-50 p-8 rounded-xl border border-blue-200">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">What Happens Next?</h3>
+          <ol class="space-y-4">
+            <li class="flex items-start gap-4">
+              <span class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">
+                1
+              </span>
+              <div>
+                <div class="font-semibold text-gray-900">Receive email confirmation</div>
+                <div class="text-gray-600 text-sm">Within a few hours of your request</div>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <span class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">
+                2
+              </span>
+              <div>
+                <div class="font-semibold text-gray-900">Choose date and time</div>
+                <div class="text-gray-600 text-sm">I'll send you a link to book your preferred slot</div>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <span class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">
+                3
+              </span>
+              <div>
+                <div class="font-semibold text-gray-900">We connect</div>
+                <div class="text-gray-600 text-sm">30 minutes to discuss your project and next steps</div>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Alternative Option -->
+        <div class="mt-12 text-center">
+          <p class="text-gray-600 mb-4">
+            Prefer written feedback instead of a call?
+          </p>
+          <a 
+            href="/en/async-audit" 
+            class="inline-flex items-center px-6 py-3 bg-white text-primary-600 border-2 border-primary-600 rounded-lg hover:bg-primary-50 transition-all font-semibold"
+          >
+            Request Async Audit
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>

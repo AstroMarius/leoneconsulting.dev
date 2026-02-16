@@ -1,0 +1,236 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout 
+  title="Who I'm NOT For - Leone Consulting" 
+  description="If you're looking for a full-service agency, rock-bottom prices, or ongoing 24/7 support, I'm probably not the right fit for you."
+>
+  <Header />
+  
+  <main>
+    <!-- Hero -->
+    <section class="pt-32 pb-16 bg-gradient-to-b from-white to-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-5xl font-bold text-gray-900 mb-6">
+          Who I'm <span class="text-primary-600">NOT</span> For
+        </h1>
+        <p class="text-xl text-gray-600 leading-relaxed">
+          Time is precious. If you recognize yourself in one of these profiles, 
+          we should probably <strong>not</strong> work together.
+        </p>
+      </div>
+    </section>
+
+    <!-- Not A Fit Section -->
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="space-y-8">
+          
+          <!-- 1. Full-Service Agency -->
+          <div class="border-l-4 border-red-500 pl-6 py-4">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">
+              ❌ If You're Looking for a Full-Service Agency
+            </h2>
+            <p class="text-gray-700 mb-4">
+              I don't do branding, graphic design, marketing, social media management, SEO copywriting, 
+              or complex infrastructure project management. I'm a <strong>technical specialist</strong>, 
+              not an agency.
+            </p>
+            <p class="text-gray-600 text-sm">
+              <strong>Alternative:</strong> Look for a full-service digital agency or in-house multidisciplinary team.
+            </p>
+          </div>
+
+          <!-- 2. Ultra-Low Budget -->
+          <div class="border-l-4 border-red-500 pl-6 py-4">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">
+              ❌ If Budget Is Your Main Criterion
+            </h2>
+            <p class="text-gray-700 mb-4">
+              If you're looking for "the lowest price," I'm not competitive. My rates reflect 
+              4+ years of experience, code quality, and measurable results. If your only KPI is 
+              "how much does it cost?", there are cheaper (and often riskier) options.
+            </p>
+            <p class="text-gray-600 text-sm">
+              <strong>Alternative:</strong> Junior freelancers, offshore teams, or platforms like Upwork/Fiverr.
+            </p>
+          </div>
+
+          <!-- 3. Continuous Hand-Holding -->
+          <div class="border-l-4 border-red-500 pl-6 py-4">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">
+              ❌ If You Need 24/7 Ongoing Support
+            </h2>
+            <p class="text-gray-700 mb-4">
+              I work on <strong>defined projects with clear start and end</strong>, not on continuous retainers 
+              or on-call support. If you need someone "always available" for small changes or 
+              daily troubleshooting, that's not my model.
+            </p>
+            <p class="text-gray-600 text-sm">
+              <strong>Alternative:</strong> In-house developer, agency with retainer contract, 
+              or managed service provider.
+            </p>
+          </div>
+
+          <!-- 4. Vague Scope -->
+          <div class="border-l-4 border-red-500 pl-6 py-4">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">
+              ❌ If "You Don't Know What You Want Yet"
+            </h2>
+            <p class="text-gray-700 mb-4">
+              I work well when there's a <strong>clear problem to solve</strong>, even if the solution 
+              isn't defined. But if you have no idea what you want to achieve, what resources you have, or 
+              "just want to explore," it's probably too early to start.
+            </p>
+            <p class="text-gray-600 text-sm">
+              <strong>Alternative:</strong> Start with an audit or discovery call to define objectives. 
+              If even after a 30-minute call no clear problem emerges, wait until you have more clarity.
+            </p>
+          </div>
+
+          <!-- 5. Zero Involvement -->
+          <div class="border-l-4 border-red-500 pl-6 py-4">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">
+              ❌ If You Want to "Delegate Everything and Disappear"
+            </h2>
+            <p class="text-gray-700 mb-4">
+              My projects require <strong>active collaboration</strong>: access to systems/data, 
+              feedback on prototypes, validation of priorities. I'm not a black box producing code in isolation. 
+              If you expect to brief me once and then check back in 3 months, it won't work.
+            </p>
+            <p class="text-gray-600 text-sm">
+              <strong>Alternative:</strong> Agencies with dedicated project managers or offshore dev shops 
+              that work more autonomously.
+            </p>
+          </div>
+
+          <!-- 6. Zero Tolerance for Iteration -->
+          <div class="border-l-4 border-red-500 pl-6 py-4">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">
+              ❌ If You Expect "Perfect on First Try"
+            </h2>
+            <p class="text-gray-700 mb-4">
+              Technical projects involve iteration. Requirements evolve, assumptions get validated, 
+              edge cases emerge. If you expect pixel-perfect, bug-free, fully-featured V1 on first deployment 
+              with zero changes, that's unrealistic and we'll both be frustrated.
+            </p>
+            <p class="text-gray-600 text-sm">
+              <strong>My approach:</strong> Ship fast, gather feedback, iterate. MVP → V2 → V3, not waterfall.
+            </p>
+          </div>
+
+          <!-- 7. Technology Dictators -->
+          <div class="border-l-4 border-red-500 pl-6 py-4">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">
+              ❌ If You've Already Decided on Tech Stack (For Wrong Reasons)
+            </h2>
+            <p class="text-gray-700 mb-4">
+              If you insist on "must be built in [obscure framework X] because my nephew uses it," 
+              that's a red flag. I recommend tech based on <strong>problem fit, scalability, maintainability</strong>, 
+              not trends or personal preferences. If you're inflexible on tech for non-technical reasons, we'll clash.
+            </p>
+            <p class="text-gray-600 text-sm">
+              <strong>Exception:</strong> If you already have a tech stack for valid reasons (existing team, infrastructure), 
+              that's fine—I'll work within those constraints.
+            </p>
+          </div>
+
+          <!-- 8. Expecting Mind Reading -->
+          <div class="border-l-4 border-red-500 pl-6 py-4">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">
+              ❌ If You Expect Me to "Just Know" What You Want
+            </h2>
+            <p class="text-gray-700 mb-4">
+              I ask questions. Lots of them. Ambiguity kills projects. If you answer questions with 
+              "you're the expert, you figure it out" or get annoyed by clarification requests, 
+              we'll waste time on rework. I need your domain knowledge; you need my technical knowledge.
+            </p>
+            <p class="text-gray-600 text-sm">
+              <strong>My approach:</strong> Collaborative discovery. I won't move forward on assumptions—I validate first.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Who IS It For -->
+    <section class="py-16 bg-gradient-to-br from-primary-50 to-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8">
+          ✅ You <span class="text-primary-600">ARE</span> a Good Fit If:
+        </h2>
+        
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow-sm">
+            <h3 class="font-bold text-gray-900 mb-2">✓ You have a clear (or clear-ish) problem</h3>
+            <p class="text-gray-600 text-sm">
+              Even if the solution is undefined, you know what pain you're trying to solve.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm">
+            <h3 class="font-bold text-gray-900 mb-2">✓ You value results over "cheap"</h3>
+            <p class="text-gray-600 text-sm">
+              You're willing to invest in quality work that delivers ROI, not just minimize upfront cost.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm">
+            <h3 class="font-bold text-gray-900 mb-2">✓ You're OK with iteration</h3>
+            <p class="text-gray-600 text-sm">
+              Ship → Learn → Improve is your mindset, not "get it perfect first time."
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm">
+            <h3 class="font-bold text-gray-900 mb-2">✓ You can commit time to collaborate</h3>
+            <p class="text-gray-600 text-sm">
+              30 min/week for check-ins, feedback, and validation. Not full-time, but engaged.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm">
+            <h3 class="font-bold text-gray-900 mb-2">✓ You want technical depth, not breadth</h3>
+            <p class="text-gray-600 text-sm">
+              Data pipelines, AI prototypes, dashboards—not branding, marketing, or graphic design.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm">
+            <h3 class="font-bold text-gray-900 mb-2">✓ You're open to honest feedback</h3>
+            <p class="text-gray-600 text-sm">
+              If something won't work, I'll tell you. You won't shoot the messenger.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-12 text-center">
+          <p class="text-gray-600 mb-6">
+            Sound like you? Let's talk.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="/en/book-call" 
+              class="px-8 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-all transform hover:scale-105 font-semibold shadow-lg"
+            >
+              Book a Free Call
+            </a>
+            <a 
+              href="/en/async-audit" 
+              class="px-8 py-4 bg-white text-primary-600 border-2 border-primary-600 rounded-lg hover:bg-primary-50 transition-all font-semibold"
+            >
+              Request Async Audit
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  
+  <Footer />
+</Layout>
