@@ -54,6 +54,9 @@ export const ui = {
     'footer.description': 'Soluzioni innovative in AI Engineering, sviluppo software e consulenza IT per trasformare la tua visione in realtà.',
     'footer.quicklinks': 'Link Rapidi',
     'footer.contact': 'Contatti',
+    'footer.legal': 'Legale',
+    'footer.privacy': 'Privacy Policy',
+    'footer.terms': 'Termini e Condizioni',
     'footer.rights': 'Tutti i diritti riservati.',
     
     'about.title': 'Chi Siamo',
@@ -153,6 +156,9 @@ export const ui = {
     'footer.description': 'Innovative solutions in AI Engineering, software development and IT consulting to transform your vision into reality.',
     'footer.quicklinks': 'Quick Links',
     'footer.contact': 'Contact',
+    'footer.legal': 'Legal',
+    'footer.privacy': 'Privacy Policy',
+    'footer.terms': 'Terms & Conditions',
     'footer.rights': 'All rights reserved.',
     
     'about.title': 'About Us',

@@ -1,0 +1,228 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout 
+  title="Privacy Policy - Leone Consulting" 
+  description="Privacy policy and personal data protection according to GDPR and Swiss regulations."
+>
+  <Header />
+  
+  <main class="py-32 px-6">
+    <div class="container mx-auto max-w-4xl">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-8">Privacy Policy</h1>
+      
+      <div class="prose prose-lg max-w-none">
+        <p class="text-gray-600 mb-8">
+          <strong>Last updated:</strong> February 16, 2026
+        </p>
+
+        <section class="mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">1. Data Controller</h2>
+          <p class="text-gray-700 leading-relaxed">
+            Leone Consulting<br/>
+            Email: privacy@leoneconsulting.dev<br/>
+            Website: leoneconsulting.dev
+          </p>
+          <p class="text-gray-700 leading-relaxed mt-4">
+            This document describes how we process personal data of users visiting the website 
+            leoneconsulting.dev, in compliance with the General Data Protection Regulation 
+            (GDPR EU 2016/679) and the Swiss Federal Data Protection Act (FDPA).
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">2. Data Collected and Purposes</h2>
+          
+          <h3 class="text-2xl font-bold text-gray-900 mb-3 mt-6">2.1 Browsing Data</h3>
+          <p class="text-gray-700 leading-relaxed">
+            During browsing, some technical data necessary for site functionality is automatically collected:
+          </p>
+          <ul class="list-disc pl-6 text-gray-700 space-y-2 my-4">
+            <li>IP address (anonymized)</li>
+            <li>Browser type and version</li>
+            <li>Operating system</li>
+            <li>Pages visited and time spent</li>
+            <li>Referrer (source website)</li>
+          </ul>
+          <p class="text-gray-700 leading-relaxed">
+            <strong>Purpose:</strong> Ensure proper site functioning, improve user experience, 
+            anonymous aggregate statistics.<br/>
+            <strong>Legal basis:</strong> Legitimate interest (Art. 6(1)(f) GDPR).<br/>
+            <strong>Retention:</strong> Maximum 26 months.
+          </p>
+
+          <h3 class="text-2xl font-bold text-gray-900 mb-3 mt-6">2.2 Voluntarily Provided Data (Contact/Booking Forms)</h3>
+          <p class="text-gray-700 leading-relaxed">
+            When you fill out a contact or booking form, we collect:
+          </p>
+          <ul class="list-disc pl-6 text-gray-700 space-y-2 my-4">
+            <li>First and last name</li>
+            <li>Email</li>
+            <li>Company (optional)</li>
+            <li>Message/request</li>
+            <li>Service of interest</li>
+          </ul>
+          <p class="text-gray-700 leading-relaxed">
+            <strong>Purpose:</strong> Respond to your requests for information, quotes, consultations.<br/>
+            <strong>Legal basis:</strong> Performance of pre-contractual measures at the data subject's 
+            request (Art. 6(1)(b) GDPR) or explicit consent.<br/>
+            <strong>Retention:</strong> 2 years from last interaction, or until consent is withdrawn.
+          </p>
+
+          <h3 class="text-2xl font-bold text-gray-900 mb-3 mt-6">2.3 Cookies and Similar Technologies</h3>
+          <p class="text-gray-700 leading-relaxed">
+            We use the following types of cookies:
+          </p>
+          <ul class="list-disc pl-6 text-gray-700 space-y-2 my-4">
+            <li><strong>Technical Cookies (necessary):</strong> Cookie preference management, user session. 
+            Do not require consent.</li>
+            <li><strong>Analytics Cookies (optional):</strong> Anonymous site usage statistics. 
+            Require consent.</li>
+          </ul>
+          <p class="text-gray-700 leading-relaxed">
+            You can manage your preferences through the cookie banner or your browser settings.
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">3. Data Sharing with Third Parties</h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            Your data may be shared with:
+          </p>
+          <ul class="list-disc pl-6 text-gray-700 space-y-2">
+            <li><strong>Hosting:</strong> Vercel Inc. (USA) - servers for website hosting. 
+            Data transferred outside EU with adequate safeguards (Standard Contractual Clauses).</li>
+            <li><strong>Email Service:</strong> Email services for notification delivery (e.g., SendGrid, Resend). 
+            Provider privacy policies apply.</li>
+            <li><strong>Analytics:</strong> Only if you consent, anonymous analytics services 
+            (e.g., Plausible, Google Analytics with anonymized IP).</li>
+          </ul>
+          <p class="text-gray-700 leading-relaxed mt-4">
+            <strong>We do not sell or transfer your data to third parties for marketing purposes.</strong>
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">4. Your Rights</h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            In accordance with GDPR and Swiss FDPA, you have the right to:
+          </p>
+          <ul class="list-disc pl-6 text-gray-700 space-y-2">
+            <li><strong>Access:</strong> Obtain a copy of your personal data.</li>
+            <li><strong>Rectification:</strong> Correct inaccurate or incomplete data.</li>
+            <li><strong>Erasure:</strong> Request deletion of your data ("right to be forgotten").</li>
+            <li><strong>Restriction:</strong> Limit processing in certain circumstances.</li>
+            <li><strong>Portability:</strong> Receive your data in a structured, machine-readable format.</li>
+            <li><strong>Objection:</strong> Object to processing based on legitimate interest.</li>
+            <li><strong>Withdraw consent:</strong> Withdraw consent at any time 
+            (without affecting the lawfulness of processing based on consent before withdrawal).</li>
+          </ul>
+          <p class="text-gray-700 leading-relaxed mt-6">
+            To exercise your rights, contact us at: <a href="mailto:privacy@leoneconsulting.dev" 
+            class="text-primary-600 font-semibold hover:text-primary-700">privacy@leoneconsulting.dev</a>
+          </p>
+          <p class="text-gray-700 leading-relaxed mt-4">
+            You also have the right to lodge a complaint with the competent Supervisory Authority:
+          </p>
+          <ul class="list-disc pl-6 text-gray-700 space-y-2 mt-2">
+            <li><strong>Switzerland:</strong> Federal Data Protection and Information Commissioner (FDPIC) 
+            - <a href="https://www.edoeb.admin.ch" target="_blank" rel="noopener" 
+            class="text-primary-600 hover:text-primary-700">www.edoeb.admin.ch</a></li>
+            <li><strong>EU/EEA:</strong> Supervisory Authority of your country of residence.</li>
+          </ul>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">5. Data Security</h2>
+          <p class="text-gray-700 leading-relaxed">
+            We implement appropriate technical and organizational measures to protect your personal data 
+            from unauthorized access, loss, destruction or alteration:
+          </p>
+          <ul class="list-disc pl-6 text-gray-700 space-y-2 my-4">
+            <li>Encrypted HTTPS/TLS connection</li>
+            <li>Secure servers with limited access</li>
+            <li>Regular backups</li>
+            <li>Anomalous activity monitoring</li>
+          </ul>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">6. International Transfers</h2>
+          <p class="text-gray-700 leading-relaxed">
+            Some of our service providers (e.g., Vercel hosting) may be located outside the 
+            European Economic Area (EEA) or Switzerland. In these cases, we ensure that transfers 
+            take place with adequate safeguards through:
+          </p>
+          <ul class="list-disc pl-6 text-gray-700 space-y-2 my-4">
+            <li>Standard Contractual Clauses (SCC) approved by the European Commission</li>
+            <li>Adequacy decisions</li>
+            <li>Privacy Shield Framework (where applicable)</li>
+          </ul>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">7. Minors</h2>
+          <p class="text-gray-700 leading-relaxed">
+            Our services are intended for individuals at least 18 years old. We do not knowingly 
+            collect personal data from minors under 18. If you become aware that a minor has 
+            provided us with personal data, contact us for immediate deletion.
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">8. Changes to Privacy Policy</h2>
+          <p class="text-gray-700 leading-relaxed">
+            We may update this Privacy Policy periodically. The "Last updated" date at the top 
+            indicates when the most recent changes were made. We recommend reviewing this page 
+            periodically for any changes.
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">9. Contact</h2>
+          <p class="text-gray-700 leading-relaxed">
+            For any questions regarding this Privacy Policy or the processing of your personal data, 
+            you can contact us at:
+          </p>
+          <p class="text-gray-700 leading-relaxed mt-4">
+            <strong>Leone Consulting</strong><br/>
+            Email: <a href="mailto:privacy@leoneconsulting.dev" 
+            class="text-primary-600 font-semibold hover:text-primary-700">privacy@leoneconsulting.dev</a><br/>
+            Website: <a href="https://leoneconsulting.dev" 
+            class="text-primary-600 font-semibold hover:text-primary-700">leoneconsulting.dev</a>
+          </p>
+        </section>
+
+        <div class="mt-12 p-6 bg-gray-50 rounded-xl border border-gray-200">
+          <p class="text-sm text-gray-600 mb-2">
+            <strong>Regulatory references:</strong>
+          </p>
+          <ul class="text-sm text-gray-600 space-y-1">
+            <li>• Regulation (EU) 2016/679 (GDPR)</li>
+            <li>• Swiss Federal Data Protection Act (FDPA / DSG)</li>
+            <li>• Data Protection Ordinance (DPO / DSV)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .prose h2 {
+    scroll-margin-top: 100px;
+  }
+  
+  .prose h3 {
+    scroll-margin-top: 100px;
+  }
+  
+  .prose a {
+    text-decoration: underline;
+  }
+</style>
