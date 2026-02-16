@@ -1,0 +1,58 @@
+{
+  "general": [
+    {
+      "question": "Quanto tempo serve per vedere risultati concreti?",
+      "answer": "Dipende dal tipo di progetto. Con il Tech/AI Audit hai un piano actionable in 5 giorni. Un MVP Sprint ti dà un prototipo funzionante in 2-4 settimane. Per progetti più complessi come Data Pipeline, vedi le prime metriche in dashboard entro 2-3 settimane dall'inizio."
+    },
+    {
+      "question": "Lavori anche con repo privati e progetti sotto NDA?",
+      "answer": "Sì, sempre. Posso firmare NDA prima di iniziare e lavoro abitualmente con codebases e dati confidenziali. Tutti i materiali restano privati e non vengono mai condivisi o riutilizzati."
+    },
+    {
+      "question": "Posso partire anche se non ho dati puliti o ben organizzati?",
+      "answer": "Assolutamente sì. Lavorare con dati 'nel disordine' è la norma, non l'eccezione. Parte del mio lavoro è proprio mappare, pulire e strutturare i dati esistenti. Se i dati sono molto caotici, potrebbe servire più tempo, ma è sempre fattibile."
+    },
+    {
+      "question": "Che stack tecnologico supporti?",
+      "answer": "Lavoro principalmente con: Python, TypeScript/JavaScript, SQL (PostgreSQL, MySQL), cloud (AWS, GCP, Vercel, Railway), framework web (Next.js, Astro, FastAPI), tool ML/AI (scikit-learn, TensorFlow, OpenAI API), e tool data (Pandas, dbt, Airflow, Metabase). Se il tuo stack è diverso, posso adattarmi o consigliare alternative moderne."
+    },
+    {
+      "question": "Cosa succede dopo l'audit o dopo il progetto?",
+      "answer": "Dopo l'audit, hai un report completo che è tuo e puoi usarlo come preferisci: eseguirlo internamente, con un altro fornitore, o con me (nessun vincolo). Dopo un progetto (MVP o Data Pipeline), hai piena ownership del codice e dell'infrastruttura. Posso offrirti supporto continuato, manutenzione mensile, o sprint aggiuntivi, ma non sei mai vincolato."
+    }
+  ],
+  "pricing": [
+    {
+      "question": "Perché i prezzi sono a range o 'a partire da'?",
+      "answer": "Ogni progetto è diverso per complessità, numero di integrazioni, volume dati, e requisiti specifici. Il range ti dà un'idea realistica. Dopo una prima call (gratuita), posso darti una stima precisa basata sul tuo caso specifico."
+    },
+    {
+      "question": "Posso fare un audit prima di decidere il budget definitivo?",
+      "answer": "Esatto. L'audit serve proprio a questo: capire la fattibilità e avere stime realistiche PRIMA di impegnarti su un progetto più grande. È l'investimento minimo per ridurre rischi e incertezze."
+    }
+  ],
+  "process": [
+    {
+      "question": "Come funziona il processo di collaborazione?",
+      "answer": "1) Prenoti una call iniziale gratuita (30 min) per discutere obiettivi e verificare fit. 2) Se proseguiamo, prepari un brief e scegliamo il pacchetto adatto. 3) Durante il progetto, sync settimanali (1h) per review e feedback. 4) A fine progetto, handover completo con documentazione e training. 5) Opzionale: supporto post-lancio o collaborazione continuata."
+    },
+    {
+      "question": "Posso cambiare scope durante il progetto?",
+      "answer": "Sì, lavoro in modo iterativo e agile. Se dopo un primo test emergi che una feature è meno prioritaria, possiamo modificare. Attenzione però: scope creep significativo può allungare timeline o richiedere budget aggiuntivo. Comunicazione chiara è la chiave."
+    }
+  ],
+  "technical": [
+    {
+      "question": "Fornisci anche hosting o solo il codice?",
+      "answer": "Dipende dal pacchetto. In MVP Sprint e Data Pipeline, includo il setup di deploy automatico su piattaforme cloud (Vercel, Railway, AWS). Posso gestire l'hosting per te (fatturato a parte) oppure farlo sul tuo account. Tu mantieni sempre ownership e controllo."
+    },
+    {
+      "question": "Il codice è production-ready o è solo un prototipo?",
+      "answer": "L'MVP Sprint è funzionante e può gestire traffico di test/early users, ma potrebbe mancare di: scalabilità enterprise, test coverage completo, edge cases avanzati. È pensato per validare. Per production-ready full-scale, serve sviluppo aggiuntivo (possiamo farlo insieme o con il tuo team)."
+    }
+  ],
+  "metadata": {
+    "language": "it",
+    "lastUpdated": "2026-02-16"
+  }
+}

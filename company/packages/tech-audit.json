@@ -1,0 +1,124 @@
+{
+  "slug": "tech-ai-audit",
+  "title": "Tech/AI Audit",
+  "tagline": "Diagnosi tecnica e roadmap in 5 giorni lavorativi",
+  "price": {
+    "display": "a partire da €2.500",
+    "value": 2500,
+    "currency": "EUR"
+  },
+  
+  "forWhom": {
+    "title": "Per chi è questo audit?",
+    "bullets": [
+      "Hai un'idea o progetto tech/AI ma non sai se è fattibile o da dove iniziare",
+      "Il tuo team interno non ha competenze AI/ML e vuoi una valutazione esterna",
+      "Vuoi un piano chiaro (rischi, quick wins, roadmap 30/60/90 giorni) prima di investire"
+    ]
+  },
+  
+  "deliverables": {
+    "title": "Cosa ottieni",
+    "items": [
+      {
+        "name": "Report di Diagnosi Tecnica",
+        "description": "Analisi dello stato attuale: architettura, stack, dati disponibili, debt tecnico",
+        "format": "PDF 15-20 pagine"
+      },
+      {
+        "name": "Valutazione Rischi",
+        "description": "Rischi tecnici, di timeline, di costi e compliance. Fattibilità complessiva (Go/No-Go/Go con modifiche)",
+        "format": "Sezione dedicata nel report"
+      },
+      {
+        "name": "Quick Wins",
+        "description": "3-5 azioni immediate (1-2 settimane) che danno valore veloce con effort minimo",
+        "format": "Checklist actionable"
+      },
+      {
+        "name": "Roadmap 30/60/90 giorni",
+        "description": "Piano di implementazione per fasi, con priorità, dipendenze e milestone",
+        "format": "Gantt o timeline visuale"
+      },
+      {
+        "name": "Stima Effort & Budget",
+        "description": "Ordini di grandezza per tempo, costi, team size necessari",
+        "format": "Range e breakdown per fase"
+      },
+      {
+        "name": "Sessione Q&A",
+        "description": "1 ora di video call per discutere il report e rispondere a domande",
+        "format": "Google Meet / Zoom"
+      }
+    ]
+  },
+  
+  "requirements": {
+    "title": "Cosa serve da te",
+    "items": [
+      "Brief iniziale (1-2 pagine): obiettivo, contesto, vincoli, scadenze",
+      "Accesso in sola lettura a repo/codice esistente (se applicabile)",
+      "1-2 ore di intervista con stakeholders key (telefono o video call)",
+      "Sample dei dati (se è progetto data/AI) o screenshot di sistemi esistenti"
+    ]
+  },
+  
+  "timeline": {
+    "duration": "5 giorni lavorativi",
+    "breakdown": [
+      {
+        "phase": "Giorno 1: Kickoff & raccolta info",
+        "days": "1"
+      },
+      {
+        "phase": "Giorni 2-3: Analisi tecnica & research",
+        "days": "2"
+      },
+      {
+        "phase": "Giorno 4: Stesura report & roadmap",
+        "days": "1"
+      },
+      {
+        "phase": "Giorno 5: Review & Q&A session",
+        "days": "1"
+      }
+    ]
+  },
+  
+  "process": [
+    "Invii il brief e materiali iniziali",
+    "Fissiamo kickoff call (1h) per capire obiettivi e vincoli",
+    "Analizzo la tua situazione tecnica (codice, dati, stack, team)",
+    "Preparo il report con diagnosi, rischi, roadmap e stime",
+    "Consegno il report e facciamo Q&A session (1h)"
+  ],
+  
+  "cta": {
+    "text": "Richiedi Tech/AI Audit",
+    "url": "/prenota?package=tech-audit"
+  },
+  
+  "faq": [
+    {
+      "question": "È vincolante? Devo poi fare il progetto con te?",
+      "answer": "No. L'audit è standalone. Il report è tuo e puoi usarlo come preferisci: eseguirlo internamente, con un altro fornitore, o con me. Nessun vincolo."
+    },
+    {
+      "question": "Posso fare l'audit prima di decidere il budget?",
+      "answer": "Assolutamente sì. L'audit serve proprio a questo: capire la fattibilità e avere stime realistiche PRIMA di impegnarti."
+    },
+    {
+      "question": "Cosa succede se i miei dati sono sensibili o coperti da NDA?",
+      "answer": "Nessun problema. Posso firmare NDA prima di iniziare e lavoro abitualmente con dati confidenziali. Tutti i materiali restano privati."
+    },
+    {
+      "question": "E se dopo l'audit risulta che il progetto non è fattibile?",
+      "answer": "Meglio saperlo dopo 5 giorni e €2.500 che dopo 3 mesi e €30K. Il report ti dirà esattamente perché e ti suggerirò alternative o modifiche per renderlo fattibile."
+    }
+  ],
+  
+  "metadata": {
+    "featured": true,
+    "language": "it"
+  }
+}

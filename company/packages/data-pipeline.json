@@ -1,0 +1,132 @@
+{
+  "slug": "data-pipeline-dashboard",
+  "title": "Data Pipeline & Dashboard",
+  "tagline": "Infrastruttura dati da zero a dashboard operativa in 2-6 settimane",
+  "price": {
+    "display": "€6.000 - €15.000",
+    "currency": "EUR"
+  },
+  
+  "forWhom": {
+    "title": "Per chi è questo pacchetto?",
+    "bullets": [
+      "Hai dati sparsi in più sistemi (ERP, CRM, fogli Excel, database) e vuoi centralizzarli e visualizzarli",
+      "Fai report manuali che richiedono giorni e vuoi automatizzarli con dashboard real-time",
+      "Vuoi costruire una base dati solida per futuri progetti AI/ML o analytics avanzati"
+    ]
+  },
+  
+  "deliverables": {
+    "title": "Cosa ottieni",
+    "items": [
+      {
+        "name": "ETL/Data Pipeline",
+        "description": "Sistema di ingestion automatico che estrae dati da N fonti, li trasforma e li carica in DB centralizzato",
+        "format": "Codice Python/Airflow/dbt + scheduling"
+      },
+      {
+        "name": "Data Warehouse/Lake",
+        "description": "Database centralizzato ottimizzato per analytics (PostgreSQL, BigQuery, Snowflake o simili)",
+        "format": "Schema design + setup"
+      },
+      {
+        "name": "KPI & Dashboard",
+        "description": "Dashboard interattiva con i KPI chiave del tuo business (Metabase, Superset, o simili)",
+        "format": "Dashboard live accessibile via web"
+      },
+      {
+        "name": "Monitoring & Alerting",
+        "description": "Alerts automatici su anomalie dati o pipeline failures (email/Slack)",
+        "format": "Setup monitoring"
+      },
+      {
+        "name": "Documentazione Data",
+        "description": "Data dictionary, schema, query examples, guida per aggiungere nuove metriche",
+        "format": "Markdown + commenti SQL"
+      },
+      {
+        "name": "Training Session",
+        "description": "2 ore di training per il tuo team: come usare la dashboard, aggiungere chart, leggere i dati",
+        "format": "Video call + registrazione"
+      }
+    ]
+  },
+  
+  "requirements": {
+    "title": "Cosa serve da te",
+    "items": [
+      "Lista fonti dati con accesso (API, database, CSV exports, fogli Excel)",
+      "KPI desiderati e metriche di business (anche draft, poi raffiniamo insieme)",
+      "1 stakeholder disponibile per weekly sync (1h/settimana)",
+      "Sample dei dati per ogni fonte (anche estratti di test, per capire struttura e qualità)",
+      "Accesso a infrastruttura per deploy (o posso gestirlo io su cloud a tuo nome)"
+    ]
+  },
+  
+  "timeline": {
+    "duration": "2-6 settimane (varia in base a numero fonti dati e complessità)",
+    "breakdown": [
+      {
+        "phase": "Settimana 1: Discovery, mapping fonti, schema design",
+        "days": "5"
+      },
+      {
+        "phase": "Settimana 2-3: ETL per prima fonte + dashboard prime metriche",
+        "days": "5-10"
+      },
+      {
+        "phase": "Settimana 3-5: Integrazione fonti aggiuntive + refine dashboard",
+        "days": "5-10"
+      },
+      {
+        "phase": "Settimana 4-6: Testing, monitoring, handover & training",
+        "days": "5"
+      }
+    ]
+  },
+  
+  "process": [
+    "Kickoff: mappiamo fonti dati, KPI prioritari, vincoli tecnici",
+    "Iterazione 1: prima fonte dati + prime metriche in dashboard (proof of concept)",
+    "Iterazione 2-N: aggiungiamo fonti e metriche progressivamente",
+    "Setup monitoring, alerts e documentazione",
+    "Training finale e handover"
+  ],
+  
+  "cta": {
+    "text": "Richiedi Data Pipeline",
+    "url": "/prenota?package=data-pipeline"
+  },
+  
+  "faq": [
+    {
+      "question": "I miei dati sono un disastro. Posso comunque partire?",
+      "answer": "Sì. Lavoro spesso con dati 'sporchi'. Parte del lavoro è proprio pulire, normalizzare e standardizzare. Se i dati sono molto caotici, potrebbe allungarsi la timeline, ma è fattibile."
+    },
+    {
+      "question": "Posso aggiungere nuove fonti dati dopo il progetto?",
+      "answer": "Sì. La pipeline è progettata per essere estesa. Ti lascio documentazione e template per aggiungere nuove fonti. Oppure possiamo farlo insieme con supporto aggiuntivo."
+    },
+    {
+      "question": "Funziona anche con dati on-premise o sistemi legacy?",
+      "answer": "Sì. Ho esperienza con ERP legacy, database on-premise, export CSV, screen scraping (se strettamente necessario). Troviamo sempre un modo."
+    },
+    {
+      "question": "Il dashboard è personalizzabile dopo?",
+      "answer": "Sì. Uso tool come Metabase o Superset che permettono di creare nuove chart, modificare query, aggiungere filtri senza scrivere codice. Ti faccio training su questo."
+    },
+    {
+      "question": "Cosa succede se la pipeline si rompe?",
+      "answer": "Setup monitoring e alerting: ricevi notifica immediata se qualcosa fallisce. Include 2 settimane di supporto post-lancio per bugfix. Dopo, possiamo fare manutenzione mensile o on-demand."
+    },
+    {
+      "question": "Posso usare questa infrastruttura come base per AI/ML in futuro?",
+      "answer": "Assolutamente. Il data warehouse è progettato per essere la base per analytics avanzato, modelli ML, o altri progetti data-driven. È il primo passo corretto."
+    }
+  ],
+  
+  "metadata": {
+    "featured": true,
+    "language": "it"
+  }
+}
