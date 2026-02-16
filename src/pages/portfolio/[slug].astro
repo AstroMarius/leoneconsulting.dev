@@ -169,27 +169,6 @@ const { caseStudy } = Astro.props;
           </div>
         </div>
 
-        <!-- Tech Stack -->
-        <div class="mb-16">
-          <h2 class="text-2xl font-bold text-gray-900 mb-6">Tech Stack</h2>
-          <div class="flex flex-wrap gap-3 mb-4">
-            {caseStudy.tech.stack.map(tech => (
-              <span class="px-4 py-2 bg-primary-100 text-primary-800 rounded-lg font-medium">
-                {tech}
-              </span>
-            ))}
-          </div>
-          {caseStudy.tech.tools.length > 0 && (
-            <div class="flex flex-wrap gap-2">
-              {caseStudy.tech.tools.map(tool => (
-                <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded text-sm">
-                  {tool}
-                </span>
-              ))}
-            </div>
-          )}
-        </div>
-
         <!-- My Role -->
         <div class="mb-16">
           <h2 class="text-2xl font-bold text-gray-900 mb-6">Il Mio Ruolo</h2>
