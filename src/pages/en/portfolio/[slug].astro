@@ -1,0 +1,226 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import type { CaseStudy } from '../../../types/case-study';
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const caseStudies = [
+    await import('../../../../company/case-studies/dashboard-kpi-operations.json'),
+    await import('../../../../company/case-studies/prototipo-ai-classificazione.json'),
+    await import('../../../../company/case-studies/pipeline-analytics-ecommerce.json'),
+  ];
+
+  return caseStudies.map((cs) => ({
+    params: { slug: cs.default.slug },
+    props: { caseStudy: cs.default as CaseStudy },
+  }));
+}
+
+const { caseStudy } = Astro.props;
+---
+
+<Layout 
+  title={`${caseStudy.title} - Case Study | Leone Consulting`}
+  description={caseStudy.problem.description}
+>
+  <Header />
+  
+  <main>
+    <!-- Hero with Featured Image -->
+    {caseStudy.featuredImage && (
+      <div class="relative h-96 overflow-hidden bg-gray-900">
+        <img 
+          src={caseStudy.featuredImage} 
+          alt={caseStudy.title}
+          class="w-full h-full object-cover opacity-60"
+        />
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-5xl font-bold text-white text-center mb-4">
+              {caseStudy.title}
+            </h1>
+            <div class="flex flex-wrap justify-center gap-4 text-white/90">
+              <span>{caseStudy.client}</span>
+              <span>•</span>
+              <span>{caseStudy.sector}</span>
+              <span>•</span>
+              <span>{caseStudy.metadata.year}</span>
+              <span>•</span>
+              <span>{caseStudy.metadata.duration}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    )}
+
+    <article class="py-16 px-6">
+      <div class="container mx-auto max-w-4xl">
+        
+        <!-- Problem & Constraints -->
+        <div class="grid md:grid-cols-2 gap-8 mb-16">
+          <div class="bg-red-50 p-6 rounded-xl border border-red-100">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">The Problem</h2>
+            <p class="text-gray-700 mb-4 leading-relaxed">{caseStudy.problem.description}</p>
+            <ul class="space-y-2">
+              {caseStudy.problem.painPoints.map(point => (
+                <li class="flex items-start gap-2 text-gray-700">
+                  <svg class="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="bg-amber-50 p-6 rounded-xl border border-amber-100">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">Constraints</h2>
+            <div class="space-y-3 text-gray-700">
+              <div>
+                <span class="font-semibold">Timeline:</span> {caseStudy.constraints.timeline}
+              </div>
+              <div>
+                <span class="font-semibold">Budget:</span> {caseStudy.constraints.budget}
+              </div>
+              {caseStudy.constraints.technical.length > 0 && (
+                <div>
+                  <span class="font-semibold block mb-2">Technical:</span>
+                  <ul class="space-y-1 text-sm">
+                    {caseStudy.constraints.technical.map(tech => (
+                      <li>• {tech}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              {caseStudy.constraints.compliance && caseStudy.constraints.compliance.length > 0 && (
+                <div>
+                  <span class="font-semibold block mb-2">Compliance:</span>
+                  <ul class="space-y-1 text-sm">
+                    {caseStudy.constraints.compliance.map(comp => (
+                      <li>• {comp}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+
+        <!-- Solution -->
+        <div class="mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">The Solution</h2>
+          
+          <div class="bg-blue-50 p-6 rounded-xl border border-blue-100 mb-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Architecture</h3>
+            <p class="text-gray-700 leading-relaxed">{caseStudy.solution.architecture}</p>
+          </div>
+
+          <div class="mb-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Key Decisions</h3>
+            <ul class="space-y-3">
+              {caseStudy.solution.keyDecisions.map(decision => (
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>{decision}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Approach</h3>
+            <p class="text-gray-700 leading-relaxed">{caseStudy.solution.approach}</p>
+          </div>
+        </div>
+
+        <!-- Results -->
+        <div class="mb-16 bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl border border-green-200">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Measurable Results</h2>
+          
+          <div class="grid md:grid-cols-3 gap-6 mb-8">
+            {caseStudy.results.metrics.map(metric => (
+              <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                <div class="text-3xl font-bold text-green-600 mb-2">
+                  {metric.value}
+                </div>
+                <div class="font-semibold text-gray-900 mb-2">
+                  {metric.label}
+                </div>
+                {metric.description && (
+                  <p class="text-sm text-gray-600">{metric.description}</p>
+                )}
+                {metric.isProxy && (
+                  <span class="inline-block mt-2 text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded">
+                    Proxy metric
+                  </span>
+                )}
+              </div>
+            ))}
+          </div>
+
+          <div class="bg-white p-6 rounded-xl">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Overall Impact</h3>
+            <p class="text-gray-700 leading-relaxed">{caseStudy.results.impact}</p>
+          </div>
+        </div>
+
+        <!-- My Role -->
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">My Role</h2>
+          <ul class="space-y-2">
+            {caseStudy.role.map(task => (
+              <li class="flex items-start gap-3 text-gray-700">
+                <svg class="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>{task}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center py-12 bg-gradient-to-br from-primary-50 to-white rounded-2xl">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">
+            Want similar results for your project?
+          </h3>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="/en/book-call" 
+              class="px-8 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-all transform hover:scale-105 font-semibold shadow-lg inline-block"
+            >
+              Book a Call
+            </a>
+            <a 
+              href="/en/async-audit" 
+              class="px-8 py-4 bg-white text-primary-600 border-2 border-primary-600 rounded-lg hover:bg-primary-50 transition-all font-semibold inline-block"
+            >
+              Request Async Audit
+            </a>
+          </div>
+        </div>
+
+        <!-- Back to Portfolio -->
+        <div class="mt-12 text-center">
+          <a 
+            href="/en/portfolio" 
+            class="text-primary-600 font-semibold hover:text-primary-700 transition-colors inline-flex items-center"
+          >
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+            Back to Portfolio
+          </a>
+        </div>
+
+      </div>
+    </article>
+  </main>
+  
+  <Footer />
+</Layout>
