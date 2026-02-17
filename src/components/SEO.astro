@@ -7,6 +7,11 @@ export interface Props {
   ogType?: 'website' | 'article';
   noindex?: boolean;
   schema?: Record<string, any>;
+  lang?: 'it' | 'en';
+  alternates?: Array<{
+    hreflang: string;
+    href: string;
+  }>;
 }
 
 const {
@@ -17,12 +22,15 @@ const {
   ogType = 'website',
   noindex = false,
   schema,
+  lang = 'it',
+  alternates = [],
 } = Astro.props;
 
 const siteUrl = 'https://leoneconsulting.dev';
 const fullTitle = title.includes('Leone Consulting') ? title : `${title} | Leone Consulting`;
 const canonicalURL = canonical || new URL(Astro.url.pathname, siteUrl).href;
 const ogImageURL = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
+const ogLocale = lang === 'en' ? 'en_US' : 'it_IT';
 
 // Default Organization Schema
 const organizationSchema = {
@@ -62,7 +70,10 @@ const finalSchema = schema
 <title>{fullTitle}</title>
 <meta name="title" content={fullTitle} />
 <meta name="description" content={description} />
-{canonical && <link rel="canonical" href={canonicalURL} />}
+<link rel="canonical" href={canonicalURL} />
+{alternates.map((alternate) => (
+  <link rel="alternate" hreflang={alternate.hreflang} href={alternate.href} />
+))}
 {noindex && <meta name="robots" content="noindex, nofollow" />}
 
 <!-- Open Graph / Facebook -->
@@ -72,7 +83,7 @@ const finalSchema = schema
 <meta property="og:description" content={description} />
 <meta property="og:image" content={ogImageURL} />
 <meta property="og:site_name" content="Leone Consulting" />
-<meta property="og:locale" content="it_IT" />
+<meta property="og:locale" content={ogLocale} />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />

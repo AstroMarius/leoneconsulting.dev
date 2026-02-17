@@ -37,9 +37,26 @@ const packages: Package[] = [
   mvpSprint as Package,
   dataPipeline as Package,
 ].filter(pkg => pkg.metadata.featured);
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Leone Consulting',
+  url: 'https://leoneconsulting.dev',
+  inLanguage: 'it-IT',
+  potentialAction: {
+    '@type': 'ContactAction',
+    target: 'https://leoneconsulting.dev/contact',
+    name: 'Richiedi una consulenza',
+  },
+};
 ---
 
-<Layout title="Leone Consulting - AI Engineering, Sviluppo Software e Consulenza IT">
+<Layout
+  title="Consulenza AI e Sviluppo Software per PMI | Leone Consulting"
+  description="Consulenza AI Engineering, sviluppo software e data engineering per PMI e startup: audit tecnici, MVP rapidi e soluzioni implementabili con impatto misurabile."
+  schema={websiteSchema}
+>
   <Header />
   
   <main>

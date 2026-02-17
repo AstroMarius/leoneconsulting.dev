@@ -1,26 +1,110 @@
 ---
 import CookieConsent from '../components/CookieConsent.astro';
+import SEO from '../components/SEO.astro';
 import { getLangFromUrl } from '../i18n/translations';
 
 interface Props {
   title: string;
   description?: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: 'website' | 'article';
+  noindex?: boolean;
+  schema?: Record<string, any>;
 }
 
-const { title, description = "Leone Consulting - AI Engineering, Sviluppo Software e Consulenza IT" } = Astro.props;
+const {
+  title,
+  description,
+  canonical,
+  ogImage,
+  ogType,
+  noindex = false,
+  schema,
+} = Astro.props;
 const lang = getLangFromUrl(Astro.url);
+const siteUrl = 'https://leoneconsulting.dev';
+
+const seoDescriptions: Record<'it' | 'en', Record<string, string>> = {
+  it: {
+    '/': 'Consulenza AI Engineering, sviluppo software e data engineering per PMI e startup. Audit tecnici, MVP rapidi e soluzioni misurabili.',
+    '/about': 'Scopri approccio, competenze e metodo di Leone Consulting per progetti AI, software e data engineering orientati ai risultati.',
+    '/services': 'Servizi di AI Engineering, data science, sviluppo software e consulenza IT per accelerare prodotti digitali e processi interni.',
+    '/portfolio': 'Case study con risultati misurabili: dashboard KPI, prototipi AI, automazioni e pipeline dati implementate su progetti reali.',
+    '/pacchetti': 'Pacchetti consulenza con scope, tempi e deliverable chiari: Tech Audit, MVP Sprint e Data Pipeline su misura.',
+    '/booking': 'Prenota una consulenza personalizzata con Leone Consulting e definisci priorità tecniche, roadmap e prossimi step operativi.',
+    '/prenota': 'Prenota una call gratuita di 30 minuti per valutare il tuo progetto e ricevere una direzione tecnica concreta.',
+    '/contact': 'Contatta Leone Consulting per audit, sviluppo software e progetti AI. Risposta rapida con proposta operativa.',
+    '/audit-asincrono': 'Audit asincrono gratuito: feedback tecnico in 48 ore con valutazione fattibilità, rischi e quick wins.',
+    '/per-chi-non-sono': 'Quando Leone Consulting non è il partner giusto: ambito, limiti e alternative consigliate per scegliere con chiarezza.',
+    '/privacy': 'Informativa privacy di Leone Consulting conforme a GDPR e normativa svizzera, con dettagli su dati, finalità e conservazione.',
+    '/terms': 'Termini e condizioni di utilizzo del sito e dei servizi Leone Consulting, incluse limitazioni e responsabilità.',
+  },
+  en: {
+    '/en': 'AI engineering, software development and data engineering consulting for SMEs and startups, focused on measurable outcomes.',
+    '/en/': 'AI engineering, software development and data engineering consulting for SMEs and startups, focused on measurable outcomes.',
+    '/en/about': 'Learn about Leone Consulting approach, expertise and delivery method for AI, software and data projects.',
+    '/en/services': 'AI engineering, data science, software development and IT consulting services to accelerate digital execution.',
+    '/en/portfolio': 'Case studies with measurable outcomes: KPI dashboards, AI prototypes, process automation and production data pipelines.',
+    '/en/packages': 'Service packages with clear scope, timelines and deliverables: Tech Audit, MVP Sprint and custom Data Pipeline.',
+    '/en/booking': 'Book a personalized consultation with Leone Consulting to define technical priorities, roadmap and next actions.',
+    '/en/book-call': 'Book a free 30-minute call to assess your project and get practical technical direction.',
+    '/en/contact': 'Contact Leone Consulting for AI, software development and technical audits. Fast response and actionable next steps.',
+    '/en/async-audit': 'Free async audit: technical feedback within 48 hours including feasibility, risks and quick wins.',
+    '/en/not-for-you': 'Who Leone Consulting is not for: scope boundaries, fit criteria and alternatives to choose the right partner.',
+    '/en/privacy': 'Privacy policy for Leone Consulting aligned with GDPR and Swiss data protection regulations.',
+    '/en/terms': 'Terms and conditions for using Leone Consulting website and services, including limitations and responsibilities.',
+  },
+};
+
+const localizedDescription =
+  description ||
+  seoDescriptions[lang as 'it' | 'en']?.[Astro.url.pathname] ||
+  (lang === 'en'
+    ? 'Leone Consulting - AI Engineering, Software Development and IT Consulting'
+    : 'Leone Consulting - AI Engineering, Sviluppo Software e Consulenza IT');
+
+const canonicalUrl = canonical || new URL(Astro.url.pathname, siteUrl).href;
+
+const italianPath = Astro.url.pathname === '/en'
+  ? '/'
+  : Astro.url.pathname.startsWith('/en/')
+    ? Astro.url.pathname.replace('/en', '')
+    : Astro.url.pathname;
+
+const englishPath = Astro.url.pathname === '/'
+  ? '/en/'
+  : Astro.url.pathname.startsWith('/en')
+    ? Astro.url.pathname
+    : `/en${Astro.url.pathname}`;
+
+const alternates = [
+  { hreflang: 'it-IT', href: new URL(italianPath, siteUrl).href },
+  { hreflang: 'en-US', href: new URL(englishPath, siteUrl).href },
+  { hreflang: 'x-default', href: new URL('/', siteUrl).href },
+];
 ---
 
 <!doctype html>
-<html lang="it">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={description} />
+    <SEO
+      title={title}
+      description={localizedDescription}
+      canonical={canonicalUrl}
+      ogImage={ogImage}
+      ogType={ogType}
+      noindex={noindex}
+      schema={schema}
+      lang={lang}
+      alternates={alternates}
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <meta name="theme-color" content="#2563eb" />
-    <meta name="robots" content="index, follow, max-snippet:150, max-image-preview:large, max-video-preview:-1" />
-    <meta name="googlebot" content="index, follow, max-snippet:150, max-image-preview:large, max-video-preview:-1" />
-    <meta name="bingbot" content="index, follow, max-snippet:150, max-image-preview:large, max-video-preview:-1" />
+    {!noindex && <meta name="robots" content="index, follow, max-snippet:150, max-image-preview:large, max-video-preview:-1" />}
+    {!noindex && <meta name="googlebot" content="index, follow, max-snippet:150, max-image-preview:large, max-video-preview:-1" />}
+    {!noindex && <meta name="bingbot" content="index, follow, max-snippet:150, max-image-preview:large, max-video-preview:-1" />}
     <meta name="google" content="nositelinkssearchbox" />
     <meta name="google" content="notranslate" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -51,7 +135,6 @@ const lang = getLangFromUrl(Astro.url);
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
   </head>
   <body class="bg-white text-gray-900 font-sans antialiased">
     <slot />
