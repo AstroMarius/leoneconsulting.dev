@@ -6,8 +6,8 @@ import PreCallForm from '../components/PreCallForm.astro';
 ---
 
 <Layout 
-  title="Prenota una Call - Leone Consulting"
-  description="Prenota una call gratuita di 30 minuti. Rispondi a 5 domande per aiutarmi a preparare al meglio la nostra conversazione."
+  title="Prenota Call Gratuita di 30 Minuti | Leone Consulting"
+  description="Prenota una call gratuita di 30 minuti: rispondi a 5 domande e ricevi un confronto tecnico focalizzato su fattibilità, priorità e prossimi step."
 >
   <Header />
   
@@ -33,10 +33,19 @@ import PreCallForm from '../components/PreCallForm.astro';
         <div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-gray-100">
           <div class="mb-8">
             <h2 class="text-2xl font-bold text-gray-900 mb-3">
-              Qualche Domanda Prima della Call
+              Cosa ottieni dalla call gratuita
             </h2>
+            <p class="text-gray-600 leading-relaxed mb-6">
+              30 minuti per discutere fattibilità tecnica, priorità e prossimi step concreti. 
+              Esci dalla chiamata con idee chiare su come procedere.
+            </p>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">
+              Come preparare il brief in 2 minuti
+            </h3>
             <p class="text-gray-600 leading-relaxed">
-              Rispondere a queste domande mi aiuta a prepararmi al meglio e a rendere la nostra call più produttiva. Richiede solo 2 minuti.
+              Rispondere a queste domande mi aiuta a prepararmi al meglio e a rendere la nostra call più produttiva. 
+              Vedi anche i nostri <a href="/services" class="text-primary-600 font-semibold hover:text-primary-700">servizi disponibili</a> 
+              e i <a href="/portfolio" class="text-primary-600 font-semibold hover:text-primary-700">risultati reali</a>.
             </p>
           </div>
 
@@ -45,7 +54,7 @@ import PreCallForm from '../components/PreCallForm.astro';
 
         <!-- What Happens Next -->
         <div class="mt-12 bg-blue-50 p-8 rounded-xl border border-blue-200">
-          <h3 class="text-xl font-bold text-gray-900 mb-4">Cosa Succede Dopo?</h3>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Prossimi step dopo la call</h3>
           <ol class="space-y-4">
             <li class="flex items-start gap-4">
               <span class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">
@@ -80,7 +89,8 @@ import PreCallForm from '../components/PreCallForm.astro';
         <!-- Alternative Option -->
         <div class="mt-12 text-center">
           <p class="text-gray-600 mb-4">
-            Preferisci un feedback scritto invece di una call?
+            <a href="/audit-asincrono" class="text-primary-600 font-semibold hover:text-primary-700">Preferisci feedback scritto?</a> 
+            Ricevi valutazione tecnica in 48 ore invece di una call.
           </p>
           <a 
             href="/audit-asincrono" 

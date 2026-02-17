@@ -7,7 +7,7 @@ import { useTranslations } from '../i18n/translations';
 const t = useTranslations('it');
 ---
 
-<Layout title="Prenota una Consulenza - Leone Consulting" description="Prenota la tua consulenza personalizzata con Leone Consulting. Scegli il servizio, la data e l'orario più adatti alle tue esigenze.">
+<Layout title="Prenota Consulenza AI e Software | Leone Consulting" description="Prenota una consulenza personalizzata per definire priorità tecniche, rischi e roadmap: scegli servizio, data e orario più adatti al tuo progetto.">
   <Header />
   
   <main>
@@ -27,6 +27,28 @@ const t = useTranslations('it');
     <section class="py-20 px-6">
       <div class="container mx-auto">
         <div class="max-w-6xl mx-auto">
+          <!-- Intro Boxes -->
+          <div class="grid md:grid-cols-3 gap-8 mb-12">
+            <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-200">
+              <h2 class="text-xl font-bold text-gray-900 mb-3">Prenota consulenza per il tuo contesto</h2>
+              <p class="text-gray-600 text-sm">
+                Scegli servizio, data e orario. Esplora i <a href="/pacchetti" class="text-primary-600 font-semibold hover:text-primary-700">pacchetti</a> disponibili.
+              </p>
+            </div>
+            <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border border-green-200">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Obiettivi della sessione tecnica</h3>
+              <p class="text-gray-600 text-sm">
+                Valutazione fattibilità, identificazione rischi, roadmap preliminare e prossimi step.
+              </p>
+            </div>
+            <div class="bg-gradient-to-br from-orange-50 to-amber-50 p-6 rounded-xl border border-orange-200">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Output e follow-up</h3>
+              <p class="text-gray-600 text-sm">
+                Recap email con punti chiave, link a <a href="/portfolio" class="text-primary-600 font-semibold hover:text-primary-700">casi simili al tuo</a> e <a href="/contact" class="text-primary-600 font-semibold hover:text-primary-700">contatto diretto</a>.
+              </p>
+            </div>
+          </div>
+
           <div class="grid md:grid-cols-3 gap-12">
             <!-- Info Sidebar -->
             <div class="md:col-span-1">

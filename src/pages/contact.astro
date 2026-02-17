@@ -4,7 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="Contatti - Leone Consulting" description="Contattaci per discutere del tuo progetto. Siamo pronti ad aiutarti a trasformare le tue idee in realtà.">
+<Layout title="Contatti per Consulenza AI e Software | Leone Consulting" description="Contatta Leone Consulting per audit tecnici, sviluppo software e progetti AI: analizziamo obiettivi, vincoli e budget per proporti un piano operativo concreto.">
   <Header />
   
   <main>
@@ -25,6 +25,30 @@ import Footer from '../components/Footer.astro';
     <section class="py-20 px-6">
       <div class="container mx-auto">
         <div class="max-w-6xl mx-auto">
+          <!-- Intro Boxes -->
+          <div class="grid md:grid-cols-3 gap-8 mb-12">
+            <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-200">
+              <h2 class="text-2xl font-bold text-gray-900 mb-3">Quando contattarci</h2>
+              <p class="text-gray-600">
+                Per progetti nuovi, audit tecnici o domande su <a href="/services" class="text-primary-600 font-semibold hover:text-primary-700">servizi disponibili</a>. 
+                Oppure <a href="/prenota" class="text-primary-600 font-semibold hover:text-primary-700">prenota call gratuita</a> direttamente.
+              </p>
+            </div>
+            <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border border-green-200">
+              <h3 class="text-2xl font-bold text-gray-900 mb-3">Informazioni utili per una risposta rapida</h3>
+              <p class="text-gray-600">
+                Obiettivo del progetto, vincoli (tempo/budget), materiali esistenti. Più contesto fornisci, più precise saranno le nostre proposte.
+              </p>
+            </div>
+            <div class="bg-gradient-to-br from-orange-50 to-amber-50 p-6 rounded-xl border border-orange-200">
+              <h3 class="text-2xl font-bold text-gray-900 mb-3">Dalla richiesta al piano operativo</h3>
+              <p class="text-gray-600">
+                Risposta in 24h, call esplorativa, valutazione tecnica e proposta con timeline e costi. 
+                Vedi <a href="/audit-asincrono" class="text-primary-600 font-semibold hover:text-primary-700">audit asincrono</a> alternativo.
+              </p>
+            </div>
+          </div>
+
           <div class="grid md:grid-cols-2 gap-12">
             <!-- Contact Info -->
             <div>

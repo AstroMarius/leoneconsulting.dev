@@ -1,17 +1,16 @@
 # Robots.txt - Leone Consulting
 # Anti-scraping & SEO configuration
 
-# Good bots (Google, Bing, etc.) - Rate limited
+# Good bots (Google, Bing, etc.)
 User-agent: Googlebot
 User-agent: Bingbot
 User-agent: Slurp
 User-agent: DuckDuckBot
 Allow: /
-Crawl-delay: 1
 Disallow: /api/
 Disallow: /portfolio-redirect.html
 
-# Block aggressive scrapers and content thieves
+# Block aggressive scrapers, AI trainers and content thieves
 User-agent: AhrefsBot
 User-agent: SemrushBot
 User-agent: MJ12bot
@@ -23,16 +22,9 @@ User-agent: GPTBot
 User-agent: CCBot
 User-agent: anthropic-ai
 User-agent: Claude-Web
+User-agent: ClaudeBot
 User-agent: cohere-ai
 User-agent: ChatGPT-User
-Disallow: /
-
-# Block AI scrapers for training data
-User-agent: GPTBot
-User-agent: ChatGPT-User
-User-agent: CCBot
-User-agent: anthropic-ai
-User-agent: ClaudeBot
 User-agent: Google-Extended
 User-agent: PerplexityBot
 User-agent: Amazonbot
@@ -55,5 +47,5 @@ Disallow: /api/
 Disallow: /portfolio-redirect.html
 Disallow: /*.json$
 
-# Sitemaps
+# Sitemap
 Sitemap: https://leoneconsulting.dev/sitemap-index.xml
