@@ -91,7 +91,7 @@
   
   "cta": {
     "text": "Request MVP Sprint",
-    "url": "/en/booking?package=mvp-sprint"
+    "url": "/en/book-call?package=mvp-sprint"
   },
   
   "faq": [

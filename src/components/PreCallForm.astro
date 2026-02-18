@@ -11,65 +11,73 @@ const t = {
     name: 'Nome',
     namePlaceholder: 'Il tuo nome',
     email: 'Email',
-    objective: 'Qual è il tuo obiettivo principale?',
-    selectOption: 'Seleziona un\'opzione',
+    objective: 'Qual è il risultato che vuoi ottenere?',
+    selectOption: 'Seleziona l\'opzione più vicina al tuo caso',
     audit: 'Validare fattibilità di un\'idea o progetto tech/AI (Audit)',
     mvp: 'Creare un prototipo o MVP funzionante (MVP Sprint)',
     dataPipeline: 'Automatizzare report e centralizzare dati (Data Pipeline)',
-    improvement: 'Migliorare/scalare sistema esistente',
+    improvement: 'Migliorare o scalare sistema esistente',
     other: 'Altro',
-    situation: 'Descrivi brevemente la tua situazione attuale',
-    situationPlaceholder: 'Es: Abbiamo dati in 3 sistemi diversi (ERP, CRM, Excel) e facciamo report manuali. Vorremmo automatizzare.',
+    situation: 'Descrivi contesto attuale e blocco principale',
+    situationPlaceholder: 'Es: Dati in ERP, CRM e fogli Excel non allineati; report manuali lenti; obiettivo: dashboard automatica con KPI affidabili entro 8 settimane.',
     maxChars: 'Max 300 caratteri',
-    dataStatus: 'Hai già dati o sistemi tecnici esistenti?',
+    dataStatus: 'A che punto siete con dati e sistemi?',
     dataStatusNone: 'No, partiamo da zero',
     dataStatusIncomplete: 'Sì, ma sono disorganizzati o incompleti',
     dataStatusIntegration: 'Sì, abbiamo dati e sistemi ma manca integrazione',
     dataStatusAdvanced: 'Sì, abbiamo già infrastruttura avanzata',
-    timeline: 'Qual è la tua timeline ideale?',
+    timeline: 'Quando vuoi vedere i primi risultati?',
     timelineUrgent: 'Urgente (entro 1 mese)',
     timelineShort: 'Breve termine (1-3 mesi)',
     timelineMedium: 'Medio termine (3-6 mesi)',
     timelineLong: 'Lungo termine (6+ mesi), sto solo esplorando',
-    budget: 'Hai un budget allocato per questo progetto? (opzionale)',
+    budget: 'Budget indicativo disponibile (opzionale, utile per proporti opzioni realistiche)',
+    budgetRange1: 'Fino a CHF 3.000',
+    budgetRange2: 'CHF 3.000 - CHF 7.000',
+    budgetRange3: 'CHF 7.000 - CHF 12.000',
+    budgetRange4: 'CHF 12.000 - CHF 20.000',
     budgetNone: 'Preferisco non specificarlo',
     budgetNotDefined: 'Non ancora definito',
     submit: 'Invia Richiesta',
     submitting: 'Invio in corso...',
-    successMsg: 'Grazie! Ti ricontatterò entro 24 ore.',
-    errorMsg: 'Errore durante l\'invio. Riprova o contattami direttamente via email.',
+    successMsg: 'Perfetto, richiesta ricevuta. Ti rispondo entro 24 ore con i prossimi step.',
+    errorMsg: 'Errore durante l\'invio. Riprova oppure scrivimi direttamente via email.',
   },
   en: {
     name: 'Name',
     namePlaceholder: 'Your name',
     email: 'Email',
-    objective: 'What is your main objective?',
-    selectOption: 'Select an option',
+    objective: 'What outcome do you want to achieve?',
+    selectOption: 'Select the option closest to your case',
     audit: 'Validate feasibility of a tech/AI idea or project (Audit)',
     mvp: 'Create a working prototype or MVP (MVP Sprint)',
     dataPipeline: 'Automate reports and centralize data (Data Pipeline)',
-    improvement: 'Improve/scale existing system',
+    improvement: 'Improve or scale an existing system',
     other: 'Other',
-    situation: 'Briefly describe your current situation',
-    situationPlaceholder: 'E.g.: We have data in 3 different systems (ERP, CRM, Excel) and create manual reports. We want to automate.',
+    situation: 'Describe your current context and main blocker',
+    situationPlaceholder: 'E.g.: Data is split across ERP, CRM, and spreadsheets; reporting is manual and slow; goal: automated KPI dashboard in 8 weeks.',
     maxChars: 'Max 300 characters',
-    dataStatus: 'Do you already have existing data or technical systems?',
+    dataStatus: 'What is your current data/system maturity?',
     dataStatusNone: 'No, starting from scratch',
     dataStatusIncomplete: 'Yes, but they are disorganized or incomplete',
     dataStatusIntegration: 'Yes, we have data and systems but integration is missing',
     dataStatusAdvanced: 'Yes, we already have advanced infrastructure',
-    timeline: 'What is your ideal timeline?',
+    timeline: 'When do you need the first measurable results?',
     timelineUrgent: 'Urgent (within 1 month)',
     timelineShort: 'Short term (1-3 months)',
     timelineMedium: 'Medium term (3-6 months)',
     timelineLong: 'Long term (6+ months), just exploring',
-    budget: 'Do you have an allocated budget for this project? (optional)',
+    budget: 'Indicative available budget (optional, helps propose realistic options)',
+    budgetRange1: 'Up to CHF 3,000',
+    budgetRange2: 'CHF 3,000 - CHF 7,000',
+    budgetRange3: 'CHF 7,000 - CHF 12,000',
+    budgetRange4: 'CHF 12,000 - CHF 20,000',
     budgetNone: 'Prefer not to specify',
     budgetNotDefined: 'Not yet defined',
     submit: 'Send Request',
     submitting: 'Sending...',
-    successMsg: 'Thanks! I\'ll get back to you within 24 hours.',
-    errorMsg: 'Error sending. Please try again or contact me directly via email.',
+    successMsg: 'Great, request received. I will reply within 24 hours with next steps.',
+    errorMsg: 'Error sending. Please try again or contact me directly by email.',
   },
 };
 
@@ -77,6 +85,19 @@ const text = t[lang];
 ---
 
 <form id="pre-call-form" class={`space-y-6 ${className}`} data-lang={lang}>
+  <div id="preselected-package" class="hidden p-3 rounded-lg bg-primary-50 border border-primary-200 text-primary-900 text-sm">
+    <div class="flex items-center justify-between gap-3">
+      <span id="preselected-package-text" class="font-medium"></span>
+      <button
+        type="button"
+        id="change-preselected-package"
+        class="text-primary-700 underline hover:text-primary-800 font-semibold whitespace-nowrap"
+      >
+        {lang === 'en' ? 'Change package' : 'Cambia pacchetto'}
+      </button>
+    </div>
+  </div>
+
   <!-- Nome -->
   <div>
     <label for="name" class="block text-sm font-semibold text-gray-900 mb-2">
@@ -193,10 +214,10 @@ const text = t[lang];
       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-transparent transition-all"
     >
       <option value="">{text.budgetNone}</option>
-      <option value="under-3k">&lt; CHF 3.200</option>
-      <option value="3-10k">CHF 3.200 - CHF 11.000</option>
-      <option value="10-30k">CHF 11.000 - CHF 32.000</option>
-      <option value="30k+">CHF 32.000+</option>
+      <option value="under-3k">{text.budgetRange1}</option>
+      <option value="3-10k">{text.budgetRange2}</option>
+      <option value="10-30k">{text.budgetRange3}</option>
+      <option value="30k+">{text.budgetRange4}</option>
       <option value="not-defined">{text.budgetNotDefined}</option>
     </select>
   </div>
@@ -224,18 +245,56 @@ const text = t[lang];
     it: {
       submitting: 'Invio in corso...',
       submit: 'Invia Richiesta',
-      success: 'Grazie! Ti ricontatterò entro 24 ore.',
-      error: 'Errore durante l\'invio. Riprova o contattami direttamente via email.',
+      success: 'Perfetto, richiesta ricevuta. Ti rispondo entro 24 ore con i prossimi step.',
+      error: 'Errore durante l\'invio. Riprova oppure scrivimi direttamente via email.',
     },
     en: {
       submitting: 'Sending...',
       submit: 'Send Request',
-      success: 'Thanks! I\'ll get back to you within 24 hours.',
-      error: 'Error sending. Please try again or contact me directly via email.',
+      success: 'Great, request received. I will reply within 24 hours with next steps.',
+      error: 'Error sending. Please try again or contact me directly by email.',
     },
   };
 
   const t = messages[lang as 'it' | 'en'] || messages.it;
+
+  const objectiveByPackage: Record<string, string> = {
+    'tech-audit': 'audit',
+    'tech-ai-audit': 'audit',
+    'mvp-sprint': 'mvp',
+    'data-pipeline': 'data-pipeline',
+    'data-pipeline-dashboard': 'data-pipeline',
+  };
+
+  const params = new URLSearchParams(window.location.search);
+  const packageParam = params.get('package')?.toLowerCase() || '';
+  const preselectedObjective = objectiveByPackage[packageParam];
+
+  if (preselectedObjective) {
+    const objectiveSelect = form?.querySelector('#objective') as HTMLSelectElement | null;
+    if (objectiveSelect) {
+      objectiveSelect.value = preselectedObjective;
+
+      const preselectedPackageBox = form?.querySelector('#preselected-package') as HTMLDivElement | null;
+      const preselectedPackageText = form?.querySelector('#preselected-package-text') as HTMLSpanElement | null;
+      const selectedText = objectiveSelect.options[objectiveSelect.selectedIndex]?.text;
+      if (preselectedPackageBox && preselectedPackageText && selectedText) {
+        const prefix = lang === 'en' ? 'Pre-selected package:' : 'Pacchetto pre-selezionato:';
+        preselectedPackageText.textContent = `${prefix} ${selectedText}`;
+        preselectedPackageBox.classList.remove('hidden');
+      }
+
+      const changePackageBtn = form?.querySelector('#change-preselected-package') as HTMLButtonElement | null;
+      changePackageBtn?.addEventListener('click', () => {
+        objectiveSelect.focus();
+        objectiveSelect.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        objectiveSelect.classList.add('ring-4', 'ring-primary-300', 'ring-offset-2');
+        setTimeout(() => {
+          objectiveSelect.classList.remove('ring-4', 'ring-primary-300', 'ring-offset-2');
+        }, 1000);
+      });
+    }
+  }
 
   form?.addEventListener('submit', async (e) => {
     e.preventDefault();

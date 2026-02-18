@@ -95,7 +95,7 @@
   
   "cta": {
     "text": "Request Data Pipeline",
-    "url": "/en/booking?package=data-pipeline"
+    "url": "/en/book-call?package=data-pipeline"
   },
   
   "faq": [

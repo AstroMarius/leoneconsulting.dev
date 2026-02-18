@@ -95,7 +95,7 @@
   
   "cta": {
     "text": "Request Tech/AI Audit",
-    "url": "/en/booking?package=tech-audit"
+    "url": "/en/book-call?package=tech-audit"
   },
   
   "faq": [
