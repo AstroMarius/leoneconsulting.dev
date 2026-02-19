@@ -150,39 +150,11 @@ const t = useTranslations('it');
 
                   <!-- Consultation Type -->
                   <div>
-                    <label class="block text-sm font-semibold text-gray-900 mb-3">
-                      {t('booking.type.label')} *
+                    <label class="block text-sm font-semibold text-gray-900 mb-2">
+                      {t('booking.type.label')}
                     </label>
-                    <div class="space-y-3">
-                      <label class="flex items-center space-x-3 cursor-pointer group">
-                        <input
-                          type="radio"
-                          name="type"
-                          value="online"
-                          checked
-                          class="w-4 h-4 text-primary-600 focus:ring-primary-500"
-                        />
-                        <span class="text-gray-700 group-hover:text-primary-600 transition-colors">{t('booking.type.online')}</span>
-                      </label>
-                      <label class="flex items-center space-x-3 cursor-pointer group">
-                        <input
-                          type="radio"
-                          name="type"
-                          value="inperson"
-                          class="w-4 h-4 text-primary-600 focus:ring-primary-500"
-                        />
-                        <span class="text-gray-700 group-hover:text-primary-600 transition-colors">{t('booking.type.inperson')}</span>
-                      </label>
-                      <label class="flex items-center space-x-3 cursor-pointer group">
-                        <input
-                          type="radio"
-                          name="type"
-                          value="phone"
-                          class="w-4 h-4 text-primary-600 focus:ring-primary-500"
-                        />
-                        <span class="text-gray-700 group-hover:text-primary-600 transition-colors">{t('booking.type.phone')}</span>
-                      </label>
-                    </div>
+                    <p class="text-sm text-gray-700">{t('booking.type.online')}</p>
+                    <input type="hidden" name="type" value="online" />
                   </div>
 
                   <!-- Contact Information -->
