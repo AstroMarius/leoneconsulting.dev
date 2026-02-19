@@ -12,11 +12,47 @@ const currentLang = currentPath.startsWith('/en') ? 'en' : 'it';
 const buttonId = isMobile ? 'lang-switcher-mobile' : 'lang-switcher';
 const menuId = isMobile ? 'lang-menu-mobile' : 'lang-menu';
 
+const italianToEnglishPathMap: Record<string, string> = {
+  '/': '/en',
+  '/about': '/en/about',
+  '/audit-asincrono': '/en/async-audit',
+  '/booking': '/en/booking',
+  '/contact': '/en/contact',
+  '/pacchetti': '/en/packages',
+  '/per-chi-non-sono': '/en/not-for-you',
+  '/portfolio': '/en/portfolio',
+  '/prenota': '/en/book-call',
+  '/privacy': '/en/privacy',
+  '/services': '/en/services',
+  '/terms': '/en/terms',
+};
+
+const englishToItalianPathMap: Record<string, string> = {
+  '/en': '/',
+  '/en/about': '/about',
+  '/en/async-audit': '/audit-asincrono',
+  '/en/booking': '/booking',
+  '/en/contact': '/contact',
+  '/en/packages': '/pacchetti',
+  '/en/not-for-you': '/per-chi-non-sono',
+  '/en/portfolio': '/portfolio',
+  '/en/book-call': '/prenota',
+  '/en/privacy': '/privacy',
+  '/en/services': '/services',
+  '/en/terms': '/terms',
+};
+
 function getAlternatePath(lang: string) {
   if (lang === 'it') {
+    if (englishToItalianPathMap[currentPath]) {
+      return englishToItalianPathMap[currentPath];
+    }
     // Remove /en prefix
     return currentPath.replace(/^\/en/, '') || '/';
   } else {
+    if (italianToEnglishPathMap[currentPath]) {
+      return italianToEnglishPathMap[currentPath];
+    }
     // Add /en prefix
     if (currentPath === '/') return '/en';
     if (currentPath.startsWith('/en')) return currentPath;
