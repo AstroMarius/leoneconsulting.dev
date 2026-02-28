@@ -1,0 +1,516 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Trust Center – Sicurezza e Compliance AI | Leone Consulting"
+  description="Come Leone Consulting gestisce sicurezza, privacy e compliance nei progetti AI e data platform in contesti svizzeri: nLPD, DPIA, data breach, trasferimenti transfrontalieri."
+>
+  <Header />
+
+  <main>
+    <!-- Hero -->
+    <section class="pt-32 pb-20 px-6 bg-gradient-to-br from-primary-50 via-white to-blue-50">
+      <div class="container mx-auto">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="inline-flex items-center gap-2 bg-primary-100 text-primary-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+            Ultimo aggiornamento: 28 febbraio 2026
+          </div>
+          <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+            Trust Center
+          </h1>
+          <p class="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+            Sicurezza e compliance per AI e sistemi dati in contesti svizzeri. Sistemi progettati per rispondere alle richieste verificabili di IT e Legal: controllo dei dati, tracciabilità e responsabilità chiare.
+          </p>
+          <p class="text-sm text-gray-400 mt-6">
+            Questa pagina è informativa e non costituisce consulenza legale.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Principi chiave -->
+    <section class="py-16 px-6 bg-white">
+      <div class="container mx-auto max-w-6xl">
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-gradient-to-br from-primary-50 to-primary-100 rounded-xl p-6 border border-primary-200">
+            <div class="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-2">Dati sotto controllo del cliente</h3>
+            <p class="text-sm text-gray-600">On-premise o nel cloud del cliente, con segregazione per cliente e ambienti separati.</p>
+          </div>
+          <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border border-blue-200">
+            <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+              </svg>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-2">Tracciabilità completa</h3>
+            <p class="text-sm text-gray-600">Audit log, decision log e documentazione delle misure tecniche e organizzative adottate.</p>
+          </div>
+          <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 border border-green-200">
+            <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-2">Responsabilità chiare</h3>
+            <p class="text-sm text-gray-600">Ruoli definiti, DPA disponibile, elenco sub-processor e supporto ai vendor assessment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cornice normativa -->
+    <section class="py-20 px-6 bg-gray-50">
+      <div class="container mx-auto max-w-5xl">
+        <div class="flex items-start gap-6">
+          <div class="flex-shrink-0 w-14 h-14 bg-primary-600 rounded-xl flex items-center justify-center">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+            </svg>
+          </div>
+          <div>
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Cornice normativa svizzera</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Operiamo con riferimento alla <strong>Legge federale sulla protezione dei dati (nLPD / FADP)</strong> e alla relativa Ordinanza (OPD / DPO). La nLPD è in vigore dal 1° settembre 2023 e si applica ai dati personali di persone fisiche.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              In base al contesto progettuale, supportiamo la documentazione e la governance necessarie per dimostrare misure tecniche e organizzative adeguate, con un approccio orientato alle evidenze.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy by design -->
+    <section class="py-20 px-6 bg-white">
+      <div class="container mx-auto max-w-5xl">
+        <div class="flex items-start gap-6 mb-10">
+          <div class="flex-shrink-0 w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+          </div>
+          <div>
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Privacy by Design e by Default</h2>
+            <p class="text-gray-600 leading-relaxed">
+              La protezione dei dati è incorporata nel progetto, non aggiunta dopo. Ogni sistema che progettiamo rispetta questi principi dal primo giorno.
+            </p>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[
+            { icon: 'M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4', title: 'Minimizzazione dei dati', desc: 'Raccogliere e trattare solo ciò che è necessario allo scopo.' },
+            { icon: 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4', title: 'Limitazione delle finalità', desc: "Uso dei dati coerente con lo scopo dichiarato, senza reimpieghi non autorizzati." },
+            { icon: 'M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z', title: 'Separazione ambienti', desc: 'Sviluppo, test e produzione separati, con dati coerentemente gestiti.' },
+            { icon: 'M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z', title: 'Controllo accessi', desc: 'Principio del minimo privilegio, ruoli e permessi chiari, MFA dove applicabile.' },
+            { icon: 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2', title: 'Tracciabilità', desc: 'Audit log e decision log dove applicabile, con retention configurabile.' },
+            { icon: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z', title: 'Retention definita', desc: 'Politiche di conservazione e cancellazione dei dati definite e documentate.' },
+          ].map(item => (
+            <div class="bg-gray-50 rounded-xl p-5 border border-gray-100">
+              <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-3">
+                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={item.icon} />
+                </svg>
+              </div>
+              <h3 class="font-semibold text-gray-900 mb-1">{item.title}</h3>
+              <p class="text-sm text-gray-600">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- DPIA -->
+    <section class="py-20 px-6 bg-gray-50">
+      <div class="container mx-auto max-w-5xl">
+        <div class="flex items-start gap-6 mb-10">
+          <div class="flex-shrink-0 w-14 h-14 bg-indigo-600 rounded-xl flex items-center justify-center">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+          </div>
+          <div>
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">DPIA – Valutazione d'impatto <span class="text-indigo-600">(art. 22–23 nLPD)</span></h2>
+            <p class="text-gray-600 leading-relaxed">
+              Quando un trattamento può comportare un rischio elevato per la personalità o i diritti fondamentali — ad es. uso di nuove tecnologie, dati sensibili, profiling ad alto impatto — supportiamo la conduzione e documentazione di una DPIA.
+            </p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-8">
+          <h3 class="font-semibold text-gray-900 mb-6 text-lg">Output tipici di progetto:</h3>
+          <div class="space-y-4">
+            {[
+              { num: '01', title: 'Mappa dei flussi dati', desc: 'Origini, trasformazioni e destinazioni documentate.' },
+              { num: '02', title: 'Inventario categorie e basi di trattamento', desc: 'Catalogazione dei dati trattati e delle relative basi operative.' },
+              { num: '03', title: 'Valutazione dei rischi', desc: 'Probabilità, impatto e scenari di abuso identificati.' },
+              { num: '04', title: 'Misure di mitigazione', desc: 'Tecniche e organizzative, con responsabilità e scadenze.' },
+              { num: '05', title: 'Decision log', desc: 'Cosa è stato deciso e perché, con evidenze disponibili.' },
+            ].map(item => (
+              <div class="flex items-start gap-4">
+                <span class="flex-shrink-0 w-8 h-8 bg-indigo-100 text-indigo-700 rounded-lg flex items-center justify-center text-xs font-bold">{item.num}</span>
+                <div>
+                  <span class="font-medium text-gray-900">{item.title}</span>
+                  <span class="text-gray-500"> — </span>
+                  <span class="text-gray-600 text-sm">{item.desc}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Data Breach -->
+    <section class="py-20 px-6 bg-white">
+      <div class="container mx-auto max-w-5xl">
+        <div class="flex items-start gap-6 mb-10">
+          <div class="flex-shrink-0 w-14 h-14 bg-red-600 rounded-xl flex items-center justify-center">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+          </div>
+          <div>
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Gestione Data Breach <span class="text-red-600">(art. 24 nLPD)</span></h2>
+            <p class="text-gray-600 leading-relaxed">
+              Processo di gestione incidenti orientato a rilevare, contenere, valutare il rischio, documentare e abilitare le azioni di notifica quando richieste.
+            </p>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="absolute left-6 top-0 bottom-0 w-0.5 bg-red-100 hidden md:block"></div>
+          <div class="space-y-6">
+            {[
+              { step: 1, title: 'Rilevazione e triage', desc: 'Identificazione evento, classificazione e priorità.', color: 'red' },
+              { step: 2, title: 'Contenimento', desc: 'Limitare l\'impatto, isolare sistemi, revocare credenziali se necessario.', color: 'orange' },
+              { step: 3, title: 'Analisi', desc: 'Causa radice, dati coinvolti, perimetro, impatti, probabilità di abuso.', color: 'yellow' },
+              { step: 4, title: 'Valutazione rischio', desc: 'Verificare se è verosimilmente presente un rischio elevato.', color: 'amber' },
+              { step: 5, title: 'Notifica e comunicazioni', desc: 'Supporto al titolare nei passi verso l\'IFPDT "il prima possibile" se la violazione è verosimilmente suscettibile di comportare un rischio elevato, e verso gli interessati quando necessario.', color: 'primary' },
+              { step: 6, title: 'Remediation', desc: 'Correzioni, hardening, prevenzione recidive, aggiornamento runbook.', color: 'green' },
+            ].map(item => (
+              <div class="md:pl-16 relative">
+                <div class="hidden md:flex absolute left-3.5 -translate-x-1/2 w-5 h-5 bg-red-600 rounded-full items-center justify-center">
+                  <span class="text-white text-xs font-bold">{item.step}</span>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-5 border border-gray-100 hover:border-red-200 transition-colors">
+                  <div class="flex items-center gap-3 mb-1">
+                    <span class="md:hidden w-6 h-6 bg-red-100 text-red-700 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">{item.step}</span>
+                    <h3 class="font-semibold text-gray-900">{item.title}</h3>
+                  </div>
+                  <p class="text-sm text-gray-600 md:ml-0">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="mt-8 bg-red-50 border border-red-200 rounded-xl p-5">
+          <h4 class="font-semibold text-red-800 mb-2">Target operativi interni</h4>
+          <div class="flex flex-wrap gap-4 text-sm text-red-700">
+            <span>⏱ <strong>T0</strong> Rilevazione e triage iniziale</span>
+            <span>⏱ <strong>T+24h</strong> Contenimento e prima valutazione impatto</span>
+            <span>⏱ <strong>T+72h</strong> Analisi consolidata, piano remediation, bozza comunicazioni</span>
+          </div>
+          <p class="text-xs text-red-500 mt-2">Questi sono obiettivi interni, non requisiti legali.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trasferimenti transfrontalieri -->
+    <section class="py-20 px-6 bg-gray-50">
+      <div class="container mx-auto max-w-5xl">
+        <div class="flex items-start gap-6">
+          <div class="flex-shrink-0 w-14 h-14 bg-teal-600 rounded-xl flex items-center justify-center">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <div class="flex-1">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Trasferimenti transfrontalieri</h2>
+            <p class="text-gray-600 leading-relaxed mb-6">
+              Quando i dati devono essere trattati o accessibili dall'estero, applichiamo un approccio strutturato che combina garanzie giuridiche e controlli tecnici.
+            </p>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div class="bg-white rounded-xl p-5 border border-gray-200">
+                <h3 class="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                  <svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                  </svg>
+                  Garanzie giuridiche
+                </h3>
+                <ul class="text-sm text-gray-600 space-y-1">
+                  <li>Valutazione di adeguatezza</li>
+                  <li>Garanzie contrattuali (DPA / SCC)</li>
+                  <li>Processi di autorizzazione documentati</li>
+                </ul>
+              </div>
+              <div class="bg-white rounded-xl p-5 border border-gray-200">
+                <h3 class="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                  <svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                  </svg>
+                  Misure tecniche
+                </h3>
+                <ul class="text-sm text-gray-600 space-y-1">
+                  <li>Cifratura dati in transito e a riposo</li>
+                  <li>Segregazione e controllo accessi</li>
+                  <li>Audit logging degli accessi</li>
+                </ul>
+              </div>
+            </div>
+            <p class="mt-4 text-sm text-teal-700 bg-teal-50 border border-teal-200 rounded-lg p-3">
+              <strong>Preferenza:</strong> Quando richiesto, favoriamo modelli on-premise o hosting in Svizzera/UE, con data residency definita contrattualmente.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Decisioni automatizzate -->
+    <section class="py-20 px-6 bg-white">
+      <div class="container mx-auto max-w-5xl">
+        <div class="flex items-start gap-6 mb-10">
+          <div class="flex-shrink-0 w-14 h-14 bg-purple-600 rounded-xl flex items-center justify-center">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2h-2" />
+            </svg>
+          </div>
+          <div>
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Decisioni automatizzate <span class="text-purple-600">(art. 21 nLPD)</span></h2>
+            <p class="text-gray-600 leading-relaxed">
+              Se una soluzione comporta decisioni automatizzate con effetti rilevanti per l'interessato, progettiamo meccanismi di trasparenza e controllo.
+            </p>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-4">
+          {[
+            { icon: 'M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z', title: 'Trasparenza operativa', desc: 'Descrizione comprensibile della logica e dei criteri utilizzati — nessuna "black box" non documentata.', color: 'purple' },
+            { icon: 'M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z', title: 'Revisione umana', desc: 'Possibilità di revisione umana dove applicabile, garantita contrattualmente.', color: 'purple' },
+            { icon: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z', title: 'Human-in-the-loop', desc: 'Gate di approvazione o escalation per azioni ad alto impatto.', color: 'purple' },
+            { icon: 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2', title: 'Audit trail', desc: 'Traccia delle decisioni e degli input principali, con retention definita.', color: 'purple' },
+          ].map(item => (
+            <div class="bg-purple-50 rounded-xl p-5 border border-purple-100">
+              <div class="flex items-start gap-3">
+                <div class="flex-shrink-0 w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
+                  <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={item.icon} />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-900 mb-1">{item.title}</h3>
+                  <p class="text-sm text-gray-600">{item.desc}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Sicurezza tecnica -->
+    <section class="py-20 px-6 bg-gray-900 text-white">
+      <div class="container mx-auto max-w-5xl">
+        <div class="flex items-start gap-6 mb-12">
+          <div class="flex-shrink-0 w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center border border-white/20">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <div>
+            <h2 class="text-3xl font-bold text-white mb-4">Sicurezza tecnica</h2>
+            <p class="text-gray-300 leading-relaxed">
+              Controlli tecnici e organizzativi calibrati sul rischio e sul modello di deployment (on-prem / cloud cliente / ibrido).
+            </p>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[
+            { title: 'Cifratura in transito', desc: 'TLS per comunicazioni tra componenti e verso i servizi esposti.', icon: 'M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z' },
+            { title: 'Cifratura a riposo', desc: 'Cifratura dischi, database e storage dove applicabile.', icon: 'M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z' },
+            { title: 'RBAC e minimo privilegio', desc: 'Controllo accessi granulare, MFA dove possibile.', icon: 'M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z' },
+            { title: 'Segregazione tenant', desc: 'Separazione ambienti, isolamento logico/fisico per cliente.', icon: 'M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10' },
+            { title: 'Audit logging', desc: 'Log di accesso e operazioni critiche, retention configurabile.', icon: 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2' },
+            { title: 'Backup e ripristino', desc: 'Backup regolari e test di restore documentati.', icon: 'M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10' },
+            { title: 'Vulnerability management', desc: 'Patching, dependency scanning, gestione CVE e remediation.', icon: 'M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z' },
+            { title: 'Change management', desc: 'Deploy tracciati, approvazioni, rollback plan.', icon: 'M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15' },
+            { title: 'Incident response', desc: 'Runbook operativi, escalation, post-incident review con azioni correttive.', icon: 'M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9' },
+          ].map(item => (
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5 hover:bg-white/10 transition-colors">
+              <div class="w-10 h-10 bg-primary-600/30 rounded-lg flex items-center justify-center mb-3">
+                <svg class="w-5 h-5 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={item.icon} />
+                </svg>
+              </div>
+              <h3 class="font-semibold text-white mb-1">{item.title}</h3>
+              <p class="text-sm text-gray-400">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Opzioni Enterprise -->
+    <section class="py-20 px-6 bg-white">
+      <div class="container mx-auto max-w-5xl">
+        <div class="flex items-start gap-6 mb-10">
+          <div class="flex-shrink-0 w-14 h-14 bg-gray-800 rounded-xl flex items-center justify-center">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
+          </div>
+          <div>
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Opzioni Enterprise</h2>
+            <p class="text-gray-600 leading-relaxed">Configurazioni aggiuntive disponibili in base alle esigenze e ai requisiti del cliente.</p>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-4">
+          {[
+            { title: 'SSO (SAML/OIDC)', desc: 'Controllo identità e accesso centralizzato, integrazione con IdP aziendali.' },
+            { title: 'SLA e supporto dedicato', desc: 'Finestre di supporto definite e livelli di servizio concordati.' },
+            { title: 'Vendor Assessment Support', desc: 'Compilazione security questionnaire e "evidence pack" disponibile sotto NDA.' },
+            { title: 'Data Residency', desc: 'On-premise, cloud del cliente o ibrido, con residenza dati definita contrattualmente.' },
+            { title: 'Retention policy personalizzate', desc: 'Log, documenti, dataset e artefatti AI con policy di retention su misura.' },
+            { title: 'Deployment flessibile', desc: 'Architettura ibrida o air-gapped secondo le esigenze di sicurezza del cliente.' },
+          ].map(item => (
+            <div class="flex items-start gap-4 p-5 bg-gray-50 rounded-xl border border-gray-100">
+              <div class="flex-shrink-0 mt-0.5">
+                <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-1">{item.title}</h3>
+                <p class="text-sm text-gray-600">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Documentazione -->
+    <section class="py-20 px-6 bg-gray-50">
+      <div class="container mx-auto max-w-5xl">
+        <div class="flex items-start gap-6 mb-10">
+          <div class="flex-shrink-0 w-14 h-14 bg-amber-500 rounded-xl flex items-center justify-center">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z" />
+            </svg>
+          </div>
+          <div>
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Documentazione disponibile</h2>
+            <p class="text-gray-600 leading-relaxed">Su richiesta e previo accordo NDA, rendiamo disponibile il pacchetto evidenze.</p>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[
+            { doc: 'Security Whitepaper', desc: 'Architettura, controlli e responsabilità.' },
+            { doc: 'DPA / Data Processing Terms', desc: 'Ruoli e modalità di trattamento dati.' },
+            { doc: 'Elenco sub-processor', desc: 'Se applicabile al deployment scelto.' },
+            { doc: 'Incident response summary', desc: 'Processi operativi e responsabilità.' },
+            { doc: 'Architecture overview', desc: 'Diagramma e descrizione componenti.' },
+            { doc: 'Pen-test summary', desc: 'Se disponibile e concordato con il cliente.' },
+          ].map(item => (
+            <div class="bg-white rounded-xl p-5 border border-gray-200 flex items-start gap-3">
+              <div class="flex-shrink-0 w-8 h-8 bg-amber-100 rounded-lg flex items-center justify-center mt-0.5">
+                <svg class="w-4 h-4 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900 text-sm">{item.doc}</h3>
+                <p class="text-xs text-gray-500 mt-0.5">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Contatti e Responsible Disclosure -->
+    <section class="py-20 px-6 bg-white">
+      <div class="container mx-auto max-w-5xl">
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Contatti -->
+          <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+            <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">Contatti</h2>
+            <ul class="space-y-3">
+              <li>
+                <span class="text-sm font-medium text-gray-500 block">Sicurezza</span>
+                <a href="mailto:security@leoneconsulting.dev" class="text-primary-600 hover:text-primary-700 font-medium transition-colors">security@leoneconsulting.dev</a>
+              </li>
+              <li>
+                <span class="text-sm font-medium text-gray-500 block">Privacy</span>
+                <a href="mailto:privacy@leoneconsulting.dev" class="text-primary-600 hover:text-primary-700 font-medium transition-colors">privacy@leoneconsulting.dev</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Responsible Disclosure -->
+          <div class="bg-orange-50 rounded-2xl p-8 border border-orange-200">
+            <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+            </div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">Responsible disclosure</h2>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Se individui una vulnerabilità o un comportamento anomalo, contattaci con una descrizione chiara, i passi per riprodurlo e l'impatto stimato. Gestiamo le segnalazioni in modo <strong>riservato e tracciabile</strong>, coordinando le azioni di remediation e comunicazione quando necessario.
+            </p>
+            <a href="mailto:security@leoneconsulting.dev" class="inline-flex items-center gap-2 mt-4 text-orange-700 font-medium text-sm hover:text-orange-800 transition-colors">
+              Segnala una vulnerabilità
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 px-6 bg-gradient-to-br from-primary-600 to-primary-800 text-white">
+      <div class="container mx-auto max-w-3xl text-center">
+        <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-6 border border-white/20">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Richiedi il pacchetto evidenze</h2>
+        <p class="text-primary-100 text-lg mb-8 leading-relaxed">
+          Per valutazioni IT/Legal, vendor assessment o richieste di documentazione security e compliance: contattaci con il modello qui sotto.
+        </p>
+        <div class="bg-white/10 border border-white/20 rounded-xl p-6 text-left mb-8 text-sm">
+          <p class="text-white font-medium mb-2">Oggetto suggerito: <span class="text-primary-200">Richiesta pacchetto evidenze (NDA) – Trust Center</span></p>
+          <p class="text-primary-100 leading-relaxed">
+            Indicare: settore, modello di deployment (on-prem / cloud / ibrido), tipologia dati trattati, requisiti specifici (SSO, retention, audit, ecc.).
+          </p>
+        </div>
+        <a
+          href="mailto:security@leoneconsulting.dev?subject=Richiesta%20pacchetto%20evidenze%20(NDA)%20%E2%80%93%20Trust%20Center&body=Buongiorno%2C%0A%0Avorremmo%20richiedere%20il%20pacchetto%20evidenze%20(NDA)%20relativo%20a%20sicurezza%20e%20compliance.%0A%0AContesto%3A%0A-%20Settore%3A%0A-%20Modello%20di%20deployment%3A%0A-%20Tipologia%20dati%20trattati%3A%0A-%20Requisiti%20specifici%3A%0A%0AGrazie"
+          class="inline-flex items-center gap-3 bg-white text-primary-700 px-8 py-4 rounded-xl font-semibold hover:bg-primary-50 transition-colors text-lg"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          Richiedi il pacchetto evidenze (NDA)
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

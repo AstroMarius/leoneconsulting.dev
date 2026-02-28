@@ -57,6 +57,7 @@ export const ui = {
     'footer.legal': 'Legale',
     'footer.privacy': 'Privacy Policy',
     'footer.terms': 'Termini e Condizioni',
+    'footer.trust': 'Trust Center',
     'footer.rights': 'Tutti i diritti riservati.',
     
     'about.title': 'Chi Siamo',
@@ -159,6 +160,7 @@ export const ui = {
     'footer.legal': 'Legal',
     'footer.privacy': 'Privacy Policy',
     'footer.terms': 'Terms & Conditions',
+    'footer.trust': 'Trust Center',
     'footer.rights': 'All rights reserved.',
     
     'about.title': 'About Us',
