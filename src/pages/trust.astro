@@ -315,6 +315,106 @@ import Footer from '../components/Footer.astro';
       </div>
     </section>
 
+    <!-- Filosofia cybersecurity -->
+    <section class="py-20 px-6 bg-white">
+      <div class="container mx-auto max-w-5xl">
+        <div class="flex items-start gap-6 mb-12">
+          <div class="flex-shrink-0 w-14 h-14 bg-gray-900 rounded-xl flex items-center justify-center">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <div>
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Filosofia di cybersecurity <span class="text-gray-500 font-normal text-2xl">(security-first)</span></h2>
+            <p class="text-gray-600 leading-relaxed">
+              Per LeoneConsulting la sicurezza informatica non è un "modulo" da aggiungere a fine progetto: è un principio di progettazione. L'obiettivo è ridurre la superficie di attacco, limitare l'impatto degli errori e rendere le attività critiche tracciabili e governabili.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-10">
+          <!-- Principi operativi -->
+          <div>
+            <h3 class="text-lg font-bold text-gray-900 mb-5 flex items-center gap-2">
+              <span class="w-7 h-7 bg-gray-900 text-white rounded-md flex items-center justify-center flex-shrink-0">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </span>
+              Principi operativi
+            </h3>
+            <div class="space-y-3">
+              {[
+                { icon: 'M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10', label: 'Secure-by-design', desc: 'Architetture e workflow progettati considerando minacce e scenari di abuso fin dall&#39;inizio.' },
+                { icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z', label: 'Defense in depth', desc: 'Pi&#249; livelli di protezione (identit&#224;, rete, applicazione, dati, logging), evitando single point of failure.' },
+                { icon: 'M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z', label: 'Zero trust', desc: 'Nessun componente &#232; considerato fidato per default; ogni accesso &#232; verificato e autorizzato.' },
+                { icon: 'M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z', label: 'Least privilege', desc: 'Permessi minimi necessari, ruoli chiari e segregazione dei compiti.' },
+                { icon: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z', label: 'Osservabilit&#224; e auditabilit&#224;', desc: 'Log e metriche per rilevare anomalie e ricostruire eventi.' },
+                { icon: 'M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636', label: 'Hardening e riduzione esposizione', desc: 'Porte, servizi e dipendenze ridotte allo stretto necessario.' },
+              ].map(item => (
+                <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl border border-gray-100">
+                  <div class="flex-shrink-0 w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center mt-0.5">
+                    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={item.icon} />
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="font-semibold text-gray-900 text-sm">{item.label}</span>
+                    <p class="text-xs text-gray-500 mt-0.5 leading-relaxed">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Approccio ingegneristico -->
+          <div>
+            <h3 class="text-lg font-bold text-gray-900 mb-5 flex items-center gap-2">
+              <span class="w-7 h-7 bg-primary-600 text-white rounded-md flex items-center justify-center flex-shrink-0">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </span>
+              Approccio ingegneristico
+            </h3>
+            <div class="space-y-3">
+              {[
+                { icon: 'M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7', label: 'Threat modeling', desc: 'Leggero ma sistematico per componenti e flussi dati pi&#249; critici.' },
+                { icon: 'M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z', label: 'Gestione segreti', desc: 'Chiavi e credenziali gestite in modo sicuro, senza hardcoding.' },
+                { icon: 'M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z', label: 'Controlli su dipendenze', desc: 'Aggiornamenti, scansioni vulnerabilit&#224; e remediation sistematici.' },
+                { icon: 'M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15', label: 'Change management tracciato', desc: 'Rilasci e modifiche documentati, con rollback plan.' },
+                { icon: 'M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9', label: 'Incident response', desc: 'Runbook, escalation e post-incident review con azioni correttive documentate.' },
+              ].map(item => (
+                <div class="flex items-start gap-3 p-4 bg-primary-50 rounded-xl border border-primary-100">
+                  <div class="flex-shrink-0 w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center mt-0.5">
+                    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={item.icon} />
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="font-semibold text-gray-900 text-sm">{item.label}</span>
+                    <p class="text-xs text-gray-500 mt-0.5 leading-relaxed">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <!-- Nota -->
+            <div class="mt-5 bg-amber-50 border border-amber-200 rounded-xl p-4">
+              <div class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p class="text-xs text-amber-800 leading-relaxed">
+                  Non siamo un SOC gestito a pacchetto. Implementiamo controlli e processi che rendono la soluzione robusta e auditabile; su richiesta collaboriamo con team di sicurezza interni o fornitori del cliente (pen-test, SIEM, policy).
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Sicurezza tecnica -->
     <section class="py-20 px-6 bg-gray-900 text-white">
       <div class="container mx-auto max-w-5xl">
